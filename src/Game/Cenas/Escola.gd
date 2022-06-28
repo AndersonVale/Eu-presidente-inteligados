@@ -9,4 +9,5 @@ func _on_Area2D_body_entered(_body):
 
 #Ativar quiz
 func _on_Area2D2_body_entered(_body):
+	Global.quiz = "escola"
 	get_tree().change_scene("res://Cenas/cena_Quiz/cena_Quiz.tscn")

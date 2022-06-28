@@ -20,3 +20,7 @@ var contador_easter_egg = 0 #variável que deterimina quando o easter egg será 
 var reiniciar = 0 #variável que determina se o jogo pode ser reiniciado
 var mudo = 0 #variável que controla a reprodução ou não do som
 var subiuRua = 0 #variável que determina se o presidente chegou ao mundo aberto passando pelo mundo aberto ou pelo menu
+
+
+var fase = 1
+var quiz = null

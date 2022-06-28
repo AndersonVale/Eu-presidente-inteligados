@@ -19,9 +19,6 @@ font_data = ExtResource( 5 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
@@ -55,20 +52,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 4967.8, 1397.26 )
 flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Ganhou" type="Sprite" parent="."]
-visible = false
-position = Vector2( 371, 115 )
-scale = Vector2( 0.0826613, 0.0680443 )
+position = Vector2( 386, 114 )
+scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 6 )
 
 [node name="Perdeu" type="Sprite" parent="."]
-visible = false
-position = Vector2( 855, 114 )
-scale = Vector2( 0.0819053, 0.0685484 )
+position = Vector2( 818, 112 )
+scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 4 )
 
 [node name="Label2" type="Label" parent="."]

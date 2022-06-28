@@ -146,26 +146,32 @@ func _on_portaminigame_body_entered(_body):
 #trocar para quiz
 func _on_Area2D_body_entered(_body):
 	if Global.index == 0: #checa se você esta nesta pergunta
+		Global.quiz = "1"
 		get_tree().change_scene("res://Cenas/cena_Quiz/cena_Quiz.tscn")
 
 func _on_Quiz2_body_entered(_body):
 	if Global.index == 1: #checa se você esta nesta pergunta
+		Global.quiz = "2"
 		get_tree().change_scene("res://Cenas/cena_Quiz/cena_Quiz.tscn")
 
 func _on_Quiz3_body_entered(_body):
 	if Global.index == 2: #checa se você esta nesta pergunta
+		Global.quiz = "3"
 		get_tree().change_scene("res://Cenas/cena_Quiz/cena_Quiz.tscn")
 
 func _on_Quiz4_body_entered(_body):
 	if Global.index == 3: #checa se você esta nesta pergunta
+		Global.quiz = "4"
 		get_tree().change_scene("res://Cenas/cena_Quiz/cena_Quiz.tscn")
 
 func _on_Quiz5_body_entered(_body):
 	if Global.index == 4: #checa se você esta nesta pergunta
+		Global.quiz = "5"
 		get_tree().change_scene("res://Cenas/cena_Quiz/cena_Quiz.tscn")
 
 func _on_Quiz6_body_entered(_body):
 	if Global.index == 5: #checa se você esta nesta pergunta
+		Global.quiz = "6"
 		get_tree().change_scene("res://Cenas/cena_Quiz/cena_Quiz.tscn")
 
 func _on_mapa_body_entered(_body):

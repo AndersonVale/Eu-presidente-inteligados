@@ -6,5 +6,5 @@
 script = ExtResource( 1 )
 Informacao_Pergunta = "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?"
 type = 0
-opcoes = [ "Nada, pois o mercado é livre para cobrar qualquer preço.", "Deve denunciar o mercado ao Procon por práticas abusivas." ]
+opcoes = [ "Nada, pois o mercado é livre para cobrar qualquer preço.", "" ]
 correct = "Deve denunciar o mercado ao Procon por práticas abusivas."

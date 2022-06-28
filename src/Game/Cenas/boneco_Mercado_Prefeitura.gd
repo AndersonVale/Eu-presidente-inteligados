@@ -37,7 +37,7 @@ func _physics_process(_delta):
 		vetor_entrada.y -= 1
 		
 	if Global.textbox == 0:
-		move_and_slide(vetor_entrada*200)
+		move_and_slide(vetor_entrada*80)
 	else:
 		move_and_slide(vetor_entrada*0)
 		animationPlayer.play("idleRight")

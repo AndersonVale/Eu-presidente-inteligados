@@ -1,5 +1,16 @@
 extends Control
 
+onready var pergunta = Mensagens.perguntaRegiaoAtual(Global.quiz)
+
+func _ready():
+	set_process(false)
+	print("Acertou pergunta:" + str(pergunta.acertou))
+	$Label.text = pergunta.explicacoes[str(pergunta.acertou)]
+	$Ganhou.visible = pergunta.acertou
+	$Perdeu.visible = !pergunta.acertou and pergunta.valorErro != 0
+	
+	
+#depreciado....
 func _process(_delta):
 	if Global.correto == 1:
 		$Ganhou.show() #mostra que o player recebeu 1 ponto
@@ -9,111 +20,111 @@ func _process(_delta):
 		if Global.index != 8 and Global.index != 10 and Global.index != 12:
 			$Perdeu.show() #mostra a sprite de perder 2 pontos caso ele esteja em mundo aberto
 		
-	if Global.index == 1: #determina a resposta para a primeira pergunta
-		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
-			$Label.text = String("Olá, presidente, como chefe de estado você pode sancionar um projeto de lei" \
-			+ " que beneficie os trabalhadores, como na resposta que você escolheu, portanto"
-			+ " você ganhou 1 ponto na barra de aprovaçao de governo." )
-		else: 
-			$Label.text = String("Olá, presidente, como você escolheu trazer trabalhadores" \
-			+ " mesmo não tendo recursos, você foi enquadrado no crime de improbidade fiscal" \
-			+ " já que está criando dispensas fora do orçamento, causando prejuízo ao erário, logo," \
-			+ " você perdeu 2 pontos na barra de aprovação do governo.")
+#	if Global.index == 1: #determina a resposta para a primeira pergunta
+#		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
+#			$Label.text = String("Olá, presidente, como chefe de estado você pode sancionar um projeto de lei" \
+#			+ " que beneficie os trabalhadores, como na resposta que você escolheu, portanto"
+#			+ " você ganhou 1 ponto na barra de aprovaçao de governo." )
+#		else: 
+#			$Label.text = String("Olá, presidente, como você escolheu trazer trabalhadores" \
+#			+ " mesmo não tendo recursos, você foi enquadrado no crime de improbidade fiscal" \
+#			+ " já que está criando dispensas fora do orçamento, causando prejuízo ao erário, logo," \
+#			+ " você perdeu 2 pontos na barra de aprovação do governo.")
 	
-	if Global.index == 2: #determina a resposta para a segunda pergunta
-		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
-			$Label.text = String("Olá, presidente, como chefe de estado você demonstrou integridade ao" \
-			+ " denunciar uma tentativa de corrupção advinda de dentro do poder legislativo, seu ato" \
-			+ " fez juz à seu cargo, portanto sua barra de aprovação aumentou em 1 ponto")
-		else: 
-			$Label.text = String("Olá, presidente, como chefe de estado você não pode aceitar dinheiro" \
-			+ " ou favorecimentos em função do seu cargo. O enriquecimento ilícito, como é o caso da sua" \
-			+ " decisão, é considerado crime de improbidade admnistrativa" \
-			+ " e pode levar ao seu impeachment, desta forma a sua barra de aprovação" \
-			+ " diminuiu em 1 ponto")
+#	if Global.index == 2: #determina a resposta para a segunda pergunta
+#		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
+#			$Label.text = String("Olá, presidente, como chefe de estado você demonstrou integridade ao" \
+#			+ " denunciar uma tentativa de corrupção advinda de dentro do poder legislativo, seu ato" \
+#			+ " fez juz à seu cargo, portanto sua barra de aprovação aumentou em 1 ponto")
+#		else: 
+#			$Label.text = String("Olá, presidente, como chefe de estado você não pode aceitar dinheiro" \
+#			+ " ou favorecimentos em função do seu cargo. O enriquecimento ilícito, como é o caso da sua" \
+#			+ " decisão, é considerado crime de improbidade admnistrativa" \
+#			+ " e pode levar ao seu impeachment, desta forma a sua barra de aprovação" \
+#			+ " diminuiu em 1 ponto")
 
 
-	if Global.index == 3:#determina a resposta para a terceira pergunta
-		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
-			$Label.text = String("Olá, presidente, como chefe de estado você agiu de forma exemplar ao" \
-			+ " denunciar uma tentativa de corrupção e em função disso você ganhou 1 ponto em sua barra de" \
-			+ " aprovação. A população fica feliz em ver seu presidente expondo esquemas de corrupção.")
-		else:
-			$Label.text = String("Olá, presidente, como chefe de estado você não pode aceitar dinheiro" \
-			+ " ou favorecimentos em função do seu cargo. Atos que conferem prejuízo erário, como é o caso " \
-			+ " da sua escolha anterior, são considerados crimes de improbidade admnistrativa" \
-			+ " e podem levar ao seu impeachment.") 
+#	if Global.index == 3:#determina a resposta para a terceira pergunta
+#		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
+#			$Label.text = String("Olá, presidente, como chefe de estado você agiu de forma exemplar ao" \
+#			+ " denunciar uma tentativa de corrupção e em função disso você ganhou 1 ponto em sua barra de" \
+#			+ " aprovação. A população fica feliz em ver seu presidente expondo esquemas de corrupção.")
+#		else:
+#			$Label.text = String("Olá, presidente, como chefe de estado você não pode aceitar dinheiro" \
+#			+ " ou favorecimentos em função do seu cargo. Atos que conferem prejuízo erário, como é o caso " \
+#			+ " da sua escolha anterior, são considerados crimes de improbidade admnistrativa" \
+#			+ " e podem levar ao seu impeachment.") 
 
  
-	if Global.index == 4:#determina a resposta para a quarta pergunta
-		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
-			$Label.text = String("Olá, Presidente, para explorar esta região, a madeireira precisa da autorização de exploração" \
-			+ " (AUTEX) para que tenha legalidade sobre a região. Ao negar a negociação com esta empresa e a " \
-			+ " denunciar para o Ministério Público você ajudou responsabilizar uma empresa que estava prejudicando a flora local" \
-			+ " por agir de forma ilícita. Em função do seu ato, sua barra de aprovação aumentou 1 ponto.")
-		else:
-			$Label.text = String("Olá, Presidente, para explorar esta região, a madeireira precisa da autorização de exploração " \
-			+ " (AUTEX) para que tenha legalidade sobre a região. Ao aceitar a negociação com a madeireira você" \
-			+ " cometeu o crime de corrupção passiva, pois utilizou de seu cargo público para " \
-			+ " receber vantagem indevida mediante ao fornecimento de meios para regular uma empresa " \
-			+ " que agia de forma ilegal em troca de favorecimento pessoal para você e sua família." \
-			+ " Desta forma você perdeu 2 pontos na barra de aprovação do governo")  
+#	if Global.index == 4:#determina a resposta para a quarta pergunta
+#		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
+#			$Label.text = String("Olá, Presidente, para explorar esta região, a madeireira precisa da autorização de exploração" \
+#			+ " (AUTEX) para que tenha legalidade sobre a região. Ao negar a negociação com esta empresa e a " \
+#			+ " denunciar para o Ministério Público você ajudou responsabilizar uma empresa que estava prejudicando a flora local" \
+#			+ " por agir de forma ilícita. Em função do seu ato, sua barra de aprovação aumentou 1 ponto.")
+#		else:
+#			$Label.text = String("Olá, Presidente, para explorar esta região, a madeireira precisa da autorização de exploração " \
+#			+ " (AUTEX) para que tenha legalidade sobre a região. Ao aceitar a negociação com a madeireira você" \
+#			+ " cometeu o crime de corrupção passiva, pois utilizou de seu cargo público para " \
+#			+ " receber vantagem indevida mediante ao fornecimento de meios para regular uma empresa " \
+#			+ " que agia de forma ilegal em troca de favorecimento pessoal para você e sua família." \
+#			+ " Desta forma você perdeu 2 pontos na barra de aprovação do governo")  
 
 
-	if Global.index == 5:#determina a resposta para a quinta pergunta
-		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
-			$Label.text = String("Olá, Presidente, denunciando essa tentiva de corrupção ao Ministério Público (MP)," \
-			+ " você estará realizando a escolha correta perante a lei e a ética, já que denunciou" \
-			+ " uma tentativa de corrupção, portanto, receberá 1 ponto no índice de aprovação do governo")
-		else:
-			$Label.text = String("Olá, Presidente, ao aceitar a proposta da empresa e falar com o governador você" \
-			+ " cometeu o crime de corrupção passiva, pois utilizou de seu cargo público para" \
-			+ " receber vantagem indevida mediante favorecimento no contrato de concessão, logo, você perdeu 2" \
-			+ " pontos no índice de aprovação do governo .")
+#	if Global.index == 5:#determina a resposta para a quinta pergunta
+#		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
+#			$Label.text = String("Olá, Presidente, denunciando essa tentiva de corrupção ao Ministério Público (MP)," \
+#			+ " você estará realizando a escolha correta perante a lei e a ética, já que denunciou" \
+#			+ " uma tentativa de corrupção, portanto, receberá 1 ponto no índice de aprovação do governo")
+#		else:
+#			$Label.text = String("Olá, Presidente, ao aceitar a proposta da empresa e falar com o governador você" \
+#			+ " cometeu o crime de corrupção passiva, pois utilizou de seu cargo público para" \
+#			+ " receber vantagem indevida mediante favorecimento no contrato de concessão, logo, você perdeu 2" \
+#			+ " pontos no índice de aprovação do governo .")
 
 
-	if Global.index == 6:#determina a resposta para a sexta pergunta
-		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
-			$Label.text = String("Olá, Presidente, ao escolher pagar a multa como um cidadão comum, você recebeu 1 ponto," \
-			+ "justamente por manter a integridade do cargo presidencial.")
-		else:
-			$Label.text = String("Olá, Presidente, ao utilizar o poder presidencial para cassar o mandato de um funcionário" \
-			+ " público você estará cometendo crime de abuso de autoridade e será julgado por isso, logo," \
-			+ " perdeu 2 pontos no índice de aprovação do jogo  por comprometer a integridade do ccargo presidencial.")
+#	if Global.index == 6:#determina a resposta para a sexta pergunta
+#		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
+#			$Label.text = String("Olá, Presidente, ao escolher pagar a multa como um cidadão comum, você recebeu 1 ponto," \
+#			+ "justamente por manter a integridade do cargo presidencial.")
+#		else:
+#			$Label.text = String("Olá, Presidente, ao utilizar o poder presidencial para cassar o mandato de um funcionário" \
+#			+ " público você estará cometendo crime de abuso de autoridade e será julgado por isso, logo," \
+#			+ " perdeu 2 pontos no índice de aprovação do jogo  por comprometer a integridade do ccargo presidencial.")
+#
+
+#	if Global.index == 8:#determina a resposta para a pergunta da escola
+#		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
+#			$Label.text = String("Olá, Presidente, parece que seu problema de memória está melhorando, não é mesmo?" \
+#			+ " você até se lembrou das obrigações de um dos cargos do poder executivo. Realmente," \
+#			+ " quem cuida dessas questões é o prefeito, parabéns por ter acertado, você ganhou 1 ponto.")
+#		else:
+#			$Label.text = String("Olá, Presidente, parece que você ainda não recuperou sua memória completamente, mas devo"\
+#			+ "lhe dizer que quem cuida de questões como esta não é você, mas sim o prefeito. Para sua sorte, nenhum ponto foi perdido")
+	
+#	if Global.index == 10:#determina a resposta para a pergunta da prefeitura
+#		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
+#			$Label.text = String("Olá, Presidente, você respondeu corretamente, é de responsabilidade " \
+#			+ " da prefeitura cuidar da iluminação em áres públicas, tais como ruas, parques e praças." \
+#			+ " Por ter acertado a pergunta você ganhou 1 ponto!.")
+#		else:
+#			$Label.text = String("Olá, Presidente, você deve ter se esquecido de novo, mas a manutenção" \
+#			+ " da iluminação em locais públicos não é de responsabilidade das companhias elétricas, embora"\
+#			+ " você não esteja correto na sua resposta, você não perdeu nenhum ponto.")
 
 
-	if Global.index == 8:#determina a resposta para a pergunta da escola
-		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
-			$Label.text = String("Olá, Presidente, parece que seu problema de memória está melhorando, não é mesmo?" \
-			+ " você até se lembrou das obrigações de um dos cargos do poder executivo. Realmente," \
-			+ " quem cuida dessas questões é o prefeito, parabéns por ter acertado, você ganhou 1 ponto.")
-		else:
-			$Label.text = String("Olá, Presidente, parece que você ainda não recuperou sua memória completamente, mas devo"\
-			+ "lhe dizer que quem cuida de questões como esta não é você, mas sim o prefeito. Para sua sorte, nenhum ponto foi perdido")
-		
-	if Global.index == 10:#determina a resposta para a pergunta da prefeitura
-		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
-			$Label.text = String("Olá, Presidente, você respondeu corretamente, é de responsabilidade " \
-			+ " da prefeitura cuidar da iluminação em áres públicas, tais como ruas, parques e praças." \
-			+ " Por ter acertado a pergunta você ganhou 1 ponto!.")
-		else:
-			$Label.text = String("Olá, Presidente, você deve ter se esquecido de novo, mas a manutenção" \
-			+ " da iluminação em locais públicos não é de responsabilidade das companhias elétricas, embora"\
-			+ " você não esteja correto na sua resposta, você não perdeu nenhum ponto.")
-
-
-	if Global.index == 12:#determina a resposta para a pergunta do mercado
-		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
-			$Label.text = String("Olá, Presidente, você escolheu corretamente, pois a elevação dos" \
-			+ " preços sem justa causa é considerado crime" \
-			+ " pelo Código de Defesa do Consumidor. Como você escolheu denunciar" \
-			+ " o mercado ao Procon, você ganhou 1 ponto, por ter agido da melhor forma frente " \
-			+ " a uma infração dos direitos do consumidor. ")
-		else:
-			$Label.text = String("Olá, Presidente, você deve ter se esquecido, mas a elevação" \
-			+ " dos preços, sem justa causa, não pode ser feita pelo mercado, porque o Código de" \
-			+ " Defesa do Consumidor prevê isso como uma prática abusiva, embora você tenha feito" \
-			+ " essa escolha, não se preocupe, você não perdeu nenhum ponto.")
+#	if Global.index == 12:#determina a resposta para a pergunta do mercado
+#		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
+#			$Label.text = String("Olá, Presidente, você escolheu corretamente, pois a elevação dos" \
+#			+ " preços sem justa causa é considerado crime" \
+#			+ " pelo Código de Defesa do Consumidor. Como você escolheu denunciar" \
+#			+ " o mercado ao Procon, você ganhou 1 ponto, por ter agido da melhor forma frente " \
+#			+ " a uma infração dos direitos do consumidor. ")
+#		else:
+#			$Label.text = String("Olá, Presidente, você deve ter se esquecido, mas a elevação" \
+#			+ " dos preços, sem justa causa, não pode ser feita pelo mercado, porque o Código de" \
+#			+ " Defesa do Consumidor prevê isso como uma prática abusiva, embora você tenha feito" \
+#			+ " essa escolha, não se preocupe, você não perdeu nenhum ponto.")
 
 
 #	if Global.index == 12:
@@ -160,6 +171,8 @@ func _process(_delta):
 
 
 func _on_botao_geral_pressed():
+	
+	#print(Global.contador)
 	
 	if Global.contador <= 0: #se o contador chegar a 0, muda para o game over
 		get_tree().change_scene("res://Cenas/final_Fase1/game_Over.tscn")

@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Cenas/cena_Quiz/cursor_Caneta.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/cena_Hud/HUD.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Font/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Cenas/cena_Quiz/camera_Quiz.gd" type="Script" id=4]
 [ext_resource path="res://Cenas/cena_Quiz/nivel_jogo.gd" type="Script" id=5]
-[ext_resource path="res://Resource/db/db_jogo_perguntas.tres" type="Resource" id=6]
 [ext_resource path="res://Imagens/Quiz/jornalOplano.png" type="Texture" id=7]
 [ext_resource path="res://Imagens/Quiz/decisao.png" type="Texture" id=8]
 [ext_resource path="res://Imagens/Quiz/flecha.png" type="Texture" id=9]
@@ -28,10 +27,6 @@ margin_right = -1024.0
 margin_bottom = -603.0
 rect_scale = Vector2( 1.01196, 1 )
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-db_perguntas = ExtResource( 6 )
 color_right = Color( 0.129412, 0.588235, 0.952941, 1 )
 color_wrong = Color( 1, 0, 0, 1 )
 
@@ -66,8 +61,7 @@ margin_right = 2135.0
 margin_bottom = 647.0
 size_flags_horizontal = 8
 __meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
+"_edit_group_": true
 }
 
 [node name="texto_pergunta" type="Label" parent="informacao_pergunta"]
@@ -94,9 +88,6 @@ anchor_bottom = 1.0
 margin_top = -2.0
 expand = true
 stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="video_pergunta" type="VideoPlayer" parent="informacao_pergunta/Panel"]
 anchor_right = 1.0

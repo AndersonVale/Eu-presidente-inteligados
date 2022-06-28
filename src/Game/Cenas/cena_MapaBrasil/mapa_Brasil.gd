@@ -11,27 +11,30 @@ func _ready(): #muta o jogo
 
 #Centro
 func _on_centro_body_entered(_body):
-	$centro/centro.frame = 1 #colore a região central
-	$mapas_text.text = "Região Centro-Oeste bloqueada"
-	$MenuItem2.modulate = Color.orange #colore a label
+	if Global.fase >= 3:
+		$centro/centro.frame = 1 #colore a região central
+		$mapas_text.text = "Região Centro-Oeste bloqueada"
+		$MenuItem2.modulate = Color.orange #colore a label
 func _on_centro_body_exited(_body):
 	$centro/centro.frame = 0 #descolore essa região
 	$mapas_text.text = "Use as setas para viajar pelo Brasil!"
 
 #Nordeste
 func _on_Nordeste_body_entered(_body):
-	$Nordeste/nordeste.frame = 1 #colore a região nordeste
-	$mapas_text.text = "Região Nordeste bloqueada"
-	$MenuItem2.modulate = Color.red #colore a label
+	if Global.fase >= 4:
+		$Nordeste/nordeste.frame = 1 #colore a região nordeste
+		$mapas_text.text = "Região Nordeste bloqueada"
+		$MenuItem2.modulate = Color.red #colore a label
 func _on_Nordeste_body_exited(_body):
 	$Nordeste/nordeste.frame = 0 #descolore essa região
 	$mapas_text.text = "Use as setas para viajar pelo Brasil!"
 
 #Sudeste
 func _on_Sudeste_body_entered(_body):
-	$Sudeste/sudeste.frame = 1 #colore a região sudeste
-	$mapas_text.text = "Região Sudeste bloqueada"
-	$MenuItem2.modulate = Color.yellow #colore a label
+	if Global.fase >= 2:
+		$Sudeste/sudeste.frame = 1 #colore a região sudeste
+		$mapas_text.text = "Região Sudeste bloqueada"
+		$MenuItem2.modulate = Color.yellow #colore a label
 func _on_Sudeste_body_exited(_body):
 	$Sudeste/sudeste.frame = 0 #descolore essa região
 	$mapas_text.text = "Use as setas para viajar pelo Brasil!"
@@ -49,9 +52,10 @@ func _on_Sul_body_exited(_body):
 
 #Norte
 func _on_Norte_body_entered(_body):
-	$Norte/norte.frame = 1 #colore a região norte
-	$mapas_text.text = "Região Norte bloqueada"
-	$MenuItem2.modulate = Color.chartreuse #colore a label
+	if Global.fase >= 5:
+		$Norte/norte.frame = 1 #colore a região norte
+		$mapas_text.text = "Região Norte bloqueada"
+		$MenuItem2.modulate = Color.chartreuse #colore a label
 func _on_Norte_body_exited(_body):
 	$Norte/norte.frame = 0 #descolore essa região
 	$mapas_text.text = "Use as setas para viajar pelo Brasil!"

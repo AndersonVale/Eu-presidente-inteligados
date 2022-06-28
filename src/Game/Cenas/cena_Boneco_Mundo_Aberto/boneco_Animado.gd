@@ -1,7 +1,9 @@
 extends KinematicBody2D
 
-var posicao_vertical_inicial = Global.posicao_vertical
-var posicao_horizontal_inicial = Global.posicao_horizontal
+const VEL = 80
+
+var posicao_vertical_inicial =  global_position.x#Global.posicao_vertical
+var posicao_horizontal_inicial = global_position.y#Global.posicao_horizontal
 onready var animationPlayer = $AnimationPlayer
 
 
@@ -25,9 +27,6 @@ func _physics_process(_delta):
 		animationPlayer.play("walk_right")
 		vetor_entrada.x += 1
 
-
-
-
 	#Parar o boneco ultima posição da animação
 	if Input.is_action_just_released("ui_left"):
 		animationPlayer.play("idleLeft") #replica a animação de andar para a esquerda
@@ -43,7 +42,7 @@ func _physics_process(_delta):
 		vetor_entrada.y -= 1
 
 	if Global.textbox == 0:
-		move_and_slide(vetor_entrada*160)
+		move_and_slide(vetor_entrada * VEL)
 	else:
 		move_and_slide(vetor_entrada*0) #para o personagem quando entrar em contato com uma textbox
 		animationPlayer.play("idleTop") #fixa a posição do personagem virado para cima quando iniciar um diálogo
@@ -51,5 +50,6 @@ func _physics_process(_delta):
 
 
 func _ready():
-	self.position.x = posicao_horizontal_inicial 
-	self.position.y = posicao_vertical_inicial
+#	self.position.x = posicao_horizontal_inicial 
+#	self.position.y = posicao_vertical_inicial
+	pass
