@@ -184,10 +184,17 @@ func _process(_delta):
 		State.LENDO:
 			Global.textbox = 1
 			if Input.is_action_just_pressed("ui_accept"):
-				texto.percent_visible = 1.0
-				$Tween.remove_all()
-				finalizar.text = "v"
-				mudar_estado(State.TERMINADO)
+				if texto.percent_visible == 1:
+					print("proximo")
+					Global.textbox = 1
+					mudar_estado(State.PRONTO)
+					hide_textbox()
+				else:
+					texto.percent_visible = 1.0
+					$Tween.remove_all()
+					finalizar.text = "v"
+					mudar_estado(State.TERMINADO)
+
 		State.TERMINADO:
 			Global.textbox = 1
 			if Input.is_action_just_pressed("ui_accept"):

@@ -12,16 +12,16 @@
 [ext_resource path="res://Imagens/Menu/menu_item2.png" type="Texture" id=10]
 [ext_resource path="res://Imagens/Menu/INTELIGADOS_2022.png" type="Texture" id=11]
 
+[sub_resource type="DynamicFont" id=1]
+size = 63
+font_data = ExtResource( 2 )
+
 [sub_resource type="DynamicFont" id=3]
 size = 98
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 46
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=1]
-size = 63
 font_data = ExtResource( 2 )
 
 [sub_resource type="SpriteFrames" id=4]
@@ -116,9 +116,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( -658, 106 )
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="MenuItem1" type="Sprite" parent="."]
 modulate = Color( 0.0588235, 0.788235, 0.956863, 0.901961 )
@@ -128,12 +125,39 @@ texture = ExtResource( 7 )
 
 [node name="MenuItem2" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.941176 )
-position = Vector2( 620, 349 )
+position = Vector2( 620, 611.425 )
 rotation = 0.00137282
 scale = Vector2( 0.2, 0.12 )
 texture = ExtResource( 10 )
 
+[node name="iniciar_Botao" type="Button" parent="."]
+margin_left = 335.0
+margin_top = 579.425
+margin_right = 935.0
+margin_bottom = 639.425
+rect_min_size = Vector2( 360, 60 )
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="start_Label" type="Label" parent="iniciar_Botao"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 0
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 1 )
+text = "Novo jogo "
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="MenuItem3" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.941176 )
 position = Vector2( 618, 502 )
 rotation = 0.00137282
@@ -152,9 +176,6 @@ custom_fonts/font = SubResource( 3 )
 text = "EU, PRESIDENTE"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="version_Label" type="Label" parent="."]
 visible = false
@@ -179,35 +200,8 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="iniciar_Botao" type="Button" parent="."]
-margin_left = 335.0
-margin_top = 317.0
-margin_right = 935.0
-margin_bottom = 377.0
-rect_min_size = Vector2( 360, 60 )
-focus_mode = 0
-enabled_focus_mode = 0
-flat = true
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="start_Label" type="Label" parent="iniciar_Botao"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-size_flags_horizontal = 0
-custom_constants/shadow_offset_x = 0
-custom_constants/shadow_offset_y = 5
-custom_fonts/font = SubResource( 1 )
-text = "Novo jogo "
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="carregar_Botao" type="Button" parent="."]
+visible = false
 margin_left = 331.0
 margin_top = 472.0
 margin_right = 931.0
@@ -252,7 +246,7 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 1188, 70 )
+position = Vector2( 1201, 73 )
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 4 )
 
