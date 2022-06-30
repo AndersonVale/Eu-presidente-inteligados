@@ -8,8 +8,7 @@ func _ready():
 	$Label.text = pergunta.explicacoes[str(pergunta.acertou)]
 	$Ganhou.visible = pergunta.acertou
 	$Perdeu.visible = !pergunta.acertou and pergunta.valorErro != 0
-	
-	
+
 #depreciado....
 func _process(_delta):
 	if Global.correto == 1:
@@ -177,23 +176,26 @@ func _on_botao_geral_pressed():
 	if Global.contador <= 0: #se o contador chegar a 0, muda para o game over
 		get_tree().change_scene("res://Cenas/final_Fase1/game_Over.tscn")
 	else:
-		if Global.index < Global.indexEscola and Global.index != 6: #caso estiver na campanha em uma pergunta diferente da final, volta para o mundo
-			get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
-			
-		if Global.index == 6 and Global.contador != 0: #apresenta a cena de próxima fase caso ainda houver pontos na HUD
-				get_tree().change_scene("res://Cenas/final_Fase1/win_Screen.tscn")
+		get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
 		
-		elif Global.index == 8: #caso estiver na escola
-			Global.indexEscola += 1 #aumenta o index do mundo fechado
-			Global.index = Global.indexMundoAberto #retorna o index para o que estava antes de entrar no prédio
-			get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
-			
-		elif Global.index == 10: #caso estiver na prefeitura
-			Global.indexPrefeitura += 1 #aumenta o index do mundo fechado
-			Global.index = Global.indexMundoAberto #retorna o index para o que estava antes de entrar no prédio
-			get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
-			
-		elif Global.index == 12:#caso estiver no mercado
-			Global.indexMercado += 1  #aumenta o index do mundo fechado
-			Global.index = Global.indexMundoAberto #retorna o index para o que estava antes de entrar no prédio
-			get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
+#	else:
+#		if Global.index < Global.indexEscola and Global.index != 6: #caso estiver na campanha em uma pergunta diferente da final, volta para o mundo
+#			get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
+#
+#		if Global.index == 6 and Global.contador != 0: #apresenta a cena de próxima fase caso ainda houver pontos na HUD
+#				get_tree().change_scene("res://Cenas/final_Fase1/win_Screen.tscn")
+#
+#		elif Global.index == 8: #caso estiver na escola
+#			Global.indexEscola += 1 #aumenta o index do mundo fechado
+#			Global.index = Global.indexMundoAberto #retorna o index para o que estava antes de entrar no prédio
+#			get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
+#
+#		elif Global.index == 10: #caso estiver na prefeitura
+#			Global.indexPrefeitura += 1 #aumenta o index do mundo fechado
+#			Global.index = Global.indexMundoAberto #retorna o index para o que estava antes de entrar no prédio
+#			get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
+#
+#		elif Global.index == 12:#caso estiver no mercado
+#			Global.indexMercado += 1  #aumenta o index do mundo fechado
+#			Global.index = Global.indexMundoAberto #retorna o index para o que estava antes de entrar no prédio
+#			get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")

@@ -6,7 +6,7 @@ func _ready():
 
 #botão de voltar para o mundo aberto
 func _on_Button_pressed():
-	get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
+	get_tree().change_scene("res://Cenas/cena_MapaBrasil/mapa_Brasil.tscn")
 
 
 #Trocar cor do botão

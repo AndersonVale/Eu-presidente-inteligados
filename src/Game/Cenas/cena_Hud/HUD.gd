@@ -1,6 +1,10 @@
 extends CanvasLayer
 
-func _process(_delta):
+func _ready():
+	onContadorAlterado()
+	Global.connect("contadorAlterado", self , "onContadorAlterado")
+
+func onContadorAlterado():
 	if Global.contador == 9:
 		$BarraAmarela10.hide() #isso fará visualmente o último bloco desaparecer
 	elif Global.contador == 8:

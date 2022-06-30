@@ -3,7 +3,7 @@ extends Node2D
 enum Tipos { TEXTO, IMAGEM, VIDEO, AUDIO }
 var textos = {
 	
-	1 : {
+	"sul" : {
 		"1" : {
 			"tipo" : Tipos.TEXTO,
 			"informacao" : "A mecanização das lavouras no Sul está ocasionando um crescente nível de desemprego, resultando na migração para outros estados brasileiros e o surgimento de boias-frias. Esses trabalhadores rurais sem-terra são tratados de forma exploratória, com baixos salários, péssimas condições de saúde e moradia. Embora os boias-frias não estejam restritos apenas à Região Sul do Brasil, o estado do Paraná é a unidade federativa com o maior número de pessoas nessas condições.",
@@ -18,7 +18,8 @@ var textos = {
 			"correta" : 1,
 			"acertou" : false,
 			"valorAcerto" : 1,
-			"valorErro" : -2
+			"valorErro" : -2,
+			"respondido" : false
 		},
 		"2" : {
 			"tipo" : Tipos.TEXTO,
@@ -34,7 +35,8 @@ var textos = {
 			"correta" : 0,
 			"acertou" : false,
 			"valorAcerto" : 1,
-			"valorErro" : -2
+			"valorErro" : -2,
+			"respondido" : false
 		},
 		"3" : {
 			"tipo" : Tipos.TEXTO,
@@ -50,7 +52,8 @@ var textos = {
 			"correta" : 1,
 			"acertou" : false,
 			"valorAcerto" : 1,
-			"valorErro" : -2
+			"valorErro" : -2,
+			"respondido" : false
 		},
 		"4" : {
 			"tipo" : Tipos.TEXTO,
@@ -66,7 +69,8 @@ var textos = {
 			"correta" : 1,
 			"acertou" : false,
 			"valorAcerto" : 1,
-			"valorErro" : -2
+			"valorErro" : -2,
+			"respondido" : false
 		},
 		"5" : {
 			"tipo" : Tipos.TEXTO,
@@ -82,7 +86,8 @@ var textos = {
 			"correta" : 1,
 			"acertou" : false,
 			"valorAcerto" : 1,
-			"valorErro" : -2
+			"valorErro" : -2,
+			"respondido" : false
 		},
 		"6" : {
 			"tipo" : Tipos.TEXTO,
@@ -98,7 +103,8 @@ var textos = {
 			"correta" : 0,
 			"acertou" : false,
 			"valorAcerto" : 1,
-			"valorErro" : -2
+			"valorErro" : -2,
+			"respondido" : false
 		},
 		"mercado" : {
 			"tipo" : Tipos.TEXTO,
@@ -114,7 +120,8 @@ var textos = {
 			"correta" : 1,
 			"acertou" : false,
 			"valorAcerto" : 1,
-			"valorErro" : 0
+			"valorErro" : 0,
+			"respondido" : false
 		},
 		"escola" : {
 			"tipo" : Tipos.TEXTO,
@@ -130,7 +137,8 @@ var textos = {
 			"correta" : 1,
 			"acertou" : false,
 			"valorAcerto" : 1,
-			"valorErro" : 0
+			"valorErro" : 0,
+			"respondido" : false
 		},
 		"prefeitura" : {
 			"tipo" : Tipos.TEXTO,
@@ -146,8 +154,290 @@ var textos = {
 			"correta" : 0,
 			"acertou" : false,
 			"valorAcerto" : 1,
-			"valorErro" : 0
+			"valorErro" : 0,
+			"respondido" : false
 		}
+	}, "sudeste" : {
+		
+		"1" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "Pergunta 1",
+			"alternativas" : [
+				"Alternativa errada",
+				"Alternativa certa"
+			],
+			"explicacoes" : {
+				"True" : "Explicação correta",
+				"False" : "Explicação errada"
+			},
+			"correta" : 1,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : -2,
+			"respondido" : false
+		},"mercado" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?",
+			"alternativas" : [
+				"Nada, pois o mercado é livre para cobrar qualquer preço.",
+				"Deve denunciar o mercado ao Procon por práticas abusivas."
+			],
+			"explicacoes" : {
+				"True" : "Olá, Presidente, você escolheu corretamente, pois a elevação dos preços sem justa causa é considerado crime pelo Código de Defesa do Consumidor. Como você escolheu denunciar o mercado ao Procon, você ganhou 1 ponto, por ter agido da melhor forma frente a uma infração dos direitos do consumidor.",
+				"False" : "Olá, Presidente, você deve ter se esquecido, mas a elevação dos preços, sem justa causa, não pode ser feita pelo mercado, porque o Código de Defesa do Consumidor prevê isso como uma prática abusiva, embora você tenha feito essa escolha, não se preocupe, você não perdeu nenhum ponto."
+			},
+			"correta" : 1,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : 0,
+			"respondido" : false
+		},
+		"escola" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "A nossa escola está com diversos problemas estruturais, faltam computadores, cadeiras e até materiais básicos, como giz. A quem podemos recorrer?",
+			"alternativas" : [
+				"Presidente",
+				"Prefeito"
+			],
+			"explicacoes" : {
+				"True" : "Olá, Presidente, parece que seu problema de memória está melhorando, não é mesmo? você até se lembrou das obrigações de um dos cargos do poder executivo. Realmente, quem cuida dessas questões é o prefeito, parabéns por ter acertado, você ganhou 1 ponto.",
+				"False" : "Olá, Presidente, parece que você ainda não recuperou sua memória completamente, mas devo lhe dizer que quem cuida de questões como esta não é você, mas sim o prefeito. Para sua sorte, nenhum ponto foi perdido"
+			},
+			"correta" : 1,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : 0,
+			"respondido" : false
+		},
+		"prefeitura" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "As ruas da cidade estão sem iluminação há muito tempo, a quem devemos recorrer nessas situações?",
+			"alternativas" : [
+				"Prefeito",
+				"Companhia de energia"
+			],
+			"explicacoes" : {
+				"True" : "Olá, Presidente, você respondeu corretamente, é de responsabilidade da prefeitura cuidar da iluminação em áres públicas, tais como ruas, parques e praças. Por ter acertado a pergunta você ganhou 1 ponto!.",
+				"False" : "Olá, Presidente, você deve ter se esquecido de novo, mas a manutenção da iluminação em locais públicos não é de responsabilidade das companhias elétricas, embora você não esteja correto na sua resposta, você não perdeu nenhum ponto."
+			},
+			"correta" : 0,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : 0,
+			"respondido" : false
+		}
+	
+		
+	}, "centro-oeste" : {
+		
+		"1" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "Pergunta 1",
+			"alternativas" : [
+				"Alternativa errada",
+				"Alternativa certa"
+			],
+			"explicacoes" : {
+				"True" : "Explicação correta",
+				"False" : "Explicação errada"
+			},
+			"correta" : 1,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : -2,
+			"respondido" : false
+		},"mercado" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?",
+			"alternativas" : [
+				"Nada, pois o mercado é livre para cobrar qualquer preço.",
+				"Deve denunciar o mercado ao Procon por práticas abusivas."
+			],
+			"explicacoes" : {
+				"True" : "Olá, Presidente, você escolheu corretamente, pois a elevação dos preços sem justa causa é considerado crime pelo Código de Defesa do Consumidor. Como você escolheu denunciar o mercado ao Procon, você ganhou 1 ponto, por ter agido da melhor forma frente a uma infração dos direitos do consumidor.",
+				"False" : "Olá, Presidente, você deve ter se esquecido, mas a elevação dos preços, sem justa causa, não pode ser feita pelo mercado, porque o Código de Defesa do Consumidor prevê isso como uma prática abusiva, embora você tenha feito essa escolha, não se preocupe, você não perdeu nenhum ponto."
+			},
+			"correta" : 1,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : 0,
+			"respondido" : false
+		},
+		"escola" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "A nossa escola está com diversos problemas estruturais, faltam computadores, cadeiras e até materiais básicos, como giz. A quem podemos recorrer?",
+			"alternativas" : [
+				"Presidente",
+				"Prefeito"
+			],
+			"explicacoes" : {
+				"True" : "Olá, Presidente, parece que seu problema de memória está melhorando, não é mesmo? você até se lembrou das obrigações de um dos cargos do poder executivo. Realmente, quem cuida dessas questões é o prefeito, parabéns por ter acertado, você ganhou 1 ponto.",
+				"False" : "Olá, Presidente, parece que você ainda não recuperou sua memória completamente, mas devo lhe dizer que quem cuida de questões como esta não é você, mas sim o prefeito. Para sua sorte, nenhum ponto foi perdido"
+			},
+			"correta" : 1,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : 0,
+			"respondido" : false
+		},
+		"prefeitura" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "As ruas da cidade estão sem iluminação há muito tempo, a quem devemos recorrer nessas situações?",
+			"alternativas" : [
+				"Prefeito",
+				"Companhia de energia"
+			],
+			"explicacoes" : {
+				"True" : "Olá, Presidente, você respondeu corretamente, é de responsabilidade da prefeitura cuidar da iluminação em áres públicas, tais como ruas, parques e praças. Por ter acertado a pergunta você ganhou 1 ponto!.",
+				"False" : "Olá, Presidente, você deve ter se esquecido de novo, mas a manutenção da iluminação em locais públicos não é de responsabilidade das companhias elétricas, embora você não esteja correto na sua resposta, você não perdeu nenhum ponto."
+			},
+			"correta" : 0,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : 0,
+			"respondido" : false
+		}
+		
+	}, "norte" : {
+		
+		"1" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "Pergunta 1",
+			"alternativas" : [
+				"Alternativa errada",
+				"Alternativa certa"
+			],
+			"explicacoes" : {
+				"True" : "Explicação correta",
+				"False" : "Explicação errada"
+			},
+			"correta" : 1,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : -2,
+			"respondido" : false
+		},"mercado" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?",
+			"alternativas" : [
+				"Nada, pois o mercado é livre para cobrar qualquer preço.",
+				"Deve denunciar o mercado ao Procon por práticas abusivas."
+			],
+			"explicacoes" : {
+				"True" : "Olá, Presidente, você escolheu corretamente, pois a elevação dos preços sem justa causa é considerado crime pelo Código de Defesa do Consumidor. Como você escolheu denunciar o mercado ao Procon, você ganhou 1 ponto, por ter agido da melhor forma frente a uma infração dos direitos do consumidor.",
+				"False" : "Olá, Presidente, você deve ter se esquecido, mas a elevação dos preços, sem justa causa, não pode ser feita pelo mercado, porque o Código de Defesa do Consumidor prevê isso como uma prática abusiva, embora você tenha feito essa escolha, não se preocupe, você não perdeu nenhum ponto."
+			},
+			"correta" : 1,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : 0,
+			"respondido" : false
+		},
+		"escola" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "A nossa escola está com diversos problemas estruturais, faltam computadores, cadeiras e até materiais básicos, como giz. A quem podemos recorrer?",
+			"alternativas" : [
+				"Presidente",
+				"Prefeito"
+			],
+			"explicacoes" : {
+				"True" : "Olá, Presidente, parece que seu problema de memória está melhorando, não é mesmo? você até se lembrou das obrigações de um dos cargos do poder executivo. Realmente, quem cuida dessas questões é o prefeito, parabéns por ter acertado, você ganhou 1 ponto.",
+				"False" : "Olá, Presidente, parece que você ainda não recuperou sua memória completamente, mas devo lhe dizer que quem cuida de questões como esta não é você, mas sim o prefeito. Para sua sorte, nenhum ponto foi perdido"
+			},
+			"correta" : 1,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : 0,
+			"respondido" : false
+		},
+		"prefeitura" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "As ruas da cidade estão sem iluminação há muito tempo, a quem devemos recorrer nessas situações?",
+			"alternativas" : [
+				"Prefeito",
+				"Companhia de energia"
+			],
+			"explicacoes" : {
+				"True" : "Olá, Presidente, você respondeu corretamente, é de responsabilidade da prefeitura cuidar da iluminação em áres públicas, tais como ruas, parques e praças. Por ter acertado a pergunta você ganhou 1 ponto!.",
+				"False" : "Olá, Presidente, você deve ter se esquecido de novo, mas a manutenção da iluminação em locais públicos não é de responsabilidade das companhias elétricas, embora você não esteja correto na sua resposta, você não perdeu nenhum ponto."
+			},
+			"correta" : 0,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : 0,
+			"respondido" : false
+		}
+		
+	}, "nordeste" : {
+		
+		"1" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "Pergunta 1",
+			"alternativas" : [
+				"Alternativa errada",
+				"Alternativa certa"
+			],
+			"explicacoes" : {
+				"True" : "Explicação correta",
+				"False" : "Explicação errada"
+			},
+			"correta" : 1,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : -2,
+			"respondido" : false
+		},"mercado" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?",
+			"alternativas" : [
+				"Nada, pois o mercado é livre para cobrar qualquer preço.",
+				"Deve denunciar o mercado ao Procon por práticas abusivas."
+			],
+			"explicacoes" : {
+				"True" : "Olá, Presidente, você escolheu corretamente, pois a elevação dos preços sem justa causa é considerado crime pelo Código de Defesa do Consumidor. Como você escolheu denunciar o mercado ao Procon, você ganhou 1 ponto, por ter agido da melhor forma frente a uma infração dos direitos do consumidor.",
+				"False" : "Olá, Presidente, você deve ter se esquecido, mas a elevação dos preços, sem justa causa, não pode ser feita pelo mercado, porque o Código de Defesa do Consumidor prevê isso como uma prática abusiva, embora você tenha feito essa escolha, não se preocupe, você não perdeu nenhum ponto."
+			},
+			"correta" : 1,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : 0,
+			"respondido" : false
+		},
+		"escola" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "A nossa escola está com diversos problemas estruturais, faltam computadores, cadeiras e até materiais básicos, como giz. A quem podemos recorrer?",
+			"alternativas" : [
+				"Presidente",
+				"Prefeito"
+			],
+			"explicacoes" : {
+				"True" : "Olá, Presidente, parece que seu problema de memória está melhorando, não é mesmo? você até se lembrou das obrigações de um dos cargos do poder executivo. Realmente, quem cuida dessas questões é o prefeito, parabéns por ter acertado, você ganhou 1 ponto.",
+				"False" : "Olá, Presidente, parece que você ainda não recuperou sua memória completamente, mas devo lhe dizer que quem cuida de questões como esta não é você, mas sim o prefeito. Para sua sorte, nenhum ponto foi perdido"
+			},
+			"correta" : 1,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : 0,
+			"respondido" : false
+		},
+		"prefeitura" : {
+			"tipo" : Tipos.TEXTO,
+			"informacao" : "As ruas da cidade estão sem iluminação há muito tempo, a quem devemos recorrer nessas situações?",
+			"alternativas" : [
+				"Prefeito",
+				"Companhia de energia"
+			],
+			"explicacoes" : {
+				"True" : "Olá, Presidente, você respondeu corretamente, é de responsabilidade da prefeitura cuidar da iluminação em áres públicas, tais como ruas, parques e praças. Por ter acertado a pergunta você ganhou 1 ponto!.",
+				"False" : "Olá, Presidente, você deve ter se esquecido de novo, mas a manutenção da iluminação em locais públicos não é de responsabilidade das companhias elétricas, embora você não esteja correto na sua resposta, você não perdeu nenhum ponto."
+			},
+			"correta" : 0,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : 0,
+			"respondido" : false
+		}
+		
 	}
 	
 }
@@ -155,10 +445,21 @@ var textos = {
 func _ready():
 	pass 
 
-
 func perguntaRegiaoAtual(index):
 	return textos[Global.fase][index]
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func regiaoCompleta(regiao):
+	return perguntasRespondidasRegiaoAtual(regiao) == textos[regiao].size()                                                                                                               
+
+func perguntasRegiaoRespondidas():
+	return perguntasRespondidasRegiaoAtual(Global.fase)
+
+func perguntasRespondidasRegiaoAtual(regiao):
+	var total = 0
+	for a in textos[regiao]:
+		total += int(textos[regiao][a]["respondido"])
+	return total
+
+func completouPerguntas():
+	return perguntasRegiaoRespondidas() == textos[Global.fase].size()
+

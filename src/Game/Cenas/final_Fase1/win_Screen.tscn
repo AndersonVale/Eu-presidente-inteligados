@@ -79,9 +79,6 @@ margin_bottom = 603.0
 focus_mode = 0
 enabled_focus_mode = 0
 flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="MenuItem2" type="Sprite" parent="Button"]
 position = Vector2( 198.5, 42.125 )
@@ -95,9 +92,6 @@ margin_right = 369.0
 margin_bottom = 59.0
 custom_fonts/font = SubResource( 4 )
 text = "AVANÇAR >>"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Ana" type="Sprite" parent="."]
 position = Vector2( 1500, 573 )

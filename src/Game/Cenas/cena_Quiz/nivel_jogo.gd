@@ -59,7 +59,9 @@ func load_quiz() -> void:
 	
 # Determina a cor do botão de acordo com a resposta
 func buttons_answer(indice) -> void:
-
+	
+	pergunta.respondido = true
+	
 	if indice == pergunta.correta:
 		Global.contador += pergunta.valorAcerto
 		Global.contador_easter_egg += 1
@@ -68,6 +70,7 @@ func buttons_answer(indice) -> void:
 		print("errou rude")
 		Global.contador += pergunta.valorErro 
 	
+	Global.respondeuPergunta()
 #	if Global.index != Global.indexEscola and Global.index != Global.indexMercado and Global.index != Global.indexPrefeitura:
 #	#detecta se o corpo está dentro de um espaço fechado, para haver alteração entre a mecânica do jogo
 #		if db_perguntas.db[Global.index].correct == button.text and Global.contador < 10 and Global.stop == 0:
@@ -121,18 +124,19 @@ func buttons_answer(indice) -> void:
 #				Global.correto = 0
 	audio_pergunta.stop()
 	audio_pergunta.stop()
-	
-	yield(get_tree().create_timer(1), "timeout") #determina um certo tempo até a próxima cena ser chamada
+
+	yield(get_tree().create_timer(.5), "timeout") #determina um certo tempo até a próxima cena ser chamada
 
 	for bt in buttons:  #desabilita botoes
-		bt.modulate = Color.white
+		#bt.modulate = Color.white
 		bt.disconnect("pressed", self, "buttons_answer")
 		
 	audio_pergunta.stream = null
 	video_pergunta.stream =  null
 	
 # Avança para a proxima pergunta
-	Global.index += 1
+	if int(Global.quiz):
+		Global.index += 1
 	
 #Voltar para o mundo aberto
 	get_tree().change_scene("res://Cenas/cena_Explicacao/cena_Explicacao.tscn")

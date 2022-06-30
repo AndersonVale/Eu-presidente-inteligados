@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Imagens/Fire.png" type="Texture" id=1]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float offset = 0.;
+uniform sampler2D noise;
+
+uniform float timeMult = .01;
+
+uniform float pixel_size = 0.03;
+
+void fragment(){
+	
+	float time = TIME * timeMult;
+	vec4 noiseTex = texture(noise, vec2(UV.x , UV.y + TIME ) + 1. );
+	
+	vec2 uv = UV - time * .1;
+	uv -= mod(uv, vec2(pixel_size, pixel_size));
+ //  	COLOR = textureLod(TEXTURE, vec2(  sin( time + noiseTex.r )  + uv.x   ,  cos(time  + noiseTex.r)) + uv.y , 0.0);
+	
+	
+	COLOR = texture(TEXTURE , vec2(UV.x , UV.y + noiseTex.r * (1.1 - UV.y) * .5 + offset ) , 0.0);
+}"
+
+[sub_resource type="OpenSimplexNoise" id=2]
+period = 47.2
+persistence = 0.0
+lacunarity = 0.53
+
+[sub_resource type="NoiseTexture" id=3]
+noise = SubResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 1 )
+shader_param/offset = -0.018
+shader_param/timeMult = 0.01
+shader_param/pixel_size = 0.042
+shader_param/noise = SubResource( 3 )
+
+[node name="Fogo" type="Sprite"]
+material = SubResource( 4 )
+position = Vector2( -1679.3, 416.391 )
+scale = Vector2( 0.891305, 0.930386 )
+z_index = 2
+texture = ExtResource( 1 )

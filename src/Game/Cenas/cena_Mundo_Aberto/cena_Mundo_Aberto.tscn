@@ -1,7 +1,6 @@
 [gd_scene load_steps=211 format=2]
 
 [ext_resource path="res://Imagens/Alertas/ExclamaçãoAmarela.png" type="Texture" id=1]
-[ext_resource path="res://Imagens/Fire.png" type="Texture" id=2]
 [ext_resource path="res://Imagens/NPC/helena.png" type="Texture" id=3]
 [ext_resource path="res://Imagens/NPC/sarah.png" type="Texture" id=4]
 [ext_resource path="res://Imagens/NPC/Eric.png" type="Texture" id=5]
@@ -38,6 +37,7 @@
 [ext_resource path="res://Cenas/cena_Opcoes/Config.tscn" type="PackedScene" id=36]
 [ext_resource path="res://Imagens/NPC/bruno.png" type="Texture" id=37]
 [ext_resource path="res://Imagens/NPC/Sergio.png" type="Texture" id=38]
+[ext_resource path="res://Cenas/Fogo.tscn" type="PackedScene" id=39]
 
 [sub_resource type="ConvexPolygonShape2D" id=22]
 points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
@@ -5691,7 +5691,7 @@ position = Vector2( 336, 477 )
 z_index = 1
 collision_mask = 2
 
-[node name="Node2D" parent="." instance=ExtResource( 34 )]
+[node name="HUD" parent="." instance=ExtResource( 34 )]
 position = Vector2( 0, -1 )
 
 [node name="Config" parent="." instance=ExtResource( 36 )]
@@ -6089,80 +6089,60 @@ scale = Vector2( 0.0610861, 0.0571267 )
 frames = SubResource( 154 )
 frame = 1
 
-[node name="Fogopai" type="Sprite" parent="."]
+[node name="Fogopai" type="Node2D" parent="."]
 visible = false
 position = Vector2( 495, -134.367 )
 scale = Vector2( 0.038111, 0.0393073 )
 z_index = 2
-texture = ExtResource( 2 )
 
-[node name="Fogo1" type="Sprite" parent="Fogopai"]
-position = Vector2( -1679.3, 416.391 )
-scale = Vector2( 0.891305, 0.930386 )
-z_index = 2
-texture = ExtResource( 2 )
+[node name="Fogo" parent="Fogopai" instance=ExtResource( 39 )]
 
-[node name="Fogo2" type="Sprite" parent="Fogopai"]
-position = Vector2( -1469.39, -524.912 )
-scale = Vector2( 0.478264, 0.449252 )
-z_index = 2
-texture = ExtResource( 2 )
+[node name="Fogo12" parent="Fogopai" instance=ExtResource( 39 )]
+position = Vector2( 0, -346.831 )
 
-[node name="Fogo3" type="Sprite" parent="Fogopai"]
-position = Vector2( -7294.48, 319.3 )
-scale = Vector2( 1.30435, 1.05791 )
-z_index = 2
-texture = ExtResource( 2 )
+[node name="Fogo8" parent="Fogopai" instance=ExtResource( 39 )]
+position = Vector2( -6035, 908.092 )
+scale = Vector2( 0.513017, 0.44817 )
 
-[node name="Fogo4" type="Sprite" parent="Fogopai"]
-position = Vector2( -9013.14, -35.6836 )
-scale = Vector2( 1.06522, 0.868109 )
-z_index = 2
-texture = ExtResource( 2 )
+[node name="Fogo6" parent="Fogopai" instance=ExtResource( 39 )]
+position = Vector2( -603.501, -1975.02 )
+scale = Vector2( 1.09446, 0.930386 )
 
-[node name="Fogo5" type="Sprite" parent="Fogopai"]
-position = Vector2( -2492.72, -702.994 )
-scale = Vector2( 0.847825, 0.783997 )
-z_index = 2
-texture = ExtResource( 2 )
+[node name="Fogo7" parent="Fogopai" instance=ExtResource( 39 )]
+position = Vector2( -2335.28, -2407.52 )
+scale = Vector2( 1.09446, 0.930386 )
 
-[node name="Fogo6" type="Sprite" parent="Fogopai"]
-position = Vector2( -603.5, -1695.18 )
-z_index = 2
-texture = ExtResource( 2 )
+[node name="Fogo3" parent="Fogopai" instance=ExtResource( 39 )]
+position = Vector2( -7084.57, 564.645 )
+scale = Vector2( 0.891305, 0.660955 )
 
-[node name="Fogo7" type="Sprite" parent="Fogopai"]
-position = Vector2( -2256.57, -2153.11 )
-z_index = 2
-texture = ExtResource( 2 )
+[node name="Fogo5" parent="Fogopai" instance=ExtResource( 39 )]
+position = Vector2( -2466.48, -702.998 )
+scale = Vector2( 0.891305, 0.660955 )
 
-[node name="Fogo8" type="Sprite" parent="Fogopai"]
-position = Vector2( -3516.04, 289.188 )
-z_index = 2
-texture = ExtResource( 2 )
+[node name="Fogo9" parent="Fogopai" instance=ExtResource( 39 )]
+position = Vector2( -4854.24, -601.236 )
+scale = Vector2( 1.21517, 0.901121 )
 
-[node name="Fogo9" type="Sprite" parent="Fogopai"]
-position = Vector2( -4801.76, -499.47 )
-z_index = 2
-texture = ExtResource( 2 )
+[node name="Fogo10" parent="Fogopai" instance=ExtResource( 39 )]
+position = Vector2( -3489.8, 136.539 )
+scale = Vector2( 1.21517, 0.901121 )
 
-[node name="Fogo10" type="Sprite" parent="Fogopai"]
-position = Vector2( -183.676, -2585.6 )
-scale = Vector2( 0.554344, 0.449253 )
-z_index = 2
-texture = ExtResource( 2 )
+[node name="Fogo11" parent="Fogopai" instance=ExtResource( 39 )]
+position = Vector2( -1443.16, -2382.09 )
+scale = Vector2( 0.581449, 0.373035 )
 
-[node name="Fogo11" type="Sprite" parent="Fogopai"]
-position = Vector2( -1443.15, -2560.14 )
-scale = Vector2( 0.554344, 0.449253 )
-z_index = 2
-texture = ExtResource( 2 )
+[node name="Fogo13" parent="Fogopai" instance=ExtResource( 39 )]
+position = Vector2( -157.43, -2382.08 )
+scale = Vector2( 0.581449, 0.373035 )
 
-[node name="Fogo12" type="Sprite" parent="Fogopai"]
-position = Vector2( -6087.5, 721.676 )
-scale = Vector2( 0.494563, 0.384026 )
-z_index = 2
-texture = ExtResource( 2 )
+[node name="Fogo4" parent="Fogopai" instance=ExtResource( 39 )]
+position = Vector2( -8980.81, -43.7365 )
+scale = Vector2( 1.09446, 0.798605 )
+
+[node name="Fogo2" parent="Fogopai" instance=ExtResource( 39 )]
+position = Vector2( -1416.91, -423.148 )
+scale = Vector2( 0.385295, 0.294967 )
 
 [node name="Grupo5" type="StaticBody2D" parent="."]
 collision_layer = 2
