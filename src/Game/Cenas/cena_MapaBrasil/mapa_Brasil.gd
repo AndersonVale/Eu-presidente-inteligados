@@ -5,7 +5,7 @@ func _ready(): #muta o jogo
 #		$AudioStreamPlayer2D.stop()
 #	if Global.mudo == 0:
 #		$AudioStreamPlayer2D.play()
-	Global.posicao_vertical += 42 #modifica a posição personagem no mundo aberto
+	#Global.posicao_vertical += 42 #modifica a posição personagem no mundo aberto
 	$aviao.connect("area_entered" , self , "on_regiao_entered")
 	$aviao.connect("area_exited" , self , "on_regiao_exited")
 
@@ -26,8 +26,6 @@ func on_regiao_exited(regiao):
 	regiao.downlight()
 	Global.fase = null
 	$mapas_text.text = "Use as setas para viajar pelo Brasil!"
-
-
 
 #Centro
 #func _on_centro_body_entered(_body):

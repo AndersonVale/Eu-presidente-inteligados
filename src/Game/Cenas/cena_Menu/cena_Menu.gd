@@ -15,8 +15,8 @@ func _on_iniciar_Botao_pressed():
 	Global.reiniciar = 0 #impossibilita o personagem de reiniciar o jogo
 	Global.contador = 5 #variável que comanda a HUD
 	Global.index = 0 #variável que comanda qual pergunta será chamada de cada vez
-	Global.posicao_horizontal = 660 #variável que armazena a posição horizontal do jogador
-	Global.posicao_vertical = 25 #variável que armazena a posição vertical do jogador
+#	Global.posicao_horizontal = 660 #variável que armazena a posição horizontal do jogador
+#	Global.posicao_vertical = 25 #variável que armazena a posição vertical do jogador
 	Global.textbox = 0 #variável que armazena informações sobre a caixa de texto
 	Global.indexMundoAberto = 0 #variável que armazena o index do mundo aberto
 	Global.indexPrefeitura = 9 #variável que determina a pergunta a ser chamada na prefeitura

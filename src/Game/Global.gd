@@ -5,8 +5,8 @@ signal perguntaRespondida
 
 var contador = 5 setget setContador, getContador #variável que comanda a HUD
 var index = 0 #variável que comanda qual pergunta será chamada de cada vez
-var posicao_horizontal = 660 #variável que armazena a posição horizontal do jogador
-var posicao_vertical = 80 #variável que armazena a posição vertical do jogador
+var posicao_horizontal  #variável que armazena a posição horizontal do jogador
+var posicao_vertical  #variável que armazena a posição vertical do jogador
 var textbox = 0 #variável que armazena informações sobre a caixa de texto
 var indexMundoAberto = 0 #variável que armazena o index do mundo aberto
 var indexPrefeitura = 9 #variável que determina a pergunta a ser chamada na prefeitura
@@ -25,7 +25,7 @@ var mudo = 0 #variável que controla a reprodução ou não do som
 var subiuRua = 0 #variável que determina se o presidente chegou ao mundo aberto passando pelo mundo aberto ou pelo menu
 
 
-var fase = 1
+var fase = "sul"
 var quiz = null
 
 

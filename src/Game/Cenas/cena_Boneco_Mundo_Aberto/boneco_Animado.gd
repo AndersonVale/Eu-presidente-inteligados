@@ -2,14 +2,30 @@ extends KinematicBody2D
 
 const VEL = 80
 
-var posicao_vertical_inicial =  Global.posicao_vertical
-var posicao_horizontal_inicial = Global.posicao_horizontal
+export(NodePath) var posicao_inicial
+
+var posicao_vertical_inicial
+var posicao_horizontal_inicial
+
 onready var animationPlayer = $AnimationPlayer
 
+func _ready():
+
+	if posicao_inicial:
+		if !Global.posicao_horizontal:
+			Global.posicao_horizontal = get_node(posicao_inicial).global_position.x
+			Global.posicao_vertical = get_node(posicao_inicial).global_position.y
+
+	global_position.x = Global.posicao_horizontal
+	global_position.y = Global.posicao_vertical
+
+
 func _physics_process(_delta):
-	var vetor_entrada=Vector2.ZERO
-	Global.posicao_horizontal = self.position.x
-	Global.posicao_vertical = self.position.y
+	
+	var vetor_entrada = Vector2.ZERO
+	
+	Global.posicao_horizontal = global_position.x
+	Global.posicao_vertical = global_position.y
 
 	#Movimentação do personagem
 	if Input.is_action_pressed("ui_down") and vetor_entrada.x == 0:
@@ -45,7 +61,5 @@ func _physics_process(_delta):
 		move_and_slide(vetor_entrada*0) #para o personagem quando entrar em contato com uma textbox
 		animationPlayer.play("idleTop") #fixa a posição do personagem virado para cima quando iniciar um diálogo
 
-func _ready():
-	self.position.x = posicao_horizontal_inicial 
-	self.position.y = posicao_vertical_inicial
-	pass
+
+
