@@ -4,6 +4,9 @@ onready var texto_container = $caixaDeTexto
 onready var iniciar = $caixaDeTexto/MarginContainer/HBoxContainer/asterisco
 onready var finalizar = $caixaDeTexto/MarginContainer/HBoxContainer/proximo
 onready var texto = $caixaDeTexto/MarginContainer/HBoxContainer/texto
+
+signal texto_completo
+
 #estados da text box
 enum State {
 	PRONTO,
@@ -20,17 +23,18 @@ func _txt():
 	return
 
 	if id_npc == 0 and false:
-		#print("Estado inicial: State.PRONTO")
-		hide_textbox()
-		fila_texto("???: Olá, Presidente! Aperte a barra de espaço para continuar falando comigo")
-		fila_texto("Presidente: Presidente? onde eu estou????")
-		fila_texto("???: Como assim? Você é o presidente hoje é primeiro dia do seu mandato, não lembra?")
-		fila_texto("Presidente: Pare com essas brincadeiras, onde eu estou e quem é você?")
-		fila_texto("???: Oh, desculpe por não me apresentar, meu nome é Ana")
-		fila_texto("Ana: Acho que seu problema de memória te afetou novamente...")
-		fila_texto("Presidente: É, eu realmente tenho problema de memória, acho que tinha esquecido disso também...")
-		fila_texto("Ana: Senhor presidente, mesmo com memória ou não, noss país está cheio de problemas e você deve trabalhar duro para nos ajudar....")
-		fila_texto("Ana: Que tal começar pela região Sul?")
+		pass
+#		#print("Estado inicial: State.PRONTO")
+#		hide_textbox()
+#		fila_texto("???: Olá, Presidente! Aperte a barra de espaço para continuar falando comigo")
+#		fila_texto("Presidente: Presidente? onde eu estou????")
+#		fila_texto("???: Como assim? Você é o presidente hoje é primeiro dia do seu mandato, não lembra?")
+#		fila_texto("Presidente: Pare com essas brincadeiras, onde eu estou e quem é você?")
+#		fila_texto("???: Oh, desculpe por não me apresentar, meu nome é Ana")
+#		fila_texto("Ana: Acho que seu problema de memória te afetou novamente...")
+#		fila_texto("Presidente: É, eu realmente tenho problema de memória, acho que tinha esquecido disso também...")
+#		fila_texto("Ana: Senhor presidente, mesmo com memória ou não, noss país está cheio de problemas e você deve trabalhar duro para nos ajudar....")
+#		fila_texto("Ana: Que tal começar pela região Sul?")
 
 
 #	if id_npc == 1:
@@ -68,6 +72,7 @@ func _txt():
 #		hide_textbox()
 #		fila_texto("Pablo: Oi! está perdendo muitos pontos durante as problemáticas?")
 #		fila_texto("Pablo: Caso deseje tentar recuperar seus pontos, entre na porta ao lado e jogue o minigame!")
+	
 	elif id_npc == 3 and Global.venceu_minigame == 1 and false:
 		print("Estado inicial: State.PRONTO")
 		hide_textbox()
@@ -145,26 +150,28 @@ func _txt():
 #			hide_textbox()
 #			fila_texto("Thainá: Presidente, repense suas deisões")
 #
-	if id_npc == 6 and false:
-		print("Estado inicial: State.PRONTO")
-		hide_textbox()
-		fila_texto("Mario: Olá senhor presidente")
-		fila_texto("Mario: Sou o prefeito desta cidade!")
-		fila_texto("Mario: Precisamos conversar, sente-se na cadeira, por favor!")
-	if id_npc == 7 and false:
-		print("Estado inicial: State.PRONTO")
-		hide_textbox()
-		fila_texto("Eliza: Olá senhor presidente")
-		fila_texto("Eliza: Preciso da sua ajuda para orientar os alunos da nossa escola!")
-		fila_texto("Eliza: Sente-se na cadeira porque já vamos começar nossa aula.")
+#	if id_npc == 6 and false:
+#		print("Estado inicial: State.PRONTO")
+#		hide_textbox()
+#		fila_texto("Mario: Olá senhor presidente")
+#		fila_texto("Mario: Sou o prefeito desta cidade!")
+#		fila_texto("Mario: Precisamos conversar, sente-se na cadeira, por favor!")
+
+
+#	if id_npc == 7 and false:
+#		print("Estado inicial: State.PRONTO")
+#		hide_textbox()
+#		fila_texto("Eliza: Olá senhor presidente")
+#		fila_texto("Eliza: Preciso da sua ajuda para orientar os alunos da nossa escola!")
+#		fila_texto("Eliza: Sente-se na cadeira porque já vamos começar nossa aula.")
 #
-	if id_npc == 8 and false:
-		print("Estado inical: State.Pronto")
-		hide_textbox()
-		fila_texto("Caio: Olá, Presidente, trabalho nesse mercado há alguns anos")
-		fila_texto("Caio: Depois que a gerencia foi trocada, comecei a ver algumas coisas estranhas")
-		fila_texto("Caio: Vá para a nossa peixaria para que possamos conversar melhor.")
-	
+#	if id_npc == 8 and false:
+#		print("Estado inical: State.Pronto")
+#		hide_textbox()
+#		fila_texto("Caio: Olá, Presidente, trabalho nesse mercado há alguns anos")
+#		fila_texto("Caio: Depois que a gerencia foi trocada, comecei a ver algumas coisas estranhas")
+#		fila_texto("Caio: Vá para a nossa peixaria para que possamos conversar melhor.")
+#
 #	if id_npc == 11 and Global.indexPrefeitura != 10 and false:
 #		print("Estado inicial: State.PRONTO")
 #		hide_textbox()
@@ -185,6 +192,13 @@ func _txt():
 
 
 func _process(_delta):
+
+	if texto.percent_visible == 1:
+		finalizar.text = "v"
+	else:
+		finalizar.text = ""
+
+
 	match estado_atual:
 		State.INATIVO:
 			Global.textbox = 0
@@ -197,21 +211,21 @@ func _process(_delta):
 			Global.textbox = 1
 			if Input.is_action_just_pressed("ui_accept"):
 				if texto.percent_visible == 1:
-					#print("proximo")
 					Global.textbox = 1
 					mudar_estado(State.PRONTO)
 					hide_textbox()
 				else:
 					texto.percent_visible = 1.0
 					$Tween.remove_all()
-					finalizar.text = "v"
 					mudar_estado(State.TERMINADO)
-
 		State.TERMINADO:
 			Global.textbox = 1
 			if Input.is_action_just_pressed("ui_accept"):
 				mudar_estado(State.PRONTO)
-				hide_textbox()
+				if texto_fila.empty():
+					hide_textbox()
+					emit_signal("texto_completo")
+
 
 
 #função passar para o proximo texto
@@ -225,10 +239,12 @@ func hide_textbox():
 	texto.text = ""
 	texto_container.hide()
 
+
 #função mostrar a text box
 func show_textbox():
 	iniciar.text = "*"
 	texto_container.show()
+
 
 #função mostrar texto dentro da text box
 func mostrar_texto():
@@ -243,80 +259,84 @@ func mostrar_texto():
 
 #Printar o estado atual no terminal
 func mudar_estado(proximo_estado):
+	set_process(true)
 	estado_atual = proximo_estado
-	match estado_atual:
-		State.PRONTO:
-			print("Estado atual: PRONTO")
-		State.LENDO:
-			print("Estado atual: LENDO")
-		State.TERMINADO:
-			print("Estado atual: TERMINADO")
-		State.INATIVO:
-			print("Estado atual: INATIVO")
+#	match estado_atual:
+#		State.PRONTO:
+#			print("Estado atual: PRONTO")
+#		State.LENDO:
+#			print("Estado atual: LENDO")
+#		State.TERMINADO:
+#			print("Estado atual: TERMINADO")
+#		State.INATIVO:
+#			print("Estado atual: INATIVO")
+
 
 
 #Mudar estado para terminado após o text box ser lido completamente
-func _on_Tween_tween_all_completed(_object, _key):
-	finalizar.text = "v"
-	mudar_estado(State.INATIVO)
+#func _on_Tween_tween_all_completed(_object, _key):
+#	finalizar.text = "v"
+#	mudar_estado(State.INATIVO)
+#	print("terminou texto")
+#
+##Ativar o texto ao entrar em uma area 2d
+#func _on_ativar_body_entered(_body):
+#	id_npc = 0
+#	mudar_estado(State.PRONTO)
+#	_txt()
+#
+#func _on_NPC_body_entered(_body):
+#	id_npc = 1
+#	mudar_estado(State.PRONTO)
+#	_txt()
+#
+#func _on_NPC1_body_entered(_body):
+#	id_npc = 2
+#	mudar_estado(State.PRONTO)
+#	_txt()
+#
+#func _on_NPC8_body_entered(_body):
+#	id_npc = 3
+#	mudar_estado(State.PRONTO)
+#	_txt()
+#
+#func _on_NPC9_body_entered(_body):
+#	id_npc = 4
+#	mudar_estado(State.PRONTO)
+#	_txt()
+#
+#func _on_NPC4_body_entered(_body):
+#	id_npc = 5
+#	mudar_estado(State.PRONTO)
+#	_txt()
+#
+#func _on_npc3_body_entered(_body):
+#	id_npc = 6
+#	mudar_estado(State.PRONTO)
+#	_txt()
+#
+#func _on_Area2D3_body_entered(_body):
+#	id_npc = 7
+#	mudar_estado(State.PRONTO)
+#	_txt()
+#
+#func _on_NPC6_2_body_entered(_body):
+#	id_npc = 8
+#	mudar_estado(State.PRONTO)
+#	_txt()
+#
+#func _on_Caramelo_body_entered(_body):
+#	id_npc = 9
+#	mudar_estado(State.PRONTO)
+#	_txt()
+#
+#func _on_Agradecimento_body_entered(_body):
+#	id_npc = 10
+#	mudar_estado(State.PRONTO)
+#	_txt()
+#
+#func _on_NPC2e3_body_entered(body):
+#	id_npc = 11
+#	mudar_estado(State.PRONTO)
+#	_txt()
 
-#Ativar o texto ao entrar em uma area 2d
-func _on_ativar_body_entered(_body):
-	id_npc = 0
-	mudar_estado(State.PRONTO)
-	_txt()
-
-func _on_NPC_body_entered(_body):
-	id_npc = 1
-	mudar_estado(State.PRONTO)
-	_txt()
-
-func _on_NPC1_body_entered(_body):
-	id_npc = 2
-	mudar_estado(State.PRONTO)
-	_txt()
-
-func _on_NPC8_body_entered(_body):
-	id_npc = 3
-	mudar_estado(State.PRONTO)
-	_txt()
-
-func _on_NPC9_body_entered(_body):
-	id_npc = 4
-	mudar_estado(State.PRONTO)
-	_txt()
-
-func _on_NPC4_body_entered(_body):
-	id_npc = 5
-	mudar_estado(State.PRONTO)
-	_txt()
-
-func _on_npc3_body_entered(_body):
-	id_npc = 6
-	mudar_estado(State.PRONTO)
-	_txt()
-
-func _on_Area2D3_body_entered(_body):
-	id_npc = 7
-	mudar_estado(State.PRONTO)
-	_txt()
-
-func _on_NPC6_2_body_entered(_body):
-	id_npc = 8
-	mudar_estado(State.PRONTO)
-	_txt()
-
-func _on_Caramelo_body_entered(_body):
-	id_npc = 9
-	mudar_estado(State.PRONTO)
-	_txt()
-
-func _on_Agradecimento_body_entered(_body):
-	id_npc = 10
-	mudar_estado(State.PRONTO)
-	_txt()
-
-func _on_NPC2e3_body_entered(body):
-	id_npc = 11
-	mudar_estado(State.PRONTO)
-	_txt()

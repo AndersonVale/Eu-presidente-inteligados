@@ -13,7 +13,7 @@ func _ready():
 	connect("body_entered" , self , "on_player_entered")
 
 func on_player_entered(body):
-	#print("NPC colidiu com:" + body.name)
+	print("NPC colidiu com:" + body.name)
 	if npc_texto:
 			npc_texto.hide_textbox()
 			var pergunta = Mensagens.perguntaRegiaoAtual(tipo)

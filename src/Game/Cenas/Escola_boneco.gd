@@ -2,7 +2,8 @@ extends KinematicBody2D
 
 onready var animationPlayer = $AnimationPlayer
 
-
+func _ready():
+	$Sprite.texture = load(Global.skins[Global.skin])
 
 func _physics_process(_delta):
 	var vetor_entrada=Vector2.ZERO

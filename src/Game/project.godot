@@ -26,7 +26,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="template_constituicao"
+config/name="Eu Presidente"
 run/main_scene="res://Cenas/cena_Menu/cena_Menu.tscn"
 config/icon="res://icon.png"
 

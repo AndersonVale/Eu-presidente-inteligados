@@ -7,10 +7,13 @@ export(NodePath) var posicao_inicial
 var posicao_vertical_inicial
 var posicao_horizontal_inicial
 
+
+
+
 onready var animationPlayer = $AnimationPlayer
 
 func _ready():
-
+	$Sprite.texture = load(Global.skins[Global.skin])
 	if posicao_inicial:
 		if !Global.posicao_horizontal:
 			Global.posicao_horizontal = get_node(posicao_inicial).global_position.x

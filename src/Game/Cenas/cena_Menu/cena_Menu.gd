@@ -31,7 +31,7 @@ func _on_iniciar_Botao_pressed():
 	Global.acertouEscola = 0#variável que determina se ele acertou a pergunta da escola
 	Global.acertouMercado = 0#variável que determina se ele acertou a pergunta do mercado
 
-	get_tree().change_scene("res://Cenas/cena_Cutscene/cutscene.tscn")
+	get_tree().change_scene("res://Cenas/escolha_skin.tscn")
 
 func _on_carregar_Botao_pressed():
 	if Global.reiniciar == 1:

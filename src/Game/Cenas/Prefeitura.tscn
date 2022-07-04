@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Cenas/npc_Txt_Box/caixa_texto.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/cena_Hud/HUD.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Imagens/NPC/npc3.png" type="Texture" id=9]
 [ext_resource path="res://Imagens/TileMap/out.png" type="Texture" id=10]
 [ext_resource path="res://Imagens/NPC/avatar1_Oficial.png" type="Texture" id=11]
+[ext_resource path="res://Cenas/cena_Mundo_Aberto/NPC.gd" type="Script" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=27]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -786,9 +787,13 @@ position = Vector2( 0, -1 )
 
 [node name="npc3" type="Area2D" parent="."]
 position = Vector2( 74, 64 )
+collision_layer = 4
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
 }
+npc_texto = NodePath("../NPC_texto")
+mensagens = PoolStringArray( "Mario: Olá senhor presidente", "Mario: Sou o prefeito desta cidade!", "Mario: Precisamos conversar, sente-se na cadeira, por favor!" )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="npc3"]
 position = Vector2( -1, 1 )

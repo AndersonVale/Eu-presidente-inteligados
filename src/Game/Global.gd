@@ -23,10 +23,17 @@ var contador_easter_egg = 0 #variável que deterimina quando o easter egg será 
 var reiniciar = 0 #variável que determina se o jogo pode ser reiniciado
 var mudo = 0 #variável que controla a reprodução ou não do som
 var subiuRua = 0 #variável que determina se o presidente chegou ao mundo aberto passando pelo mundo aberto ou pelo menu
-
+var skin = 3
 
 var fase = "sul"
 var quiz = null
+
+var skins = [
+	"res://Imagens/NPC/avatar1_Oficial.png",
+	"res://Imagens/NPC/npc_garoto_negro.png",
+	"res://Imagens/NPC/npc_garota_negra.png",
+	"res://Imagens/NPC/npc_garota_branca.png"
+]
 
 
 func setContador(val):
