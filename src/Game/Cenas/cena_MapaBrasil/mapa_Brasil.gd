@@ -1,5 +1,7 @@
 extends Node2D
 
+var podeAcessar = false
+
 func _ready(): #muta o jogo
 #	if Global.mudo == 1:
 #		$AudioStreamPlayer2D.stop()
@@ -12,17 +14,21 @@ func _ready(): #muta o jogo
 func on_regiao_entered(regiao):
 	
 	$mapas_text.text = regiao.nome
+	
+	podeAcessar = !regiao.id_anterior || regiao.id_anterior.completa()
 
-	if  !regiao.id_anterior || regiao.id_anterior.completa():
+	if  podeAcessar:
 		$mapas_text.text = "Pressione barra de espaço para jogar!"
 		regiao.hilight()
 		Global.fase = regiao.id
+		$blip.play()
 	else:
 		$mapas_text.text = "Região " + regiao.nome + " bloqueada..."
 		Global.fase = null
 
 		
 func on_regiao_exited(regiao):
+	podeAcessar = false
 	regiao.downlight()
 	Global.fase = null
 	$mapas_text.text = "Use as setas para viajar pelo Brasil!"
@@ -83,7 +89,11 @@ func on_regiao_exited(regiao):
 #	$mapas_text.text = "Use as setas para viajar pelo Brasil!"
 
 func _process(_delta):
-	if Input.is_action_pressed("ui_accept") and Global.fase:
+	
+	$Space.visible = bool(podeAcessar)
+	
+	
+	if Input.is_action_pressed("ui_accept") and Global.fase and podeAcessar:
 		$aviao.connect("area_entered" , self , "on_regiao_entered")
 		$aviao.disconnect("area_exited", self , "on_regiao_exited")
 		

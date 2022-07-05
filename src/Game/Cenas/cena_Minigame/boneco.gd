@@ -8,12 +8,14 @@ var motion = Vector2() #Vector2 é um tipo que aceita dois números do tipo floa
 var audio = 1
 var tempo = 0
 var perdeu = false
+var timeInAir = 0
 
 
 func _ready():
 	$AnimationPlayer.play("idleRight")
 	Global.colidiu = 0
-	Global.posicao_vertical += 42
+	#Global.posicao_vertical += 18
+	$Sprite.texture = load(Global.skins[Global.skin])
 
 func _physics_process(delta):
 	if Global.colidiu == 1:
@@ -21,8 +23,7 @@ func _physics_process(delta):
 		motion.x = 0
 	else:
 		motion.y+= gravidade #aumento gradual da gravidade enquanto não há contato com o solo
-	
-	
+
 	if Input.is_action_pressed("ui_right") and Global.colidiu == 0: #movimentaçãoo para a direita
 		motion.x = velocidade
 		if is_on_floor():
@@ -42,9 +43,14 @@ func _physics_process(delta):
 		$AnimationPlayer.play("idleLeft")
 	if Input.is_action_just_released("ui_right"):
 		$AnimationPlayer.play("idleRight")
+		
+	if !is_on_floor():
+		timeInAir += delta
+	else:
+		timeInAir = 0
 
-	if is_on_floor(): #Verifica se o avatar está em contato com o chão
-		if Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_accept") and Global.colidiu == 0:
+	if is_on_floor() or timeInAir <= .15: #Verifica se o avatar está em contato com o chão
+		if Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("ui_accept") and Global.colidiu == 0:
 			motion.y = forca_pulo
 			$AudioStreamPlayer2D.stream = load("res://Audio/jump_01.wav")
 			if Global.mudo == 0:
@@ -57,12 +63,12 @@ func _physics_process(delta):
 	if motion.y >= 2000:
 		$game_over.play() #Sprite de game over
 		$Sprite.hide() #esconde o personagem para não interferir na sprite
+		Mensagens.perguntaRegiaoAtual("minigame1").respondido = true
 		
 
 	if motion.y >= 4000:
 		get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn") #quando o personagem cai por muito tempo, encerra o jogo
-		
-		
+
 	tempo += delta 
 	
 	for index in get_slide_count():
@@ -72,8 +78,12 @@ func _physics_process(delta):
 			perderJogo()
 
 func perderJogo():
+	if perdeu:
+		return
+	perdeu = true
 	$game_over.play()
 	$explosao.show()
+	Mensagens.perguntaRegiaoAtual("minigame1").respondido = true
 	yield(get_tree().create_timer(1.5), "timeout")
 	get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
 

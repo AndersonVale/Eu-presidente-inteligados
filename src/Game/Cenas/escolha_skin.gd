@@ -17,9 +17,11 @@ func _process(delta):
 	
 	if Input.is_action_just_pressed("right"):
 		selection += 1
+		$blip.play()
 		
 	if Input.is_action_just_pressed("left"):
 		selection -= 1
+		$blip.play()
 		
 	selection = clamp(selection , 0 , 3)
 	

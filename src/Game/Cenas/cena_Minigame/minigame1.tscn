@@ -250,7 +250,7 @@ position = Vector2( 12, -19 )
 shape = SubResource( 6 )
 
 [node name="Camera2D" type="Camera2D" parent="Boneco"]
-position = Vector2( 12, -12 )
+position = Vector2( 37, 172 )
 current = true
 
 [node name="Sprite" type="Sprite" parent="Boneco"]
@@ -1655,7 +1655,10 @@ texture = ExtResource( 2 )
 stream = ExtResource( 10 )
 volume_db = -10.0
 
-[node name="wasd" parent="." instance=ExtResource( 1 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="wasd" parent="CanvasLayer" instance=ExtResource( 1 )]
+position = Vector2( 0, 48 )
 
 [connection signal="input_event" from="Boneco" to="Boneco" method="_on_Boneco_input_event"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

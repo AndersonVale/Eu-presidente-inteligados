@@ -5855,7 +5855,7 @@ __meta__ = {
 "_edit_group_": true
 }
 npc_texto = NodePath("../NPC_texto")
-mensagens = PoolStringArray( "Pablo: Oi! está perdendo muitos pontos durante as problemáticas\?", "Pablo: Caso deseje tentar recuperar seus pontos, entre na porta ao lado e jogue o minigame!" )
+tipo = "minigame1"
 
 [node name="Npc8" type="Sprite" parent="NPC8"]
 position = Vector2( 1.99998, 2 )
@@ -6346,6 +6346,7 @@ position = Vector2( 523, -165 )
 
 [node name="pos_6" type="Position2D" parent="posicoes"]
 
+[connection signal="body_entered" from="porta-minigame" to="." method="_on_portaminigame_body_entered"]
 [connection signal="body_entered" from="Quiz_prefeitura" to="." method="_on_Area2D4_body_entered"]
 [connection signal="body_entered" from="Quiz_escola" to="." method="_on_Area2D2_body_entered"]
 [connection signal="body_entered" from="Quiz_mercado" to="." method="_on_mercado_body_entered"]

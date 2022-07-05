@@ -18,6 +18,10 @@ var estado_atual = State.INATIVO
 var texto_fila = []
 var id_npc = 0
 #fila de textos
+
+func _ready():
+	pass
+
 func _txt():
 
 	return
@@ -73,17 +77,17 @@ func _txt():
 #		fila_texto("Pablo: Oi! está perdendo muitos pontos durante as problemáticas?")
 #		fila_texto("Pablo: Caso deseje tentar recuperar seus pontos, entre na porta ao lado e jogue o minigame!")
 	
-	elif id_npc == 3 and Global.venceu_minigame == 1 and false:
-		print("Estado inicial: State.PRONTO")
-		hide_textbox()
-		fila_texto("Pablo: Não posso acreditar! Você venceu mesmo o minigame!")
-		fila_texto("Pablo: Parabéns! Estou sem palavras! Poucos dos que tentaram conseguiram vencer esse desafio!")
-	elif id_npc == 3 and Global.venceu_minigame == 2 and false:
-		print("Estado inicial: State.PRONTO")
-		hide_textbox()
-		fila_texto("Pablo: Você quase conseguiu, presidente! Continue tentando!")
-		fila_texto("Pablo: Tenho certeza que você vencerá em uma outra tentativa!")
-	
+#	elif id_npc == 3 and Global.venceu_minigame == 1 and false:
+#		print("Estado inicial: State.PRONTO")
+#		hide_textbox()
+#		fila_texto("Pablo: Não posso acreditar! Você venceu mesmo o minigame!")
+#		fila_texto("Pablo: Parabéns! Estou sem palavras! Poucos dos que tentaram conseguiram vencer esse desafio!")
+#	elif id_npc == 3 and Global.venceu_minigame == 2 and false:
+#		print("Estado inicial: State.PRONTO")
+#		hide_textbox()
+#		fila_texto("Pablo: Você quase conseguiu, presidente! Continue tentando!")
+#		fila_texto("Pablo: Tenho certeza que você vencerá em uma outra tentativa!")
+#
 	if id_npc == 9  and Global.contador_easter_egg == 9 and false:
 		print("Estado inicial: State.PRONTO")
 		hide_textbox()
@@ -214,10 +218,14 @@ func _process(_delta):
 					Global.textbox = 1
 					mudar_estado(State.PRONTO)
 					hide_textbox()
+					if texto_fila.empty():
+						hide_textbox()
+						emit_signal("texto_completo")
 				else:
 					texto.percent_visible = 1.0
 					$Tween.remove_all()
 					mudar_estado(State.TERMINADO)
+					
 		State.TERMINADO:
 			Global.textbox = 1
 			if Input.is_action_just_pressed("ui_accept"):

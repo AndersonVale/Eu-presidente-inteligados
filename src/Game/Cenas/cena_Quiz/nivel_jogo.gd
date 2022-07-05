@@ -14,11 +14,40 @@ onready var audio_pergunta := $informacao_pergunta/Panel/audio_pergunta
 
 onready var pergunta = Mensagens.perguntaRegiaoAtual(Global.quiz)
 
+var opcao = 1
+var oldOpcao = opcao
+var respondeu = false
+
 func _ready() -> void:
 	for _button in $resposta.get_children():
 		buttons.append(_button)
 	Global.stop = 0  #retorna ao estado inicial quando a cena é chamada
 	load_quiz()
+
+func _process(delta):
+	$hud/Space.visible =  $Sprite.escolher_esquerda
+	$Caneta.global_position = get_node("posCaneta"+str(opcao)).global_position
+	
+
+	if $Sprite.escolher_esquerda:
+		if Input.is_action_just_pressed("down"):
+			opcao += 1
+
+		if Input.is_action_just_pressed("up"):
+			opcao -= 1
+
+		if Input.is_action_just_pressed("ui_accept") and !pergunta.respondido:
+				buttons_answer(opcao - 1)
+		
+		
+		opcao = clamp(opcao , 1 , 2)
+		
+		if oldOpcao != opcao:
+			$blip.play()
+
+		oldOpcao = opcao
+		
+		
 
 func load_quiz() -> void:
 	
@@ -32,7 +61,7 @@ func load_quiz() -> void:
 	for i in buttons.size():
 		#buttons[i].text = str(db_perguntas.db[Global.index].opcoes[i])
 		buttons[i].text = str(pergunta.alternativas[i])
-		buttons[i].connect("pressed", self, "buttons_answer", [i])
+		#buttons[i].connect("pressed", self, "buttons_answer", [i])
 		
 		
 		
@@ -59,8 +88,15 @@ func load_quiz() -> void:
 	
 # Determina a cor do botão de acordo com a resposta
 func buttons_answer(indice) -> void:
-	
+
+	#$pencil_write.play()
 	pergunta.respondido = true
+	
+	respondeu = true
+	
+	get_node("stroke" + str(indice + 1)).start()
+	
+	$Caneta.visible = false
 	
 	if indice == pergunta.correta:
 		Global.contador += pergunta.valorAcerto
@@ -71,6 +107,8 @@ func buttons_answer(indice) -> void:
 		Global.contador += pergunta.valorErro 
 	
 	Global.respondeuPergunta()
+	
+	
 #	if Global.index != Global.indexEscola and Global.index != Global.indexMercado and Global.index != Global.indexPrefeitura:
 #	#detecta se o corpo está dentro de um espaço fechado, para haver alteração entre a mecânica do jogo
 #		if db_perguntas.db[Global.index].correct == button.text and Global.contador < 10 and Global.stop == 0:
@@ -125,12 +163,12 @@ func buttons_answer(indice) -> void:
 	audio_pergunta.stop()
 	audio_pergunta.stop()
 
-	yield(get_tree().create_timer(.5), "timeout") #determina um certo tempo até a próxima cena ser chamada
+	yield(get_tree().create_timer(2), "timeout") #determina um certo tempo até a próxima cena ser chamada
 
-	for bt in buttons:  #desabilita botoes
-		#bt.modulate = Color.white
-		bt.disconnect("pressed", self, "buttons_answer")
-		
+#	for bt in buttons:  #desabilita botoes
+#		#bt.modulate = Color.white
+#		bt.disconnect("pressed", self, "buttons_answer")
+	
 	audio_pergunta.stream = null
 	video_pergunta.stream =  null
 	
@@ -141,16 +179,16 @@ func buttons_answer(indice) -> void:
 #Voltar para o mundo aberto
 	get_tree().change_scene("res://Cenas/cena_Explicacao/cena_Explicacao.tscn")
 
-func _on_opcao1_pressed():
-	if Global.mudo == 0: 
-		$AudioStreamPlayer1.stream = load("res://Audio/pencil_write.ogg")
-		$AudioStreamPlayer1.play()
-	else: 
-		$AudioStreamPlayer1.stop()
-func _on_opcao2_pressed():
-	if Global.mudo == 0: 
-		$AudioStreamPlayer1.stream = load("res://Audio/pencil_write.ogg")
-		$AudioStreamPlayer1.play()
-	else: 
-		$AudioStreamPlayer1.stop()
+#func _on_opcao1_pressed():
+#	if Global.mudo == 0: 
+#		$AudioStreamPlayer1.stream = load("res://Audio/pencil_write.ogg")
+#		$AudioStreamPlayer1.play()
+#	else: 
+#		$AudioStreamPlayer1.stop()
+#func _on_opcao2_pressed():
+#	if Global.mudo == 0: 
+#		$AudioStreamPlayer1.stream = load("res://Audio/pencil_write.ogg")
+#		$AudioStreamPlayer1.play()
+#	else: 
+#		$AudioStreamPlayer1.stop()
 		

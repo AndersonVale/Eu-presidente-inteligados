@@ -1,7 +1,7 @@
 extends Area2D
 
 export(NodePath) var npc_texto
-export(String , "mercado", "escola", "prefeitura", "comum") var tipo = "comum"
+export(String , "mercado", "escola", "prefeitura", "minigame1" , "comum") var tipo = "comum"
 export(PoolStringArray) var mensagens
 export(PoolStringArray) var mensagens_acertou
 export(PoolStringArray) var mensagens_errou

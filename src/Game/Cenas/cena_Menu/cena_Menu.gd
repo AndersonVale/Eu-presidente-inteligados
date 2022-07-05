@@ -1,5 +1,6 @@
 extends Control
 
+var bus_id
 
 func _ready(): #play na logo do jogo
 	$inteligados_logo.play("inteligados")
@@ -53,14 +54,19 @@ func _on_carregar_Botao_mouse_exited():
 func _on_sair_Botao_mouse_exited():
 	$MenuItem4.modulate = Color.white
 
+func _process(delta):
+	bus_id = AudioServer.get_bus_index("Master")
+	$AnimatedSprite.frame = bool(AudioServer.is_bus_mute(bus_id))
 
 func _on_Button_pressed(): #mutar o jogo
-	if Global.mudo == 0:
-		Global.mudo = 1
-		$menuSoundtrack.stop()
-		$AnimatedSprite.frame = 1
-	else:
-		Global.mudo == 1
-		Global.mudo = 0
-		$menuSoundtrack.play()
-		$AnimatedSprite.frame = 0 
+	
+	AudioServer.set_bus_mute(bus_id, !AudioServer.is_bus_mute(bus_id))
+#	if Global.mudo == 0:
+#		Global.mudo = 1
+#		$menuSoundtrack.stop()
+#		$AnimatedSprite.frame = 1
+#	else:
+#		Global.mudo == 1
+#		Global.mudo = 0
+#		$menuSoundtrack.play()
+#		$AnimatedSprite.frame = 0 

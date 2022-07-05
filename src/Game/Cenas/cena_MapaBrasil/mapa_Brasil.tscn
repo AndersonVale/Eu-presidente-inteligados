@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Cenas/wasd_Teclas.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Font/MEGAMAN10.ttf" type="DynamicFontData" id=2]
@@ -20,6 +20,9 @@
 [ext_resource path="res://Imagens/MapaBrasil/centro.png" type="Texture" id=18]
 [ext_resource path="res://Imagens/MapaBrasil/sul_cinza.png" type="Texture" id=19]
 [ext_resource path="res://Cenas/cena_MapaBrasil/regiao.gd" type="Script" id=20]
+[ext_resource path="res://Audio/plane.wav" type="AudioStream" id=21]
+[ext_resource path="res://Audio/562773__bionn__sync-blip.wav" type="AudioStream" id=22]
+[ext_resource path="res://Imagens/Teclado/space.png" type="Texture" id=23]
 
 [sub_resource type="Shader" id=10]
 code = "shader_type canvas_item;
@@ -205,7 +208,7 @@ frames = SubResource( 6 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sul"]
 position = Vector2( 64.058, 60.8677 )
 scale = Vector2( 0.898723, 0.898723 )
-polygon = PoolVector2Array( 631, 510, 641, 511, 645, 509, 649, 512, 654, 511, 658, 513, 665, 514, 671, 515, 677, 518, 680, 519, 682, 523, 686, 527, 687, 536, 693, 541, 696, 545, 701, 552, 701, 562, 696, 566, 696, 570, 698, 576, 699, 584, 699, 592, 697, 600, 697, 610, 691, 613, 686, 619, 685, 622, 682, 622, 680, 626, 679, 629, 676, 632, 670, 645, 663, 653, 653, 661, 647, 669, 646, 673, 642, 677, 638, 680, 634, 685, 632, 688, 626, 693, 623, 686, 625, 681, 622, 676, 617, 669, 614, 664, 608, 660, 603, 659, 594, 655, 591, 650, 586, 651, 583, 650, 580, 645, 575, 639, 573, 637, 566, 638, 564, 635, 571, 629, 578, 621, 582, 617, 581, 614, 590, 607, 595, 601, 606, 596, 618, 587, 623, 577, 620, 568, 616, 559, 611, 550, 610, 544, 611, 537, 614, 531, 617, 526, 622, 522, 626, 517 )
+polygon = PoolVector2Array( 631, 510, 641, 511, 645.296, 510.872, 649, 512, 654.197, 511.985, 658, 513, 665, 514, 671, 515, 677, 518, 680, 519, 682, 523, 686, 527, 687, 536, 693, 541, 696, 545, 701, 552, 701, 562, 696, 566, 696, 570, 698, 576, 699, 584, 699, 592, 697, 600, 697, 610, 691, 613, 686, 619, 685, 622, 682, 622, 680, 626, 679, 629, 676, 632, 670, 645, 663, 653, 653, 661, 647, 669, 646, 673, 642, 677, 638, 680, 634, 685, 632, 688, 626, 693, 623, 686, 625, 681, 622, 676, 617, 669, 614, 664, 608, 660, 603, 659, 594, 655, 591, 650, 586, 651, 583, 650, 580, 645, 575, 639, 573, 637, 566, 638, 564, 635, 571, 629, 578, 621, 582, 617, 581, 614, 590, 607, 595, 601, 606, 596, 618, 587, 623, 577, 620, 568, 616, 559, 611, 550, 610, 544, 611, 537, 614, 531, 617, 526, 622, 522, 626, 517 )
 
 [node name="aviao" type="Area2D" parent="."]
 position = Vector2( 183, 480 )
@@ -231,16 +234,22 @@ gravity = Vector2( 0, 0 )
 scale_amount_curve = SubResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="aviao"]
-position = Vector2( 14, 1 )
 rotation = 1.5708
 shape = SubResource( 5 )
 
+[node name="plane" type="AudioStreamPlayer" parent="aviao"]
+stream = ExtResource( 21 )
+pitch_scale = 0.37
+autoplay = true
+
 [node name="MenuItem2" type="Sprite" parent="."]
+visible = false
 position = Vector2( 1050, 48 )
 scale = Vector2( 0.198065, 0.08 )
 texture = ExtResource( 7 )
 
 [node name="mapas_text" type="Label" parent="."]
+visible = false
 margin_left = 836.001
 margin_top = 38.0
 margin_right = 1258.0
@@ -254,5 +263,12 @@ position = Vector2( 82, 619 )
 stream = ExtResource( 11 )
 
 [node name="wasd" parent="." instance=ExtResource( 1 )]
-offset = Vector2( 910, 40 )
-transform = Transform2D( 1, 0, 0, 1, 910, 40 )
+position = Vector2( 940, 15 )
+
+[node name="blip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
+
+[node name="Space" type="Sprite" parent="."]
+position = Vector2( 1118, 645 )
+scale = Vector2( 0.202581, 0.202581 )
+texture = ExtResource( 23 )

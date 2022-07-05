@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/416179__inspectorj__book-flipping-through-pages-a.wav-2283505fcf3e358648fd2e81ab20deae.sample"
+
+[deps]
+
+source_file="res://Audio/416179__inspectorj__book-flipping-through-pages-a.wav"
+dest_files=[ "res://.import/416179__inspectorj__book-flipping-through-pages-a.wav-2283505fcf3e358648fd2e81ab20deae.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

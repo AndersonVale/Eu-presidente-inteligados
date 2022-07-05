@@ -24,7 +24,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : -2,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" : true
 		},
 		"2" : {
 			"tipo" : Tipos.TEXTO,
@@ -44,7 +45,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : -2,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" : true
 		},
 		"3" : {
 			"tipo" : Tipos.TEXTO,
@@ -64,7 +66,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : -2,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},
 		"4" : {
 			"tipo" : Tipos.TEXTO,
@@ -86,7 +89,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : -2,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},
 		"5" : {
 			"tipo" : Tipos.TEXTO,
@@ -107,7 +111,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : -2,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},
 		"6" : {
 			"tipo" : Tipos.TEXTO,
@@ -127,7 +132,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : -2,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},
 		"mercado" : {
 			"tipo" : Tipos.TEXTO,
@@ -161,7 +167,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : 0,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},
 		"escola" : {
 			"tipo" : Tipos.TEXTO,
@@ -192,9 +199,10 @@ var textos = {
 			},
 			"correta" : 1,
 			"acertou" : false,
-			"valorAcerto" : 1,
-			"valorErro" : 0,
-			"respondido" : false
+			"valorAcerto" : 0,
+			"valorErro" : 1,
+			"respondido" : false,
+			"obrigatorio" :true,
 		},
 		"prefeitura" : {
 			"tipo" : Tipos.TEXTO,
@@ -224,9 +232,31 @@ var textos = {
 			"correta" : 0,
 			"acertou" : false,
 			"valorAcerto" : 1,
-			"valorErro" : 0,
-			"respondido" : false
+			"valorErro" : -1,
+			"respondido" : false,
+			"obrigatorio" :true
+		},
+		"minigame1" : {
+			"acertou" : false,
+			"pontos" : 0,
+			"respondido" : false,
+			"obrigatorio" : false,
+			"mensagens_npc":{
+				"neutro" : [
+					"Pablo: Oi! está perdendo muitos pontos durante as problemáticas?",
+					"Pablo: Caso deseje tentar recuperar seus pontos, entre na porta ao lado e jogue o minigame!"
+				], 
+				"acertou": [
+					"Pablo: Não posso acreditar! Você venceu mesmo o minigame!",
+					"Pablo: Parabéns! Estou sem palavras! Poucos dos que tentaram conseguiram vencer esse desafio!"
+				],
+				"errou" : [
+					"Pablo: Você quase conseguiu, presidente! Continue tentando!",
+					"Pablo: Tenho certeza que você vencerá em uma outra tentativa!"
+				]
+			}
 		}
+
 	}, "sudeste" : {
 		
 		"1" : {
@@ -244,7 +274,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : -2,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},"mercado" : {
 			"tipo" : Tipos.TEXTO,
 			"informacao" : "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?",
@@ -260,7 +291,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : 0,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},
 		"escola" : {
 			"tipo" : Tipos.TEXTO,
@@ -277,7 +309,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : 0,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},
 		"prefeitura" : {
 			"tipo" : Tipos.TEXTO,
@@ -294,7 +327,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : 0,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		}
 	
 		
@@ -315,7 +349,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : -2,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},"mercado" : {
 			"tipo" : Tipos.TEXTO,
 			"informacao" : "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?",
@@ -331,7 +366,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : 0,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},
 		"escola" : {
 			"tipo" : Tipos.TEXTO,
@@ -348,7 +384,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : 0,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},
 		"prefeitura" : {
 			"tipo" : Tipos.TEXTO,
@@ -365,7 +402,28 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : 0,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
+		},
+		"minigame1" : {
+			"acertou" : false,
+			"pontos" : 0,
+			"respondido" : false,
+			"obrigatorio" : false,
+			"mensagens_npc":{
+				"neutro" : [
+					"Pablo: Oi! está perdendo muitos pontos durante as problemáticas?",
+					"Pablo: Caso deseje tentar recuperar seus pontos, entre na porta ao lado e jogue o minigame!"
+				], 
+				"acertou": [
+					"Pablo: Não posso acreditar! Você venceu mesmo o minigame!",
+					"Pablo: Parabéns! Estou sem palavras! Poucos dos que tentaram conseguiram vencer esse desafio!"
+				],
+				"errou" : [
+					"Pablo: Você quase conseguiu, presidente! Continue tentando!",
+					"Pablo: Tenho certeza que você vencerá em uma outra tentativa!"
+				]
+			}
 		}
 		
 	}, "norte" : {
@@ -385,7 +443,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : -2,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},"mercado" : {
 			"tipo" : Tipos.TEXTO,
 			"informacao" : "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?",
@@ -401,7 +460,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : 0,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},
 		"escola" : {
 			"tipo" : Tipos.TEXTO,
@@ -418,7 +478,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : 0,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},
 		"prefeitura" : {
 			"tipo" : Tipos.TEXTO,
@@ -435,7 +496,28 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : 0,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
+		},
+		"minigame1" : {
+			"acertou" : false,
+			"pontos" : 0,
+			"respondido" : false,
+			"obrigatorio" : false,
+			"mensagens_npc":{
+				"neutro" : [
+					"Pablo: Oi! está perdendo muitos pontos durante as problemáticas?",
+					"Pablo: Caso deseje tentar recuperar seus pontos, entre na porta ao lado e jogue o minigame!"
+				], 
+				"acertou": [
+					"Pablo: Não posso acreditar! Você venceu mesmo o minigame!",
+					"Pablo: Parabéns! Estou sem palavras! Poucos dos que tentaram conseguiram vencer esse desafio!"
+				],
+				"errou" : [
+					"Pablo: Você quase conseguiu, presidente! Continue tentando!",
+					"Pablo: Tenho certeza que você vencerá em uma outra tentativa!"
+				]
+			}
 		}
 		
 	}, "nordeste" : {
@@ -455,7 +537,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : -2,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},"mercado" : {
 			"tipo" : Tipos.TEXTO,
 			"informacao" : "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?",
@@ -471,7 +554,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : 0,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},
 		"escola" : {
 			"tipo" : Tipos.TEXTO,
@@ -488,7 +572,8 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : 0,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
 		},
 		"prefeitura" : {
 			"tipo" : Tipos.TEXTO,
@@ -505,7 +590,28 @@ var textos = {
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : 0,
-			"respondido" : false
+			"respondido" : false,
+			"obrigatorio" :true
+		},
+		"minigame1" : {
+			"acertou" : false,
+			"pontos" : 0,
+			"respondido" : false,
+			"obrigatorio" : false,
+			"mensagens_npc":{
+				"neutro" : [
+					"Pablo: Oi! está perdendo muitos pontos durante as problemáticas?",
+					"Pablo: Caso deseje tentar recuperar seus pontos, entre na porta ao lado e jogue o minigame!"
+				], 
+				"acertou": [
+					"Pablo: Não posso acreditar! Você venceu mesmo o minigame!",
+					"Pablo: Parabéns! Estou sem palavras! Poucos dos que tentaram conseguiram vencer esse desafio!"
+				],
+				"errou" : [
+					"Pablo: Você quase conseguiu, presidente! Continue tentando!",
+					"Pablo: Tenho certeza que você vencerá em uma outra tentativa!"
+				]
+			}
 		}
 		
 	}
@@ -529,7 +635,20 @@ func perguntaRegiaoAtual(index):
 
 
 func regiaoCompleta(regiao):
-	return perguntasRespondidasRegiaoAtual(regiao) == textos[regiao].size()                                                                                                               
+	return perguntasRespondidasRegiaoAtual(regiao) == perguntasObrigatoriasRegiao(regiao)                                                                                                             
+
+func perguntasObrigatoriasRegiao(regiao):
+	var obrigatorias = 0
+	print(regiao)
+	for a in textos[regiao]:
+		if textos[regiao][a].obrigatorio:
+			obrigatorias += 1
+
+	return obrigatorias
+
+func perguntasObrigatoriasRegiaoAtual():
+	return perguntasObrigatoriasRegiao(Global.fase)
+	
 
 func perguntasRegiaoRespondidas():
 	return perguntasRespondidasRegiaoAtual(Global.fase)
@@ -541,4 +660,4 @@ func perguntasRespondidasRegiaoAtual(regiao):
 	return total
 
 func completouPerguntas():
-	return perguntasRegiaoRespondidas() == textos[Global.fase].size()
+	return perguntasRegiaoRespondidas() == perguntasObrigatoriasRegiao(Global.fase)

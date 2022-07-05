@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Cenas/cena_Explicacao/cena_Explicacao.gd" type="Script" id=1]
 [ext_resource path="res://Font/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://Imagens/Quiz/menos2.png" type="Texture" id=4]
 [ext_resource path="res://Font/ChiKareGo2.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Imagens/Quiz/mais.png" type="Texture" id=6]
+[ext_resource path="res://Imagens/Quiz/medalhaoErro.png" type="Texture" id=7]
+[ext_resource path="res://Imagens/Quiz/medalhaoAcerto.png" type="Texture" id=8]
+[ext_resource path="res://Imagens/Teclado/space.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 57
@@ -14,6 +17,10 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 47
+font_data = ExtResource( 2 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -42,9 +49,6 @@ anchor_right = 3.88125
 anchor_bottom = 3.88194
 rect_scale = Vector2( 1.85, 1.85 )
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="botao_geral" type="Button" parent="."]
 light_mask = 3
@@ -53,12 +57,19 @@ anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 4967.8, 1397.26 )
 flat = true
 
+[node name="Space" type="Sprite" parent="botao_geral"]
+position = Vector2( 1139, 600 )
+scale = Vector2( 0.226129, 0.226129 )
+texture = ExtResource( 9 )
+
 [node name="Ganhou" type="Sprite" parent="."]
+visible = false
 position = Vector2( 386, 114 )
 scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 6 )
 
 [node name="Perdeu" type="Sprite" parent="."]
+visible = false
 position = Vector2( 818, 112 )
 scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 4 )
@@ -76,4 +87,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="botao_geral" to="." method="_on_botao_geral_pressed"]
+[node name="MedalhaoAcerto" type="Sprite" parent="."]
+visible = false
+position = Vector2( 889.68, 110 )
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 8 )
+
+[node name="MedalhaoErro" type="Sprite" parent="."]
+visible = false
+position = Vector2( 890.68, 110 )
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 7 )
+
+[node name="valor" type="Label" parent="."]
+visible = false
+margin_left = 852.68
+margin_top = 79.0
+margin_right = 924.68
+margin_bottom = 137.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.521569 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = SubResource( 3 )
+text = "+2"
+align = 1

@@ -49,9 +49,6 @@ margin_top = -1150.0
 margin_right = -1994.0
 margin_bottom = -437.0
 flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="continue/continue"]
 anchor_right = 1.0
@@ -99,9 +96,6 @@ rect_scale = Vector2( 1.04041, 1.12146 )
 focus_mode = 0
 enabled_focus_mode = 0
 flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="audio_Icon" type="AnimatedSprite" parent="."]
 position = Vector2( 1188, 70 )

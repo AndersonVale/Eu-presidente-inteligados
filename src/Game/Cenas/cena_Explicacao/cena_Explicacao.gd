@@ -3,21 +3,42 @@ extends Control
 onready var pergunta = Mensagens.perguntaRegiaoAtual(Global.quiz)
 
 func _ready():
-	set_process(false)
-	print("Acertou pergunta:" + str(pergunta.acertou))
+	#set_process(false)
+	#print("Acertou pergunta:" + str(pergunta.acertou))
 	$Label.text = pergunta.explicacoes[str(pergunta.acertou)]
-	$Ganhou.visible = pergunta.acertou
-	$Perdeu.visible = !pergunta.acertou and pergunta.valorErro != 0
-
-#depreciado....
-func _process(_delta):
-	if Global.correto == 1:
-		$Ganhou.show() #mostra que o player recebeu 1 ponto
-		$Perdeu.hide()
+	
+	if  !pergunta.acertou:
+		if pergunta.valorErro != 0:
+			$MedalhaoErro.visible = true
+			$valor.visible = true
+			$valor.text = str(pergunta.valorErro)
+		else:
+			$valor.hide()
 	else:
-		$Ganhou.hide()
-		if Global.index != 8 and Global.index != 10 and Global.index != 12:
-			$Perdeu.show() #mostra a sprite de perder 2 pontos caso ele esteja em mundo aberto
+		if pergunta.valorAcerto != 0:
+			$MedalhaoAcerto.visible = true
+			$valor.visible = true
+			$valor.text = "+" + str(pergunta.valorAcerto)
+			
+		else:
+			$valor.hide()
+
+func _process(_delta):
+	
+	if Input.is_action_just_pressed("ui_accept"):
+		print("OK")
+		_on_botao_geral_pressed()
+		
+##depreciado....
+#func _process(_delta):
+#	if Global.correto == 1:
+#		$MedalhaoAcerto.show() #mostra que o player recebeu 1 ponto
+#		$MedalhaoErro.hide()
+#
+#	else:
+#		$MedalhaoAcerto.hide()
+#		if Global.index != 8 and Global.index != 10 and Global.index != 12:
+#			$MedalhaoErro.show() #mostra a sprite de perder 2 pontos caso ele esteja em mundo aberto
 		
 #	if Global.index == 1: #determina a resposta para a primeira pergunta
 #		if Global.correto == 1: #determina uma resposta diferente quando acerta ou erra uma questão
@@ -171,7 +192,7 @@ func _process(_delta):
 
 func _on_botao_geral_pressed():
 	
-	#print(Global.contador)
+	print("_on_botao_geral_pressed")
 	
 	if Global.contador <= 0: #se o contador chegar a 0, muda para o game over
 		get_tree().change_scene("res://Cenas/final_Fase1/game_Over.tscn")

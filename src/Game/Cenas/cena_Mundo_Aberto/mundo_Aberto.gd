@@ -30,14 +30,16 @@ func _ready():
 func _process(delta):
 
 	var proximaPerguntaId = Mensagens.proximaPerguntaId(Global.fase)
+
+	#print(Mensagens.perguntasObrigatoriasRegiao(Global.fase))
 	
-	if int(proximaPerguntaId) > 0:
+	if int(proximaPerguntaId) > 0 and get_node("Quiz_" + proximaPerguntaId):
 		$Alerta.global_position = get_node("Quiz_" + proximaPerguntaId).get_node("exclamacao").global_position
 		$NPC9.global_position = get_node("Quiz_" + proximaPerguntaId).get_node("npc").global_position 
 	else:
 		$Alerta.hide()
 		$NPC9.hide()
-	
+
 	$Fogopai.visible = proximaPerguntaId == "4"
 
 #	if Global.index == 1:
