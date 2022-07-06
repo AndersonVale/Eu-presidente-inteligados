@@ -150,7 +150,10 @@ func _on_mercado_body_entered(_body):
 
 #Trocar para cena do minigame
 func _on_portaminigame_body_entered(_body):
-	get_tree().change_scene("res://Cenas/cena_Minigame/minigame1.tscn")
+	
+	Global.retornoMinigame = "res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn"
+	get_tree().change_scene(Mensagens.textos[Global.fase]["minigame1"].cena)
+	#get_tree().change_scene("res://Cenas/cena_Minigame/minigame1.tscn")
 
 
 func quiz_entered(body, origem):

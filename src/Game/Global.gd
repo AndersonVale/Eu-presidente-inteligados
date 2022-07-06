@@ -5,8 +5,8 @@ signal perguntaRespondida
 
 var contador = 5 setget setContador, getContador #variável que comanda a HUD
 var index = 0 #variável que comanda qual pergunta será chamada de cada vez
-var posicao_horizontal  #variável que armazena a posição horizontal do jogador
-var posicao_vertical  #variável que armazena a posição vertical do jogador
+var posicao_horizontal = 0 #variável que armazena a posição horizontal do jogador
+var posicao_vertical = 0 #variável que armazena a posição vertical do jogador
 var textbox = 0 #variável que armazena informações sobre a caixa de texto
 var indexMundoAberto = 0 #variável que armazena o index do mundo aberto
 var indexPrefeitura = 9 #variável que determina a pergunta a ser chamada na prefeitura
@@ -27,6 +27,7 @@ var skin = 3
 
 var fase = "sul"
 var quiz = null
+var retornoMinigame 
 
 var skins = [
 	"res://Imagens/NPC/avatar1_Oficial.png",
@@ -38,6 +39,7 @@ var skins = [
 
 func setContador(val):
 	contador = val
+	contador = clamp(contador , 0, 10)
 	emit_signal("contadorAlterado")
 	
 func getContador():
@@ -45,3 +47,6 @@ func getContador():
 
 func respondeuPergunta():
 	emit_signal("perguntaRespondida")
+
+func voltaMundoAberto():
+	get_tree().change_scene(retornoMinigame)

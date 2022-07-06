@@ -194,15 +194,15 @@ position = Vector2( 1273.77, 354 )
 [node name="hud" type="CanvasLayer" parent="."]
 layer = -2
 
-[node name="Space" type="Sprite" parent="hud"]
-position = Vector2( 1127, 600 )
-scale = Vector2( 0.232258, 0.232258 )
-texture = ExtResource( 11 )
-
 [node name="Desktop" type="Sprite" parent="hud"]
 position = Vector2( 645, 364.5 )
 scale = Vector2( 1.82286, 1.85496 )
 texture = ExtResource( 12 )
+
+[node name="Space" type="Sprite" parent="hud"]
+position = Vector2( 1127, 600 )
+scale = Vector2( 0.232258, 0.232258 )
+texture = ExtResource( 11 )
 
 [node name="wasd" parent="hud" instance=ExtResource( 10 )]
 position = Vector2( -48, 48 )

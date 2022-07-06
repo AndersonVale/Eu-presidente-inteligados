@@ -14,7 +14,7 @@ var timeInAir = 0
 func _ready():
 	$AnimationPlayer.play("idleRight")
 	Global.colidiu = 0
-	#Global.posicao_vertical += 18
+	Global.posicao_vertical += 18
 	$Sprite.texture = load(Global.skins[Global.skin])
 
 func _physics_process(delta):

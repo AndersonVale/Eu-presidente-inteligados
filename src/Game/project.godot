@@ -109,6 +109,8 @@ quit={
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Objects"
 2d_physics/layer_3="NPC"
+2d_physics/layer_4="carta"
+2d_physics/layer_5="cursor"
 
 [physics]
 

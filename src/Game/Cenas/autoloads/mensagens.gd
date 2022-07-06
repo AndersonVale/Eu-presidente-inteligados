@@ -1,11 +1,11 @@
 extends Node2D
 
-enum Tipos { TEXTO, IMAGEM, VIDEO, AUDIO }
+enum Tipos { PERGUNTA , MINIGAME  }
 var textos = {
 	
 	"sul" : {
 		"1" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "A mecanização das lavouras no Sul está ocasionando um crescente nível de desemprego, resultando na migração para outros estados brasileiros e o surgimento de boias-frias. Esses trabalhadores rurais sem-terra são tratados de forma exploratória, com baixos salários, péssimas condições de saúde e moradia. Embora os boias-frias não estejam restritos apenas à Região Sul do Brasil, o estado do Paraná é a unidade federativa com o maior número de pessoas nessas condições.",
 			"alternativas" : [
 				"Trazer trabalhadores de outros lugares, sem possuir recursos.",
@@ -28,7 +28,7 @@ var textos = {
 			"obrigatorio" : true
 		},
 		"2" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "Um grande resort planeja expandir a sua área, mas após um estudo ambiental, foi constatado que há espécies de plantas que só existem naquele local. O dono desse resort, que também é senador, oferece verba e apoio a você, caso o terreno for liberado. O que fazer:",
 			"alternativas" : [
 				"Recusar a proposta e denunciar para o Ministério Público.",
@@ -49,7 +49,7 @@ var textos = {
 			"obrigatorio" : true
 		},
 		"3" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "Uma construtora, em troca de apoio nas próximas eleições, solicita a você que escolha essa empresa para a construção de diversas obras públicas, mesmo gastando muito mais dinheiro da população. O que você deve fazer:",
 			"alternativas" : [
 				"Aceita a proposta.",
@@ -70,7 +70,7 @@ var textos = {
 			"obrigatorio" :true
 		},
 		"4" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "Uma madeireira estrangeira quer explorar uma região de mata preservada. O que você fará?",
 			"alternativas" : [
 				"Negociar com a empresa para que ela possa explorar a região.",
@@ -93,7 +93,7 @@ var textos = {
 			"obrigatorio" :true
 		},
 		"5" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "Uma empresa quer monopolizar as linhas de transporte de um estado, como o governador é seu amigo e a empresa tem contato direto com você, ela te oferece verba para o financiamento da próxima campanha em troca de ser indicada para o contrato PPP. O que você fará?",
 			"alternativas" : [
 				"Conversar com o governador, seu amigo, para facilitar a contratação",
@@ -115,7 +115,7 @@ var textos = {
 			"obrigatorio" :true
 		},
 		"6" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "Após estacionar com o carro pessoal em local proibido, um guarda de trânsito lhe aplicou uma multa. O que você deve fazer?",
 			"alternativas" : [
 				"Realizar o pagamento da multa, assim como um cidadão comum",
@@ -136,7 +136,7 @@ var textos = {
 			"obrigatorio" :true
 		},
 		"mercado" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?",
 			"alternativas" : [
 				"Nada, pois o mercado é livre para cobrar qualquer preço.",
@@ -171,7 +171,7 @@ var textos = {
 			"obrigatorio" :true
 		},
 		"escola" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "A nossa escola está com diversos problemas estruturais, faltam computadores, cadeiras e até materiais básicos, como giz. A quem podemos recorrer?",
 			"alternativas" : [
 				"Presidente",
@@ -200,12 +200,12 @@ var textos = {
 			"correta" : 1,
 			"acertou" : false,
 			"valorAcerto" : 0,
-			"valorErro" : 1,
+			"valorErro" : -1,
 			"respondido" : false,
 			"obrigatorio" :true,
 		},
 		"prefeitura" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "As ruas da cidade estão sem iluminação há muito tempo, a quem devemos recorrer nessas situações?",
 			"alternativas" : [
 				"Prefeito",
@@ -237,10 +237,12 @@ var textos = {
 			"obrigatorio" :true
 		},
 		"minigame1" : {
+			"tipo" : Tipos.MINIGAME,
 			"acertou" : false,
 			"pontos" : 0,
 			"respondido" : false,
 			"obrigatorio" : false,
+			"cena" : "res://Cenas/cena_Minigame/miniGameMemoria.tscn",
 			"mensagens_npc":{
 				"neutro" : [
 					"Pablo: Oi! está perdendo muitos pontos durante as problemáticas?",
@@ -260,7 +262,7 @@ var textos = {
 	}, "sudeste" : {
 		
 		"1" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "Pergunta 1",
 			"alternativas" : [
 				"Alternativa errada",
@@ -277,7 +279,7 @@ var textos = {
 			"respondido" : false,
 			"obrigatorio" :true
 		},"mercado" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?",
 			"alternativas" : [
 				"Nada, pois o mercado é livre para cobrar qualquer preço.",
@@ -295,7 +297,7 @@ var textos = {
 			"obrigatorio" :true
 		},
 		"escola" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "A nossa escola está com diversos problemas estruturais, faltam computadores, cadeiras e até materiais básicos, como giz. A quem podemos recorrer?",
 			"alternativas" : [
 				"Presidente",
@@ -313,7 +315,7 @@ var textos = {
 			"obrigatorio" :true
 		},
 		"prefeitura" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "As ruas da cidade estão sem iluminação há muito tempo, a quem devemos recorrer nessas situações?",
 			"alternativas" : [
 				"Prefeito",
@@ -335,7 +337,7 @@ var textos = {
 	}, "centro-oeste" : {
 		
 		"1" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "Pergunta 1",
 			"alternativas" : [
 				"Alternativa errada",
@@ -352,7 +354,7 @@ var textos = {
 			"respondido" : false,
 			"obrigatorio" :true
 		},"mercado" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?",
 			"alternativas" : [
 				"Nada, pois o mercado é livre para cobrar qualquer preço.",
@@ -370,7 +372,7 @@ var textos = {
 			"obrigatorio" :true
 		},
 		"escola" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "A nossa escola está com diversos problemas estruturais, faltam computadores, cadeiras e até materiais básicos, como giz. A quem podemos recorrer?",
 			"alternativas" : [
 				"Presidente",
@@ -388,7 +390,7 @@ var textos = {
 			"obrigatorio" :true
 		},
 		"prefeitura" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "As ruas da cidade estão sem iluminação há muito tempo, a quem devemos recorrer nessas situações?",
 			"alternativas" : [
 				"Prefeito",
@@ -429,7 +431,7 @@ var textos = {
 	}, "norte" : {
 		
 		"1" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "Pergunta 1",
 			"alternativas" : [
 				"Alternativa errada",
@@ -446,7 +448,7 @@ var textos = {
 			"respondido" : false,
 			"obrigatorio" :true
 		},"mercado" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?",
 			"alternativas" : [
 				"Nada, pois o mercado é livre para cobrar qualquer preço.",
@@ -464,7 +466,7 @@ var textos = {
 			"obrigatorio" :true
 		},
 		"escola" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "A nossa escola está com diversos problemas estruturais, faltam computadores, cadeiras e até materiais básicos, como giz. A quem podemos recorrer?",
 			"alternativas" : [
 				"Presidente",
@@ -482,7 +484,7 @@ var textos = {
 			"obrigatorio" :true
 		},
 		"prefeitura" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "As ruas da cidade estão sem iluminação há muito tempo, a quem devemos recorrer nessas situações?",
 			"alternativas" : [
 				"Prefeito",
@@ -523,7 +525,7 @@ var textos = {
 	}, "nordeste" : {
 		
 		"1" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "Pergunta 1",
 			"alternativas" : [
 				"Alternativa errada",
@@ -540,7 +542,7 @@ var textos = {
 			"respondido" : false,
 			"obrigatorio" :true
 		},"mercado" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?",
 			"alternativas" : [
 				"Nada, pois o mercado é livre para cobrar qualquer preço.",
@@ -558,7 +560,7 @@ var textos = {
 			"obrigatorio" :true
 		},
 		"escola" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "A nossa escola está com diversos problemas estruturais, faltam computadores, cadeiras e até materiais básicos, como giz. A quem podemos recorrer?",
 			"alternativas" : [
 				"Presidente",
@@ -576,7 +578,7 @@ var textos = {
 			"obrigatorio" :true
 		},
 		"prefeitura" : {
-			"tipo" : Tipos.TEXTO,
+			"tipo" : Tipos.PERGUNTA,
 			"informacao" : "As ruas da cidade estão sem iluminação há muito tempo, a quem devemos recorrer nessas situações?",
 			"alternativas" : [
 				"Prefeito",
@@ -598,6 +600,7 @@ var textos = {
 			"pontos" : 0,
 			"respondido" : false,
 			"obrigatorio" : false,
+			"cena" : "res://Cenas/cena_Minigame/miniGameMemoria.tscn",
 			"mensagens_npc":{
 				"neutro" : [
 					"Pablo: Oi! está perdendo muitos pontos durante as problemáticas?",
@@ -623,7 +626,7 @@ func _ready():
 
 func proximaPerguntaId(regiao):
 	for a in textos[regiao]:
-		if !textos[regiao][a]["respondido"]:
+		if textos[regiao][a].tipo == Tipos.PERGUNTA and !textos[regiao][a]["respondido"]:
 			return a
 	return null
 
@@ -633,7 +636,6 @@ func perguntaRegiaoAtual(index):
 	else:
 		return null
 
-
 func regiaoCompleta(regiao):
 	return perguntasRespondidasRegiaoAtual(regiao) == perguntasObrigatoriasRegiao(regiao)                                                                                                             
 
@@ -641,9 +643,8 @@ func perguntasObrigatoriasRegiao(regiao):
 	var obrigatorias = 0
 	print(regiao)
 	for a in textos[regiao]:
-		if textos[regiao][a].obrigatorio:
+		if textos[regiao][a].obrigatorio and textos[regiao][a].tipo == Tipos.PERGUNTA:
 			obrigatorias += 1
-
 	return obrigatorias
 
 func perguntasObrigatoriasRegiaoAtual():
@@ -656,7 +657,8 @@ func perguntasRegiaoRespondidas():
 func perguntasRespondidasRegiaoAtual(regiao):
 	var total = 0
 	for a in textos[regiao]:
-		total += int(textos[regiao][a]["respondido"])
+		if textos[regiao][a].tipo == Tipos.PERGUNTA:
+			total += int(textos[regiao][a]["respondido"])
 	return total
 
 func completouPerguntas():
