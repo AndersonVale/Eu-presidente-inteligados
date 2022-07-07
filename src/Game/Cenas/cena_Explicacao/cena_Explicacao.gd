@@ -12,6 +12,7 @@ func _ready():
 			$MedalhaoErro.visible = true
 			$valor.visible = true
 			$valor.text = str(pergunta.valorErro)
+			$errou.play()
 		else:
 			$valor.hide()
 	else:
@@ -19,7 +20,7 @@ func _ready():
 			$MedalhaoAcerto.visible = true
 			$valor.visible = true
 			$valor.text = "+" + str(pergunta.valorAcerto)
-			
+			$acertou.play()
 		else:
 			$valor.hide()
 

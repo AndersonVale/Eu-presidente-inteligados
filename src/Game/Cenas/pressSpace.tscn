@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Font/ChiKareGo2.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=7]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "blink"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "fastblink"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="pressSpace" type="Label"]
+margin_left = 31.0
+margin_top = 570.0
+margin_right = 1279.0
+margin_bottom = 663.0
+custom_colors/font_color_shadow = Color( 0.247059, 0.45098, 0.541176, 1 )
+custom_constants/shadow_offset_x = -3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 7 )
+text = "PRESSIONE ESPAÇO PARA JOGAR"
+align = 1
+valign = 1
+
+[node name="anim" type="AnimationPlayer" parent="."]
+autoplay = "blink"
+anims/RESET = SubResource( 8 )
+anims/blink = SubResource( 9 )
+anims/fastblink = SubResource( 10 )

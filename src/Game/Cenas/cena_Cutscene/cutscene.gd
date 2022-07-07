@@ -1,10 +1,10 @@
 extends Node2D
 
-func _ready(): #desativar som do jogo
-	if Global.mudo == 1:
-		$musica_cutscene.stop()
-	if Global.mudo == 0:
-		$musica_cutscene.play()
+var pronto = false
+
+func _ready(): 
+	set_process(false)
+	$musica_cutscene.play()
 	$inicio_jogo/jogar.hide()
 	$inicio_jogo.play("intro")
 	yield(get_tree().create_timer(2.2), "timeout")
@@ -13,7 +13,8 @@ func _ready(): #desativar som do jogo
 
 #Mudar para o mapa do Brasi
 func _process(_delta):
-	if $inicio_jogo/jogar.is_pressed():
+	#if $inicio_jogo/jogar.is_pressed():
+	if Input.is_action_just_pressed("ui_accept"):
 		get_tree().change_scene("res://Cenas/cena_MapaBrasil/mapa_Brasil.tscn")
 
 func iniciaFalas():
@@ -31,4 +32,7 @@ func iniciaFalas():
 
 
 func _on_NPC_texto_texto_completo():
-	$inicio_jogo/jogar.show()
+	#$inicio_jogo/jogar.show()
+	$pressSpace.visible = true
+	yield(get_tree().create_timer(1),"timeout")
+	set_process(true)

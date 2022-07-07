@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Cenas/cena_Explicacao/cena_Explicacao.gd" type="Script" id=1]
 [ext_resource path="res://Font/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Imagens/Quiz/medalhaoErro.png" type="Texture" id=7]
 [ext_resource path="res://Imagens/Quiz/medalhaoAcerto.png" type="Texture" id=8]
 [ext_resource path="res://Imagens/Teclado/space.png" type="Texture" id=9]
+[ext_resource path="res://Audio/success.wav" type="AudioStream" id=10]
+[ext_resource path="res://Audio/error.wav" type="AudioStream" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 57
@@ -111,3 +113,9 @@ custom_constants/shadow_offset_y = 2
 custom_fonts/font = SubResource( 3 )
 text = "+2"
 align = 1
+
+[node name="errou" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="acertou" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )

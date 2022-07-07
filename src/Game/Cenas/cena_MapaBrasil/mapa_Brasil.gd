@@ -2,7 +2,8 @@ extends Node2D
 
 var podeAcessar = false
 
-func _ready(): #muta o jogo
+func _ready(): 
+	#muta o jogo
 #	if Global.mudo == 1:
 #		$AudioStreamPlayer2D.stop()
 #	if Global.mudo == 0:
@@ -18,12 +19,12 @@ func on_regiao_entered(regiao):
 	podeAcessar = !regiao.id_anterior || regiao.id_anterior.completa()
 
 	if  podeAcessar:
-		$mapas_text.text = "Pressione barra de espaço para jogar!"
+		#$mapas_text.text = "Pressione barra de espaço para jogar!"
 		regiao.hilight()
 		Global.fase = regiao.id
 		$blip.play()
 	else:
-		$mapas_text.text = "Região " + regiao.nome + " bloqueada..."
+		#$mapas_text.text = "Região " + regiao.nome + " bloqueada..."
 		Global.fase = null
 
 		
@@ -31,7 +32,7 @@ func on_regiao_exited(regiao):
 	podeAcessar = false
 	regiao.downlight()
 	Global.fase = null
-	$mapas_text.text = "Use as setas para viajar pelo Brasil!"
+	#$mapas_text.text = "Use as setas para viajar pelo Brasil!"
 
 #Centro
 #func _on_centro_body_entered(_body):
@@ -91,13 +92,14 @@ func on_regiao_exited(regiao):
 func _process(_delta):
 	
 	$Space.visible = bool(podeAcessar)
-	
-	
+
 	if Input.is_action_pressed("ui_accept") and Global.fase and podeAcessar:
 		$aviao.connect("area_entered" , self , "on_regiao_entered")
 		$aviao.disconnect("area_exited", self , "on_regiao_exited")
-		
-		get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
+
+		print(Mensagens.configuracaoRegiaoAtual().cena)
+
+		get_tree().change_scene(Mensagens.configuracaoRegiaoAtual().cena)
 #			if Global.reiniciar == 0: #se ele começou o jogo agora, vai diretamente para o mundo aberto
 #				get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
 #			if Global.reiniciar == 1: #comando que só é atendido quando o personagem apresenta algum progresso na campanha
@@ -106,8 +108,7 @@ func _process(_delta):
 #					get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
 #				else: #caso ele tenha saído do mapa subindo a rua do mundo aberto, envia o personagem para baixo da posição de quando entrou
 #					get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
-	
-		pass
+
 	if $aviao.position.x > 1300: #retorna o avião para o início da tela caso ele esteja no final horizontal
 		$aviao.position.x = -100
 	if $aviao.position.x < -100: #retorna o avião para o início da tela caso ele esteja no final horizontal

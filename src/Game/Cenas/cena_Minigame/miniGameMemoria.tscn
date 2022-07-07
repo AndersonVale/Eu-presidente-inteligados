@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Cenas/memoria/memoria.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/cena_Minigame/miniGameMemoria.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Audio/error.wav" type="AudioStream" id=7]
 [ext_resource path="res://Audio/success.wav" type="AudioStream" id=8]
 [ext_resource path="res://Audio/8-bit-game-over-sound-tune.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Audio/TremLoadingloopl.mp3" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -22,8 +23,17 @@ position = Vector2( 682.5, 372 )
 scale = Vector2( 2.0447, 2.07634 )
 texture = ExtResource( 4 )
 
+[node name="titulo" type="Label" parent="."]
+margin_left = 3.0
+margin_top = 11.0
+margin_right = 1279.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 1 )
+text = "Encontre os pares e ganhe pontos"
+align = 1
+
 [node name="memoria" parent="." instance=ExtResource( 1 )]
-position = Vector2( 191, 71 )
+position = Vector2( 191, 108 )
 scale = Vector2( 0.7, 0.7 )
 autoStart = false
 apagaFundo = true
@@ -34,17 +44,17 @@ position = Vector2( 0, 598 )
 
 [node name="acertos" type="Label" parent="hud"]
 margin_left = 20.0
-margin_top = 14.0
+margin_top = 33.0
 margin_right = 487.0
-margin_bottom = 98.0
+margin_bottom = 117.0
 custom_fonts/font = SubResource( 1 )
 text = "Acertos: 0"
 
 [node name="vidas" type="Label" parent="hud"]
 margin_left = 801.0
-margin_top = 14.0
+margin_top = 33.0
 margin_right = 1268.0
-margin_bottom = 98.0
+margin_bottom = 117.0
 custom_fonts/font = SubResource( 1 )
 text = "Acertos: 0"
 align = 2
@@ -63,6 +73,10 @@ stream = ExtResource( 8 )
 
 [node name="gameover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
 
 [connection signal="flipped" from="memoria" to="." method="_on_memoria_flipped"]
 [connection signal="mactch" from="memoria" to="." method="_on_memoria_mactch"]

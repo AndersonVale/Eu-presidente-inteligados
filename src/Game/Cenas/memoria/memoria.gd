@@ -177,4 +177,5 @@ func _on_memoria_flipped(c):
 
 
 func _on_memoria_selected(c):
-	print("selected card")
+	#print("selected card")
+	pass

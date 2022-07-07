@@ -9,7 +9,7 @@ export var nome = ""
 func _ready():
 	if id_anterior:
 		id_anterior = get_node(id_anterior)
-		print(id_anterior)
+		#print(id_anterior)
 
 func hilight():
 	$hilight.frame = 1

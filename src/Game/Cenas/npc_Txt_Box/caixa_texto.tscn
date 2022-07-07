@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Font/ChiKareGo2.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Cenas/npc_Txt_Box/caixa_texto.gd" type="Script" id=2]
+[ext_resource path="res://Audio/click.wav" type="AudioStream" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.054902, 0.054902, 0.054902, 1 )
@@ -89,3 +90,9 @@ custom_fonts/font = SubResource( 2 )
 text = "V"
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="blip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+pitch_scale = 0.35
+
+[connection signal="tween_step" from="Tween" to="." method="_on_Tween_tween_step"]

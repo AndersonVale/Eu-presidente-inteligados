@@ -1,6 +1,7 @@
 extends Control
 
 var bus_id
+var iniciou = false
 
 func _ready(): #play na logo do jogo
 	$inteligados_logo.play("inteligados")
@@ -9,8 +10,6 @@ func _ready(): #play na logo do jogo
 		$menuSoundtrack.play() 
 	else:
 		$AnimatedSprite.frame = 1
-	 
-
 
 func _on_iniciar_Botao_pressed():
 	Global.reiniciar = 0 #impossibilita o personagem de reiniciar o jogo
@@ -37,22 +36,29 @@ func _on_iniciar_Botao_pressed():
 func _on_carregar_Botao_pressed():
 	if Global.reiniciar == 1:
 		get_tree().change_scene("res://Cenas/cena_MapaBrasil/mapa_Brasil.tscn")
-	
 
-func _on_iniciar_Botao_mouse_entered():
-	$MenuItem2.modulate = Color.cornflower
-func _on_carregar_Botao_mouse_entered():
-	$MenuItem3.modulate = Color.cornflower
-func _on_sair_Botao_mouse_entered():
-	$MenuItem4.modulate = Color.cornflower
+func _input(event):
+	if !iniciou and Input.is_action_just_pressed("ui_accept"):
+		iniciou = true
+		$start.play()
+		$menuSoundtrack.stop()
+		$pressSpace/anim.play("fastblink")
+		yield(get_tree().create_timer(2) , "timeout")
+		get_tree().change_scene("res://Cenas/escolha_skin.tscn")
 
-
-func _on_iniciar_Botao_mouse_exited():
-	$MenuItem2.modulate = Color.white
-func _on_carregar_Botao_mouse_exited():
-	$MenuItem3.modulate = Color.white
-func _on_sair_Botao_mouse_exited():
-	$MenuItem4.modulate = Color.white
+#func _on_iniciar_Botao_mouse_entered():
+#	$MenuItem2.modulate = Color.cornflower
+#func _on_carregar_Botao_mouse_entered():
+#	$MenuItem3.modulate = Color.cornflower
+#func _on_sair_Botao_mouse_entered():
+#	$MenuItem4.modulate = Color.cornflower
+#
+#func _on_iniciar_Botao_mouse_exited():
+#	$MenuItem2.modulate = Color.white
+#func _on_carregar_Botao_mouse_exited():
+#	$MenuItem3.modulate = Color.white
+#func _on_sair_Botao_mouse_exited():
+#	$MenuItem4.modulate = Color.white
 
 func _process(delta):
 	bus_id = AudioServer.get_bus_index("Master")

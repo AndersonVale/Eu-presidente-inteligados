@@ -1,6 +1,5 @@
 extends Node2D
 
-
 var vidas = 10
 var acertos = 0
 
@@ -9,11 +8,6 @@ func _ready():
 	$memoria.preparaTabuleiro()
 	$memoria.start()
 	updateHud()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 func updateHud():
 	$hud/acertos.text = "  Acertos : " + str(acertos)

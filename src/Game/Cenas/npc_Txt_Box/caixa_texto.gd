@@ -1,5 +1,5 @@
 extends CanvasLayer
-const CHAR_READ_RATE = 0.05
+const CHAR_READ_RATE = 0.02
 onready var texto_container = $caixaDeTexto
 onready var iniciar = $caixaDeTexto/MarginContainer/HBoxContainer/asterisco
 onready var finalizar = $caixaDeTexto/MarginContainer/HBoxContainer/proximo
@@ -348,3 +348,9 @@ func mudar_estado(proximo_estado):
 #	mudar_estado(State.PRONTO)
 #	_txt()
 
+
+#texto, "percent_visible", 0.0, 1.0, len(proximo_texto) * CHAR_READ_RATE, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
+func _on_Tween_tween_step(object, key, elapsed, value):
+	#
+	if int(value * 100) % 2 == 0:
+		$blip.play()
