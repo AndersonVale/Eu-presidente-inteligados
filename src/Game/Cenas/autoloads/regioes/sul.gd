@@ -1,165 +1,60 @@
 extends Node
-
-
+ 
 var data =  {
-	
-		"1" : {
+
+		"industria" : {
 			"tipo" : Mensagens.Tipos.PERGUNTA,
-			"informacao" : "A mecanização das lavouras no Sul está ocasionando um crescente nível de desemprego, resultando na migração para outros estados brasileiros e o surgimento de boias-frias. Esses trabalhadores rurais sem-terra são tratados de forma exploratória, com baixos salários, péssimas condições de saúde e moradia. Embora os boias-frias não estejam restritos apenas à Região Sul do Brasil, o estado do Paraná é a unidade federativa com o maior número de pessoas nessas condições.",
+			"informacao" : "Larissa estava lendo o jornal e se deparou com a seguinte frase: \"PIB do Brasil cresce 1% no primeiro trimestre de 2022\". Diante disso, Larissa, estudante do ensino médio, sem saber o significado de PIB, não conseguiu entender a notícia. Nesse contexto, aproveitando que você estava chegando, ficou de prontidão para te encontrar na porta da indústria. Diante disso, Presidente, como você explicaria para Larissa o que significa o PIB?",
 			"alternativas" : [
-				"Trazer trabalhadores de outros lugares, sem possuir recursos.",
-				"Implementação de cursos profissionalizantes aos trabalhadores."
+				"Explica que o PIB é o Produto Internacional Brasileiro, isto é, o valor de todos os produtos que o Brasil produz e envia para o exterior no decorrer de um ano",
+				"Explica que o PIB é o Produto Interno Bruto, isto é, a soma de todos os bens e serviços finais produzidos por um país, estado ou cidade, geralmente em um ano"
 			],
 			"explicacoes" : {
-				"True" : "Olá, presidente, como chefe de estado você pode sancionar um projeto de lei que beneficie os trabalhadores, como na resposta que você escolheu, portanto você ganhou 1 ponto na barra de aprovaçao de governo.",
-				"False" : "Olá, presidente, como você escolheu trazer trabalhadores mesmo não tendo recursos, você foi enquadrado no crime de improbidade fiscal já que está criando dispensas fora do orçamento, causando prejuízo ao erário, logo, você perdeu 2 pontos na barra de aprovação do governo."
+				"True" : "Mandou bem, Presidente! O PIB significa produto interno bruto e, por mais que possa ser calculado com base em referências distintas, representa a soma de todos os bens e serviços finais produzidos em uma determinada região e em um determinado tempo. Todos os países calculam o seu PIB nas suas respectivas moedas. O PIB do Brasil em 2021, por exemplo, foi de R$ 8,7 trilhões.",
+				"False" : "Acho que você se confundiu, Presidente! O PIB significa produto interno bruto e, por mais que possa ser calculado com base em referências distintas, representa a soma de todos os bens e serviços finais produzidos em uma determinada região e em um determinado tempo."
 			},
-			"conversa_npc" : [
-				"Leo: Quando você encontrar estes pontos de exclamação vermelhos, é possivel entrar no edificio em questão para resolver uma problematica.",
-				"Leo: Olha só, parece que temos um objetivo logo ao nosso lado!",
-				"Leo: Porque não entra para conferir?"
-			],
+			"mensagens_npc":{
+				"neutro" : [
+					"Rodrigo: Muito interessante entender mais sobre como funciona nossa economia!",
+				], 
+				"acertou": [
+					"Rodrigo: Muito obrigado por esclarecer essa duvida, presidente!",
+					"Rodrigo: Agora, nossa população consegue compreender mais sobre o funcionamento do Brasil",
+				],
+				"errou" : [
+					"Rodrigo: Presidente, infelizmente essa não era a explicação correta",
+				]
+			},
 			"correta" : 1,
 			"acertou" : false,
 			"valorAcerto" : 1,
-			"valorErro" : -2,
-			"respondido" : false,
-			"obrigatorio" : true
-		},
-		"2" : {
-			"tipo" : Mensagens.Tipos.PERGUNTA,
-			"informacao" : "Um grande resort planeja expandir a sua área, mas após um estudo ambiental, foi constatado que há espécies de plantas que só existem naquele local. O dono desse resort, que também é senador, oferece verba e apoio a você, caso o terreno for liberado. O que fazer:",
-			"alternativas" : [
-				"Recusar a proposta e denunciar para o Ministério Público.",
-				"Aceitar a verba e o apoio."
-			],
-			"explicacoes" : {
-				"True" : "Olá, presidente, como chefe de estado você demonstrou integridade ao denunciar uma tentativa de corrupção advinda de dentro do poder legislativo, seu ato fez juz à seu cargo, portanto sua barra de aprovação aumentou em 1 ponto",
-				"False" : "Olá, presidente, como chefe de estado você não pode aceitar dinheiro ou favorecimentos em função do seu cargo. O enriquecimento ilícito, como é o caso da sua decisão, é considerado crime de improbidade admnistrativa e pode levar ao seu impeachment, desta forma a sua barra de aprovação diminuiu em 2 pontos"
-			},"conversa_npc" : [
-				"Leo: Que bom te ver de novo, presidente! Isso significa respondeu a ultima problemática",
-				"Leo: Vamos para a próxima?"
-			],
-			"correta" : 0,
-			"acertou" : false,
-			"valorAcerto" : 1,
-			"valorErro" : -2,
-			"respondido" : false,
-			"obrigatorio" : true
-		},
-		"3" : {
-			"tipo" : Mensagens.Tipos.PERGUNTA,
-			"informacao" : "Uma construtora, em troca de apoio nas próximas eleições, solicita a você que escolha essa empresa para a construção de diversas obras públicas, mesmo gastando muito mais dinheiro da população. O que você deve fazer:",
-			"alternativas" : [
-				"Aceita a proposta.",
-				"Recusar a proposta e denunciar a construtora para o Ministério Público"
-			],
-			"explicacoes" : {
-				"True" : "Olá, presidente, como chefe de estado você agiu de forma exemplar ao denunciar uma tentativa de corrupção e em função disso você ganhou 1 ponto em sua barra de aprovação. A população fica feliz em ver seu presidente expondo esquemas de corrupção.",
-				"False" : "Olá, presidente, como chefe de estado você não pode aceitar dinheiro ou favorecimentos em função do seu cargo. Atos que conferem prejuízo erário, como é o caso da sua escolha anterior, são considerados crimes de improbidade admnistrativa e podem levar ao seu impeachment."
-			},"conversa_npc" : [
-				"Leo: Olá, presidente, os problemas não param de aparecer",
-				"Leo: Ajude-nos, tome as decisões que ajudarão a mudar o país."
-			],
-			"correta" : 1,
-			"acertou" : false,
-			"valorAcerto" : 1,
-			"valorErro" : -2,
-			"respondido" : false,
-			"obrigatorio" :true
-		},
-		"4" : {
-			"tipo" : Mensagens.Tipos.PERGUNTA,
-			"informacao" : "Uma madeireira estrangeira quer explorar uma região de mata preservada. O que você fará?",
-			"alternativas" : [
-				"Negociar com a empresa para que ela possa explorar a região.",
-				"Não negociar em função da preservação da flora local."
-			],
-			"explicacoes" : {
-				"True" : "Olá, Presidente, para explorar esta região, a madeireira precisa da autorização de exploração (AUTEX) para que tenha legalidade sobre a região. Ao negar a negociação com esta empresa e a  denunciar para o Ministério Público você ajudou responsabilizar uma empresa que estava prejudicando a flora local por agir de forma ilícita. Em função do seu ato, sua barra de aprovação aumentou 1 ponto.",
-				"False" : "Olá, Presidente, para explorar esta região, a madeireira precisa da autorização de exploração  (AUTEX) para que tenha legalidade sobre a região. Ao aceitar a negociação com a madeireira você cometeu o crime de corrupção passiva, pois utilizou de seu cargo público para receber vantagem indevida mediante ao fornecimento de meios para regular uma empresa que agia de forma ilegal em troca de favorecimento pessoal para você e sua família. Desta forma você perdeu 2 pontos na barra de aprovação do governo"
-			},
-			"conversa_npc" : [
-				"Leo: Presidente! Estamos enfrentando severos problemas ambientais!",
-				"Leo: Essas questões estão degradando nossas florestas",
-				"Leo: Ajude-nos a resolver esse problema!"
-			],
-			"correta" : 1,
-			"acertou" : false,
-			"valorAcerto" : 1,
-			"valorErro" : -2,
-			"respondido" : false,
-			"obrigatorio" :true
-		},
-		"5" : {
-			"tipo" : Mensagens.Tipos.PERGUNTA,
-			"informacao" : "Uma empresa quer monopolizar as linhas de transporte de um estado, como o governador é seu amigo e a empresa tem contato direto com você, ela te oferece verba para o financiamento da próxima campanha em troca de ser indicada para o contrato PPP. O que você fará?",
-			"alternativas" : [
-				"Conversar com o governador, seu amigo, para facilitar a contratação",
-				"Recusa a proposta e denuncia para o Ministério Público."
-			],
-			"explicacoes" : {
-				"True" : "Olá, Presidente, denunciando essa tentiva de corrupção ao Ministério Público (MP), você estará realizando a escolha correta perante a lei e a ética, já que denunciou uma tentativa de corrupção, portanto, receberá 1 ponto no índice de aprovação do governo",
-				"False" : "Olá, Presidente, ao aceitar a proposta da empresa e falar com o governador você cometeu o crime de corrupção passiva, pois utilizou de seu cargo público para receber vantagem indevida mediante favorecimento no contrato de concessão, logo, você perdeu 2 pontos no índice de aprovação do governo ."
-			},
-			"conversa_npc" : [
-				"Leo: Presidente! Que surpresa vê-lo por aqui, como você pode ver, o transporte público não está tendo o devido cuidado",
-				"O que será que as empresas de transporte vão propor dessa vez? Entre no ônibus e descubra."
-			],
-			"correta" : 1,
-			"acertou" : false,
-			"valorAcerto" : 1,
-			"valorErro" : -2,
-			"respondido" : false,
-			"obrigatorio" :true
-		},
-		"6" : {
-			"tipo" : Mensagens.Tipos.PERGUNTA,
-			"informacao" : "Após estacionar com o carro pessoal em local proibido, um guarda de trânsito lhe aplicou uma multa. O que você deve fazer?",
-			"alternativas" : [
-				"Realizar o pagamento da multa, assim como um cidadão comum",
-				"Utilizar seu cargo para cassar o emprego do guarda de trânsito"
-			],
-			"explicacoes" : {
-				"True" : "Olá, Presidente, ao escolher pagar a multa como um cidadão comum, você recebeu 1 ponto, justamente por manter a integridade do cargo presidencial.",
-				"False" : "Olá, Presidente, ao utilizar o poder presidencial para cassar o mandato de um funcionário público você estará cometendo crime de abuso de autoridade e será julgado por isso, logo, perdeu 2 pontos no índice de aprovação do jogo  por comprometer a integridade do ccargo presidencial."
-			},
-			"conversa_npc" : [
-				"Leo: Olá, presidente, os cidadãos estão atentos à sua conduta e por isso é bom agir de forma íntegra no seu mandato, fique atento à suas ações e responda a próxima questão"
-			],
-			"correta" : 0,
-			"acertou" : false,
-			"valorAcerto" : 1,
-			"valorErro" : -2,
+			"valorErro" : 0,
 			"respondido" : false,
 			"obrigatorio" :true
 		},
 		"mercado" : {
 			"tipo" : Mensagens.Tipos.PERGUNTA,
-			"informacao" : "Devido a falta de abastecimento, o preço de arroz está muito alto, e há mercados praticando preços abusivos, com o intuito de obter lucro. Nessa situação, o que o consumidor deve fazer?",
+			"informacao" : "Isabel comprou uma máquina de lavar. Mas, após 3 meses de sua compra, a máquina parou de funcionar por um problema técnico em sua função elétrica, que não era evidente no momento da compra. Além disso, Isabel não contratou garantia no momento de comprar o produto e agora teme ter perdido esse dinheiro para sempre, restando-lhe apenas comprar uma nova máquina. Você, como Presidente, precisará orientá-la sobre o que fazer nessa situação. Como você aconselharia Isabel?",
 			"alternativas" : [
-				"Nada, pois o mercado é livre para cobrar qualquer preço.",
-				"Deve denunciar o mercado ao Procon por práticas abusivas."
+				"Aconselha a pedir um empréstimo e comprar uma nova máquina de lavar, porque quem não compra com garantia não tem qualquer proteção de acordo com as nossas leis. Na próxima, ela deverá torcer para que não haja qualquer problema oculto no produto e contar um pouco mais com a sorte.",
+				"Aconselha a entrar em contato com o fornecedor do produto, em até 90 dias depois que descobriu o defeito, para que a empresa arrume o produto, uma vez que nossas leis protegem as pessoas que compram produtos que não imaginavam ser defeituosos, com base no Código de Defesa do Consumidor."
 			],
 			"explicacoes" : {
-				"True" : "Olá, Presidente, você escolheu corretamente, pois a elevação dos preços sem justa causa é considerado crime pelo Código de Defesa do Consumidor. Como você escolheu denunciar o mercado ao Procon, você ganhou 1 ponto, por ter agido da melhor forma frente a uma infração dos direitos do consumidor.",
-				"False" : "Olá, Presidente, você deve ter se esquecido, mas a elevação dos preços, sem justa causa, não pode ser feita pelo mercado, porque o Código de Defesa do Consumidor prevê isso como uma prática abusiva, embora você tenha feito essa escolha, não se preocupe, você não perdeu nenhum ponto."
+				"True" : "Isso mesmo, Presidente! De acordo com o Código de Defesa do Consumidor, aquele que compra produto com defeito oculto, como Isabel, ainda que sem garantia, terá até 90 dias caso o produto seja durável, como as máquinas de lavar, para solicitar que o fornecedor corrija o defeito do produto em até 30 dias, ou, não sendo possível corrigir, possa (i) substituir o produto por um novo, igual, em perfeitas condições de funcionamento, (ii) restituir o valor pago pelo consumidor ou (iii) retirar do valor pago a quantia correspondente ao defeito do produto, sendo que o consumidor deve escolher uma dessas opções",
+				"False" : "Não foi dessa vez, Presidente! A alternativa está incorreta porque, de acordo com as disposições do Código de Defesa do Consumidor, aquele que compra produto com defeito oculto, como Isabel, ainda que sem garantia, terá até 90 dias caso o produto seja durável, como as máquinas de lavar, para solicitar que o fornecedor corrija o defeito do produto em até 30 dias, ou, não sendo possível corrigir, possa (i) substituir o produto por um novo, igual, em perfeitas condições de funcionamento, (ii) restituir o valor pago pelo consumidor ou (iii) retirar do valor pago a quantia correspondente ao defeito do produto, sendo que o consumidor deve escolher uma dessas opções."
 			},
 			"mensagens_npc":{
 				"neutro" : [
 					"Rodrigo: Eu adoro comprar neste mercado!",
-					"Rodrigo: É uma pena que os preços estejam tão caros ultimamente...",
-					"Rodrigo: Isso tem feito até alguns pararem de comprar aqui...",
-					"Rodrigo: No fundo do mercado você pode conferir como os preços estão absurdos "
+					"Rodrigo: As promoções que eles fazem são boas, mas um pouco confusas"
 				], 
 				"acertou": [
 					"Rodrigo: Muito obrigado por resolver nosso problema, presidente!",
-					"Rodrigo: A partir de sua decisão correta, o mercado melhorou e as pessoas passaram a gostar ainda mais de comprar aqui!",
-					"Rodrigo: Veja só! O crescimento foi tanto que ele até comprou o terreno ao lado e virou um supermercado!"
+					"Rodrigo: A partir de sua decisão correta, o mercado melhorou e as pessoas passaram a gostar ainda mais de comprar aqui!"
 				],
 				"errou" : [
 					"Rodrigo: Presidente, infelizmente o problema não foi solucionado corretamente",
-					"Rodrigo: Presidente, isso fez com que os consumidores diminuíssem e o mercado fechou..."
+					"Rodrigo: Presidente, isso fez com que os consumidores diminuíssem..."
 				]
 			},
 			"correta" : 1,
@@ -171,14 +66,14 @@ var data =  {
 		},
 		"escola" : {
 			"tipo" : Mensagens.Tipos.PERGUNTA,
-			"informacao" : "A nossa escola está com diversos problemas estruturais, faltam computadores, cadeiras e até materiais básicos, como giz. A quem podemos recorrer?",
+			"informacao" : "Matheus gostaria de matricular sua filha na escola perto de sua casa, na zona sul de São Paulo. Ao chegar na escola, Matheus é informado que não há vaga naquela unidade e que sua filha terá que estudar em uma creche na zona oeste de São Paulo, que fica a 2 horas da casa de Matheus. Diante dessa situação, Matheus questiona se tem algo que possa fazer para resolver essa situação. Como resposta, você, como Presidente, informa que:",
 			"alternativas" : [
-				"Presidente",
-				"Prefeito"
+				"Não é possível fazer nada, porque é necessário respeitar o limite das escolas e, por isso, Rodrigo não poderá matricular sua filha perto de casa",
+				"É direito do cidadão que tenha vaga na escola pública de educação infantil ou de ensino fundamental mais próxima de sua residência a toda criança a partir do dia em que completar 4 anos de idade. Por isso, Rodrigo poderá se valer de seu direito para matricular sua filha na escola mais próxima de casa, na zona sul de São Paulo"
 			],
 			"explicacoes" : {
-				"True" : "Olá, Presidente, parece que seu problema de memória está melhorando, não é mesmo? você até se lembrou das obrigações de um dos cargos do poder executivo. Realmente, quem cuida dessas questões é o prefeito, parabéns por ter acertado, você ganhou 1 ponto.",
-				"False" : "Olá, Presidente, parece que você ainda não recuperou sua memória completamente, mas devo lhe dizer que quem cuida de questões como esta não é você, mas sim o prefeito. Para sua sorte, nenhum ponto foi perdido"
+				"True" : "A resposta está correta, Presidente! A Lei de Diretrizes e Bases da Educação determina que é dever do Estado garantir vaga na escola pública de educação infantil ou de ensino fundamental mais próxima da residência a toda criança a partir do dia em que completar 4 (quatro) anos de idade. Rodrigo, portanto, poderá matricular sua filha na escola mais próxima de casa, na zona sul de São Paulo, conforme garantido por lei. Lembrando que isso é de responsabilidade do Poder Executivo Municipal, ou seja, do Prefeito!",
+				"False" : "A resposta está errada, Presidente! A Lei de Diretrizes e Bases da Educação determina que é dever do Estado garantir vaga na escola pública de educação infantil ou de ensino fundamental mais próxima da residência a toda criança a partir do dia em que completar 4 (quatro) anos de idade. Rodrigo, portanto, poderá matricular sua filha na escola mais próxima de casa, na zona sul de São Paulo, conforme garantido por lei"
 			},
 			"conversa_npc" : [
 			],
@@ -193,7 +88,7 @@ var data =  {
 					"Thainá: Graças a isso, nossa escola será um lugar melhor!"
 				],
 				"errou" : [
-					"Thainá: Presidente, repense suas deisões"
+					"Thainá: Presidente, acho que vale a pena conversar com o Prefeito sobre isso!"
 				]
 			},
 			"correta" : 1,
@@ -205,14 +100,14 @@ var data =  {
 		},
 		"prefeitura" : {
 			"tipo" : Mensagens.Tipos.PERGUNTA,
-			"informacao" : "As ruas da cidade estão sem iluminação há muito tempo, a quem devemos recorrer nessas situações?",
+			"informacao" : "Uma empresa muito importante para o País está concorrendo em uma licitação para ser escolhida como a nova empresa responsável por realizar a coleta de lixo do município relevante, no entanto, entra em contato e fornece dinheiro ao servidor público responsável por coordenar o procedimento de licitação para que ele influencie internamente e faça com que a empresa ganhe a licitação, mesmo cobrando um preço maior para realizar o serviço que as demais empresas concorrentes. Nesse contexto, ao ser informado dessa situação, você é convidado a orientar sobre o que deve acontecer em seguida:",
 			"alternativas" : [
-				"Prefeito",
-				"Companhia de energia"
+				"Orienta a manter as coisas como estão desde que não se torne um escândalo e pede para que, caso alguém pergunte se você sabe a respeito, seja falado que essa história não lhe foi reportada, tendo em vista que é uma empresa muito importante para o País",
+				"Orienta que o caso seja reportado ao Ministério Público para que, de acordo com o previsto na Lei de Licitações, o procedimento de licitação seja anulado e a empresa e o funcionário deverão ser responsabilizados pelas consequências que lhe cabem"
 			],
 			"explicacoes" : {
-				"True" : "Olá, Presidente, você respondeu corretamente, é de responsabilidade da prefeitura cuidar da iluminação em áres públicas, tais como ruas, parques e praças. Por ter acertado a pergunta você ganhou 1 ponto!.",
-				"False" : "Olá, Presidente, você deve ter se esquecido de novo, mas a manutenção da iluminação em locais públicos não é de responsabilidade das companhias elétricas, embora você não esteja correto na sua resposta, você não perdeu nenhum ponto."
+				"True" : "Ótima orientação, Presidente! Conforme orientou, nesse caso, é necessário que o contrato administrativo de licitação seja anulado, para que tal conduta de corrupção não seja incentivada, assim como o servidor público que aceitou suborno e permitiu a violação do caráter competitivo da licitação, que sempre deve envolver diversas empresas a serem escolhidas de acordo com os critérios estabelecidos em lei, poderá sofrer pena de reclusão de 4 anos a 8 anos, além de multa.",
+				"False" : "Epa, corrupção não pode, Presidente! Nesse caso, é necessário que o contrato administrativo de licitação seja anulado, para que tal conduta de corrupção não seja incentivada, assim como o servidor público que aceitou suborno e permitiu a violação do caráter competitivo da licitação, que sempre deve envolver diversas empresas a serem escolhidas de acordo com os critérios estabelecidos em lei, poderá sofrer pena de reclusão de 4 anos a 8 anos, além de multa."
 			},
 			"mensagens_npc":{
 				"neutro" : [
@@ -221,11 +116,10 @@ var data =  {
 				], 
 				"acertou": [
 					"Frederico: Boa resposta Presidente, continue assim!",
-					"Isabela: Vou agendar uma festa na frente da prefeitura, assim que acabar suas missões, volte aqui!"
 				],
 				"errou" : [
-					"Frederico: Essa foi por pouco presidente! continue tentando.",
-					"Isabela: Não desista, precisamos que você continue seu mandato!"
+					"Frederico: Presidente, queremos um Brasil melhor, sem corrupção!",
+					"Isabela: Voce deve dar o exemplo, Presidente!"
 				]
 			},
 			"correta" : 0,

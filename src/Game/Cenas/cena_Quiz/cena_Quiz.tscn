@@ -57,10 +57,10 @@ current = true
 stream = ExtResource( 8 )
 
 [node name="posCaneta1" type="Position2D" parent="."]
-position = Vector2( 1587.37, 283 )
+position = Vector2( 1553.42, 283 )
 
 [node name="posCaneta2" type="Position2D" parent="."]
-position = Vector2( 1582.43, 534 )
+position = Vector2( 1554.41, 534 )
 
 [node name="JornalTop" type="Sprite" parent="."]
 position = Vector2( 632.436, 367 )
@@ -78,35 +78,66 @@ scale = Vector2( 0.342642, 0.342642 )
 texture = ExtResource( 6 )
 offset = Vector2( -180, -180 )
 
-[node name="resposta" type="VBoxContainer" parent="."]
+[node name="opcao1" type="Button" parent="."]
+visible = false
 margin_left = 1578.0
-margin_top = 105.0
+margin_top = 203.0
 margin_right = 2226.0
-margin_bottom = 722.0
-custom_constants/separation = 20
-alignment = 1
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="opcao1" type="Button" parent="resposta"]
-margin_top = 98.0
-margin_right = 648.0
-margin_bottom = 298.0
+margin_bottom = 403.0
 rect_min_size = Vector2( 470, 200 )
 size_flags_horizontal = 3
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 flat = true
 
-[node name="opcao2" type="Button" parent="resposta"]
-margin_top = 318.0
-margin_right = 648.0
-margin_bottom = 518.0
+[node name="opcao2" type="Button" parent="."]
+visible = false
+margin_left = 1578.0
+margin_top = 423.0
+margin_right = 2226.0
+margin_bottom = 623.0
 rect_min_size = Vector2( 470, 200 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 flat = true
+
+[node name="opcoes" type="Node2D" parent="."]
+
+[node name="opcao3" type="Label" parent="opcoes"]
+margin_left = 1578.0
+margin_top = 415.0
+margin_right = 2226.0
+margin_bottom = 622.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "teste
+"
+valign = 1
+autowrap = true
+
+[node name="opcao4" type="Label" parent="opcoes"]
+margin_left = 1578.0
+margin_top = 185.0
+margin_right = 2226.0
+margin_bottom = 384.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "teste
+"
+valign = 1
+autowrap = true
+
+[node name="resposta" type="VBoxContainer" parent="."]
+visible = false
+margin_left = 1578.0
+margin_top = 165.0
+margin_right = 2226.0
+margin_bottom = 642.0
+custom_constants/separation = 20
+alignment = 1
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="informacao_pergunta" type="VBoxContainer" parent="."]
 modulate = Color( 0, 0, 0, 1 )

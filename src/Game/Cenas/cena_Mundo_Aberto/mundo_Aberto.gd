@@ -16,31 +16,31 @@ func _ready():
 		$theme_song.play() #Faz áudio parar
 	Global.subiuRua = 0 
 	
-	$AlertaAmarelo.play()
-	$AlertaAmarelo2.play()
-	$AlertaAmarelo3.play()
+#	$AlertaAmarelo.play()
+#	$AlertaAmarelo2.play()
+#	$AlertaAmarelo3.play()
 	$AlertaAzul.play()
 	$Alerta.play()
 	
 	$NPC9.connect("body_entered" , self , "on_npc_quiz_entered")
 	
-	for a in range(6):
-		get_node("Quiz_" + str(a+1)).connect("body_entered" , self , "quiz_entered", [get_node("Quiz_" + str(a+1))])
+	for a in ["mercado", "industria" , "escola" , "prefeitura"]:
+		get_node("Quiz_" + a).connect("body_entered" , self , "quiz_entered", [get_node("Quiz_" + a)])
 
 func _process(delta):
+	
+	
 
 	var proximaPerguntaId = Mensagens.proximaPerguntaId(Global.fase)
 
-	#print(Mensagens.perguntasObrigatoriasRegiao(Global.fase))
-	
-	if int(proximaPerguntaId) > 0 and get_node("Quiz_" + proximaPerguntaId):
+	if get_node("Quiz_" + proximaPerguntaId):
 		$Alerta.global_position = get_node("Quiz_" + proximaPerguntaId).get_node("exclamacao").global_position
 		$NPC9.global_position = get_node("Quiz_" + proximaPerguntaId).get_node("npc").global_position 
 	else:
 		$Alerta.hide()
 		$NPC9.hide()
 
-	$Fogopai.visible = proximaPerguntaId == "4"
+	#$Fogopai.visible = proximaPerguntaId == "4"
 
 #	if Global.index == 1:
 #		$Alerta.position.x = 823 #modifica a posição x da exclamação de acordo com a pergunta
@@ -118,35 +118,35 @@ func _process(delta):
 	
 	#print("Mercado respondido: " + str(Mensagens.perguntaRegiaoAtual("mercado").respondido))
 	
-	if Mensagens.perguntaRegiaoAtual("mercado").respondido:
-		$Quiz_mercado/Label.hide()
-		$Supermercado.show()
-		$TileSupermercado.show()
-			
-	if Global.contador_easter_egg == 9:
-		$Caramelo.show() #apresenta o easter egg
+#	if Mensagens.perguntaRegiaoAtual("mercado").respondido:
+#		$Quiz_mercado/Label.hide()
+#		$Supermercado.show()
+#		$TileSupermercado.show()
+#
+#	if Global.contador_easter_egg == 9:
+#		$Caramelo.show() #apresenta o easter egg
+#
+#	$AlertaAmarelo3.visible = !Mensagens.perguntaRegiaoAtual("prefeitura").respondido #se ainda existirem perguntas na prefeitura sem resposta
+#	$AlertaAmarelo2.visible = !Mensagens.perguntaRegiaoAtual("escola").respondido #se ainda existirem perguntas na escola sem resposta
+#	$AlertaAmarelo.visible = !Mensagens.perguntaRegiaoAtual("mercado").respondido #se ainda existirem perguntas no mercado sem resposta
 
-	$AlertaAmarelo3.visible = !Mensagens.perguntaRegiaoAtual("prefeitura").respondido #se ainda existirem perguntas na prefeitura sem resposta
-	$AlertaAmarelo2.visible = !Mensagens.perguntaRegiaoAtual("escola").respondido #se ainda existirem perguntas na escola sem resposta
-	$AlertaAmarelo.visible = !Mensagens.perguntaRegiaoAtual("mercado").respondido #se ainda existirem perguntas no mercado sem resposta
-
-func _on_Area2D2_body_entered(_body):
-	if !Mensagens.perguntaRegiaoAtual("escola").respondido: #entra na escola se ainda houver perguntas
-		get_tree().change_scene("res://Cenas/Escola.tscn")
-#		Global.indexMundoAberto = Global.index #salva o index antes de passar pela porta
-#		Global.index = Global.indexEscola #modifica o index pelo armazenado na escola
-
-func _on_Area2D4_body_entered(_body):
-	if !Mensagens.perguntaRegiaoAtual("prefeitura").respondido: #entra na escola se ainda houver perguntas
-		get_tree().change_scene("res://Cenas/Prefeitura.tscn")
-#		Global.indexMundoAberto = Global.index #salva o index antes de passar pela porta
-#		Global.index = Global.indexPrefeitura #modifica o index pelo armazenado na escola
-
-func _on_mercado_body_entered(_body):
-	if !Mensagens.perguntaRegiaoAtual("mercado").respondido: #entra no mercado se ainda houver perguntas
-		get_tree().change_scene("res://Cenas/Mercado.tscn")
-#		Global.indexMundoAberto = Global.index #salva o index antes de passar pela porta
-#		Global.index = Global.indexMercado #modifica o index pelo armazenado na escola
+#func _on_Area2D2_body_entered(_body):
+#	if !Mensagens.perguntaRegiaoAtual("escola").respondido: #entra na escola se ainda houver perguntas
+#		get_tree().change_scene("res://Cenas/Escola.tscn")
+##		Global.indexMundoAberto = Global.index #salva o index antes de passar pela porta
+##		Global.index = Global.indexEscola #modifica o index pelo armazenado na escola
+#
+#func _on_Area2D4_body_entered(_body):
+#	if !Mensagens.perguntaRegiaoAtual("prefeitura").respondido: #entra na escola se ainda houver perguntas
+#		get_tree().change_scene("res://Cenas/Prefeitura.tscn")
+##		Global.indexMundoAberto = Global.index #salva o index antes de passar pela porta
+##		Global.index = Global.indexPrefeitura #modifica o index pelo armazenado na escola
+#
+#func _on_mercado_body_entered(_body):
+#	if !Mensagens.perguntaRegiaoAtual("mercado").respondido: #entra no mercado se ainda houver perguntas
+#		get_tree().change_scene("res://Cenas/Mercado.tscn")
+##		Global.indexMundoAberto = Global.index #salva o index antes de passar pela porta
+##		Global.index = Global.indexMercado #modifica o index pelo armazenado na escola
 
 #Trocar para cena do minigame
 func _on_portaminigame_body_entered(_body):
@@ -155,6 +155,7 @@ func _on_portaminigame_body_entered(_body):
 	#get_tree().change_scene("res://Cenas/cena_Minigame/minigame1.tscn")
 
 func quiz_entered(body, origem):
+	#print(origem)
 	var proximaPerguntaId = Mensagens.proximaPerguntaId(Global.fase)
 	if origem.name.ends_with(proximaPerguntaId):
 		Global.quiz = proximaPerguntaId
@@ -163,11 +164,19 @@ func quiz_entered(body, origem):
 func on_npc_quiz_entered(body):
 	var pergunta = Mensagens.perguntaRegiaoAtual(Mensagens.proximaPerguntaId(Global.fase))
 	$NPC_texto.hide_textbox()
-	for txt in pergunta.conversa_npc:
+	var textos = []
+	if !pergunta.respondido:
+		textos = pergunta.mensagens_npc.neutro
+	else:
+		if pergunta.acertou:
+			textos = pergunta.mensagens_npc.acertou
+		else:
+			textos = pergunta.mensagens_npc.errou
+		
+	for txt in textos:
 		$NPC_texto.fila_texto(txt)
 	$NPC_texto.mudar_estado($NPC_texto.State.PRONTO)
-		
-		
+
 ##trocar para quiz
 #func _on_Area2D_body_entered(_body):
 #	if Global.index == 0: #checa se você esta nesta pergunta

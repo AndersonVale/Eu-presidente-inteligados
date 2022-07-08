@@ -1,19 +1,14 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Font/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Cenas/final_Fase1/win_Screen.gd" type="Script" id=2]
 [ext_resource path="res://Imagens/NPC/ana.png" type="Texture" id=3]
-[ext_resource path="res://Font/MEGAMAN10.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Imagens/Menu/menu_item2.png" type="Texture" id=5]
+[ext_resource path="res://Cenas/pressSpace.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Cenas/cena_Menu/cursor_Mouse.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
 font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 72
-font_data = ExtResource( 4 )
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -71,28 +66,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
-margin_left = 422.0
-margin_top = 523.0
-margin_right = 820.0
-margin_bottom = 603.0
-focus_mode = 0
-enabled_focus_mode = 0
-flat = true
-
-[node name="MenuItem2" type="Sprite" parent="Button"]
-position = Vector2( 198.5, 42.125 )
-scale = Vector2( 0.194516, 0.144677 )
-texture = ExtResource( 5 )
-
-[node name="Continue" type="Label" parent="Button"]
-margin_left = 26.0
-margin_top = 11.0
-margin_right = 369.0
-margin_bottom = 59.0
-custom_fonts/font = SubResource( 4 )
-text = "AVANÇAR >>"
-
 [node name="Ana" type="Sprite" parent="."]
 position = Vector2( 1500, 573 )
 scale = Vector2( 0.2, 0.2 )
@@ -104,6 +77,6 @@ anims/ana_fase1 = SubResource( 3 )
 
 [node name="cursor_Mouse" parent="." instance=ExtResource( 6 )]
 
-[connection signal="mouse_entered" from="Button" to="." method="_on_Button_mouse_entered"]
-[connection signal="mouse_exited" from="Button" to="." method="_on_Button_mouse_exited"]
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[node name="pressSpace" parent="." instance=ExtResource( 4 )]
+margin_left = 4.0
+text = "PRESSIONE ESPAÇO PARA CONTINUAR"

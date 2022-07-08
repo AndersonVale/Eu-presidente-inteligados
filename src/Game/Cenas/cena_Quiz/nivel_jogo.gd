@@ -19,7 +19,7 @@ var oldOpcao = opcao
 var respondeu = false
 
 func _ready() -> void:
-	for _button in $resposta.get_children():
+	for _button in $opcoes.get_children():
 		buttons.append(_button)
 	Global.stop = 0  #retorna ao estado inicial quando a cena é chamada
 	load_quiz()

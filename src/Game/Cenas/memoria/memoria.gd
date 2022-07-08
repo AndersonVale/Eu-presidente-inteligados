@@ -40,14 +40,23 @@ func _input(event):
 	if Input.is_action_just_pressed("ui_accept"):
 		flippaCartaAtual()
 		emit_signal("flipped" , cartaAtual)
+	
+
 
 	if $cursor.visible and event is InputEventKey and event.pressed and not event.echo:
-		cursorPos += Input.get_vector("left","right","up","down")
+		if Input.is_action_just_pressed("left"):
+			cursorPos += Vector2(-1,0)
+		elif Input.is_action_just_pressed("right"):
+			cursorPos += Vector2(1,0)
+		elif Input.is_action_just_pressed("down"):
+			cursorPos += Vector2(0,1)
+		elif Input.is_action_just_pressed("up"):
+			cursorPos += Vector2(0,-1)
+			
+		cursorPos.x = clamp(cursorPos.x , 0 , colunas - 1)
+		cursorPos.y = clamp(cursorPos.y , 0 , linhas - 1)
 
-	cursorPos.x = clamp(cursorPos.x , 0 , colunas - 1)
-	cursorPos.y = clamp(cursorPos.y , 0 , linhas - 1)
-
-	alocaCursor()
+		alocaCursor()
 
 
 func preparaTabuleiro():

@@ -51,4 +51,5 @@ func completouPerguntas():
 func configuracaoRegiaoAtual():
 	return textos[Global.fase]["configuracao"]
 	
-	
+
+
