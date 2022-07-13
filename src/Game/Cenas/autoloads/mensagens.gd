@@ -51,5 +51,10 @@ func completouPerguntas():
 func configuracaoRegiaoAtual():
 	return textos[Global.fase]["configuracao"]
 	
-
-
+func gameCompleto():
+	var completo = true
+	for regiao in textos:
+		#print(regiao)
+		if !regiaoCompleta(regiao):
+			completo = false
+	return completo

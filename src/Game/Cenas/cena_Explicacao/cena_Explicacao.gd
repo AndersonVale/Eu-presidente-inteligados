@@ -198,7 +198,10 @@ func _on_botao_geral_pressed():
 	if Global.contador <= 0: #se o contador chegar a 0, muda para o game over
 		get_tree().change_scene("res://Cenas/final_Fase1/game_Over.tscn")
 	else:
-		get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
+		if Mensagens.gameCompleto():
+			get_tree().change_scene("res://Cenas/jogoCompleto.tscn")
+		else:
+			get_tree().change_scene("res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn")
 		
 #	else:
 #		if Global.index < Global.indexEscola and Global.index != 6: #caso estiver na campanha em uma pergunta diferente da final, volta para o mundo

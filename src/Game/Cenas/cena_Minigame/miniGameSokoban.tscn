@@ -1,0 +1,107 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Cenas/sokoban/sokoban.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/bandeira.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cenas/cena_Minigame/miniGameSokoban.gd" type="Script" id=3]
+[ext_resource path="res://Audio/step.wav" type="AudioStream" id=4]
+[ext_resource path="res://Audio/error.wav" type="AudioStream" id=5]
+[ext_resource path="res://Audio/TremLoadingloopl.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Audio/success.wav" type="AudioStream" id=7]
+[ext_resource path="res://Font/MEGAMAN10.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Cenas/wasd_Teclas.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Imagens/Teclado/space_blank.png" type="Texture" id=10]
+[ext_resource path="res://Audio/arrasta_caixa.wav" type="AudioStream" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+font_data = ExtResource( 8 )
+
+[node name="miniGameSokoban" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="bandeira" parent="." instance=ExtResource( 2 )]
+
+[node name="sokoban" parent="." instance=ExtResource( 1 )]
+
+[node name="blip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -6.19
+autoplay = true
+
+[node name="error" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="success" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="arrasta" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = 7.429
+
+[node name="HUD" type="Node2D" parent="."]
+
+[node name="nivel" type="Label" parent="HUD"]
+margin_left = 22.0
+margin_top = 19.0
+margin_right = 326.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 1 )
+text = "blablabla"
+
+[node name="espaço" type="Label" parent="HUD"]
+margin_left = 752.0
+margin_top = 640.0
+margin_right = 1265.0
+margin_bottom = 674.0
+custom_fonts/font = SubResource( 2 )
+text = "Mantenha espaço apertado para sair"
+align = 2
+
+[node name="wasd" parent="HUD" instance=ExtResource( 9 )]
+position = Vector2( -50, 2 )
+
+[node name="SpaceBlank" type="Sprite" parent="HUD"]
+position = Vector2( 128.5, 627 )
+scale = Vector2( 0.203226, 0.219032 )
+texture = ExtResource( 10 )
+
+[node name="espaço2" type="Label" parent="HUD"]
+margin_left = 18.0
+margin_top = 632.0
+margin_right = 235.0
+margin_bottom = 721.0
+custom_colors/font_color = Color( 0.152941, 0.152941, 0.152941, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Voltar
+"
+align = 1
+valign = 1
+
+[node name="espaço3" type="Label" parent="HUD"]
+margin_left = 752.0
+margin_top = 675.0
+margin_right = 1265.0
+margin_bottom = 709.0
+custom_fonts/font = SubResource( 2 )
+text = "Pressione ESC para reiniciar"
+align = 2
+
+[connection signal="box_fited" from="sokoban" to="." method="_on_sokoban_box_fited"]
+[connection signal="box_pushed" from="sokoban" to="." method="_on_sokoban_box_pushed"]
+[connection signal="exited" from="sokoban" to="." method="_on_sokoban_exited"]
+[connection signal="finished" from="sokoban" to="." method="_on_sokoban_finished"]
+[connection signal="levels_completed" from="sokoban" to="." method="_on_sokoban_levels_completed"]
+[connection signal="moved" from="sokoban" to="." method="_on_sokoban_moved"]
+[connection signal="started" from="sokoban" to="." method="_on_sokoban_started"]
+[connection signal="undone" from="sokoban" to="." method="_on_sokoban_undone"]

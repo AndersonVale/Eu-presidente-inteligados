@@ -28,6 +28,7 @@ var skin = 3
 var fase = "sul"
 var quiz = null
 var retornoMinigame 
+var ultimo_sokoban = 0
 
 var skins = [
 	"res://Imagens/NPC/avatar1_Oficial.png",
@@ -35,7 +36,6 @@ var skins = [
 	"res://Imagens/NPC/npc_garota_negra.png",
 	"res://Imagens/NPC/npc_garota_branca.png"
 ]
-
 
 func setContador(val):
 	contador = val
@@ -49,4 +49,4 @@ func respondeuPergunta():
 	emit_signal("perguntaRespondida")
 
 func voltaMundoAberto():
-	get_tree().change_scene(retornoMinigame)
+	  get_tree().change_scene(retornoMinigame)

@@ -135,7 +135,7 @@ var data =  {
 			"pontos" : 0,
 			"respondido" : false,
 			"obrigatorio" : false,
-			"cena" : "res://Cenas/cena_Minigame/miniGameMemoria.tscn",
+			"cena" : "res://Cenas/cena_Minigame/minigameForca.tscn",
 			"mensagens_npc":{
 				"neutro" : [
 					"Pablo: Oi! está perdendo muitos pontos durante as problemáticas?",

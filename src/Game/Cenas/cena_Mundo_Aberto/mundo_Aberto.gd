@@ -14,7 +14,7 @@ func _ready():
 		$theme_song.stop() #Faz o áudio tocar
 	if Global.mudo == 0:
 		$theme_song.play() #Faz áudio parar
-	Global.subiuRua = 0 
+	Global.subiuRua = 0
 	
 #	$AlertaAmarelo.play()
 #	$AlertaAmarelo2.play()
@@ -28,8 +28,6 @@ func _ready():
 		get_node("Quiz_" + a).connect("body_entered" , self , "quiz_entered", [get_node("Quiz_" + a)])
 
 func _process(delta):
-	
-	
 
 	var proximaPerguntaId = Mensagens.proximaPerguntaId(Global.fase)
 

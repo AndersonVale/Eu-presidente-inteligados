@@ -105,9 +105,9 @@ flat = true
 
 [node name="opcao3" type="Label" parent="opcoes"]
 margin_left = 1578.0
-margin_top = 415.0
+margin_top = 185.0
 margin_right = 2226.0
-margin_bottom = 622.0
+margin_bottom = 392.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "teste
@@ -117,9 +117,9 @@ autowrap = true
 
 [node name="opcao4" type="Label" parent="opcoes"]
 margin_left = 1578.0
-margin_top = 185.0
+margin_top = 417.0
 margin_right = 2226.0
-margin_bottom = 384.0
+margin_bottom = 616.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "teste

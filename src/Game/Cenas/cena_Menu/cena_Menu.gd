@@ -5,11 +5,8 @@ var iniciou = false
 
 func _ready(): #play na logo do jogo
 	$inteligados_logo.play("inteligados")
-	if Global.mudo == 0:
-		$AnimatedSprite.frame = 0
-		$menuSoundtrack.play() 
-	else:
-		$AnimatedSprite.frame = 1
+	$AnimatedSprite.frame = 0
+	$menuSoundtrack.play() 
 
 func _on_iniciar_Botao_pressed():
 	Global.reiniciar = 0 #impossibilita o personagem de reiniciar o jogo
@@ -38,6 +35,9 @@ func _on_carregar_Botao_pressed():
 		get_tree().change_scene("res://Cenas/cena_MapaBrasil/mapa_Brasil.tscn")
 
 func _input(event):
+#	if Input.is_action_just_pressed("ui_cancel"):
+#		get_tree().change_scene("res://Cenas/jogoCompleto.tscn")
+	
 	if !iniciou and Input.is_action_just_pressed("ui_accept"):
 		iniciou = true
 		$start.play()

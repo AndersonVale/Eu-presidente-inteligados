@@ -15,7 +15,6 @@ func _input(event):
 #func _on_Button_pressed():
 #	get_tree().change_scene("res://Cenas/cena_MapaBrasil/mapa_Brasil.tscn")
 
-
 ##Trocar cor do botão
 #func _on_Button_mouse_entered():
 #	$Button/MenuItem2.modulate = Color.cornflower

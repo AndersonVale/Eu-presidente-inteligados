@@ -1,0 +1,135 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Font/MEGAMAN10.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Imagens/NPC/avatar1_Oficial.png" type="Texture" id=2]
+[ext_resource path="res://Audio/Hino.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Imagens/sunset.png" type="Texture" id=4]
+
+[sub_resource type="Shader" id=5]
+code = "shader_type canvas_item;
+
+void fragment(){
+	COLOR = texture(TEXTURE , UV + vec2( .05 * TIME ,0));
+}"
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 5 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends Node2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	$Sprite.texture = load(Global.skins[Global.skin])
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("boneco/Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 655, 474 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("boneco/Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 27 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "walk"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("boneco/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 27, 35 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("boneco/Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 656.2, 474 ), Vector2( 691, 474 ) ]
+}
+
+[node name="jogoCompleto" type="Node2D"]
+
+[node name="Sunset" type="Sprite" parent="."]
+material = SubResource( 6 )
+position = Vector2( 640, 361.5 )
+scale = Vector2( 1.85429, 1.94162 )
+texture = ExtResource( 4 )
+
+[node name="titulo" type="Label" parent="."]
+margin_right = 1286.0
+margin_bottom = 317.0
+custom_fonts/font = SubResource( 1 )
+text = "Parabéns! 
+Você sobreviveu a 1 ano na presidência!"
+align = 1
+valign = 1
+
+[node name="boneco" type="Node2D" parent="."]
+position = Vector2( 0, 32 )
+script = SubResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="boneco"]
+position = Vector2( 655, 500 )
+scale = Vector2( 7.76562, 7.76562 )
+texture = ExtResource( 2 )
+hframes = 9
+vframes = 4
+frame = 27
+
+[node name="anim" type="AnimationPlayer" parent="boneco/Sprite"]
+root_node = NodePath("../../..")
+autoplay = "walk"
+playback_speed = 0.5
+anims/RESET = SubResource( 2 )
+anims/walk = SubResource( 3 )
+
+[node name="musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -9.905
+autoplay = true
