@@ -14,33 +14,43 @@ signal letraJaEscolhida
 
 var enigmas = [
 	{
-		"palavra" : "paralelepipedo",
-		"dica" : "Pedra pra fazer ruas",
+		"palavra" : "Quociente Eleitoral",
+		"dica" : "metodo de distribuicao das vagas do legislativo nas eleições pelo sistema proporcional de votos ",
 		"usado" : false
-	},{
-		"palavra" : "presidente",
-		"dica" : "Cargo maior do executivo",
+	},
+	{
+		"palavra" : "Clausula Petrea",
+		"dica" : "Clausulas da Constituicao Federal que nao podem ser alteradas",
 		"usado" : false
-	},{
-		"palavra" : "Axioma",
-		"dica" : "Premissa considerada evidente e verdadeira",
+	},
+	{
+		"palavra" : "prefeito",
+		"dica" : "chefe do poder executivo municipal",
 		"usado" : false
-	},{
-		"palavra" : "Azulejo",
-		"dica" : "Plaqueta cerâmica vidrada",
+	},
+	{
+		"palavra" : "PEC",
+		"dica" : "Proposta para alterar a Constituicao Federal",
 		"usado" : false
-	},{
-		"palavra" : "carapaça",
-		"dica" : "qualquer cobertura rija us. como proteção.",
+	},
+	{
+		"palavra" : "Vereador",
+		"dica" : "Representante do poder legislativo municipal",
+		"usado" : false
+	},
+	{
+		"palavra" : "Governador",
+		"dica" : "Chefe do poder executivo estadual",
 		"usado" : false
 	}
+	
 ]
 
 func _ready():
 	escolhePalavra()
 
 func escolhePalavra():
-	
+
 	if !temEnigma():
 		set_process_input(false)
 		return
@@ -55,17 +65,27 @@ func escolhePalavra():
 	var loops=randi() % 20 + 10
 	for c in $hbox2.get_children():
 		c.queue_free()
-	for c in $hbox.get_children():
+	for c in $caixaTexto/hbox.get_children():
 			c.queue_free()
 	enigma = enigmas[randi() % enigmas.size()]
 
 	while(enigma.usado):
 		enigma = enigmas[randi() % enigmas.size()]
 
+	var maiorLargura = 0
+	
+	var ps =  enigma.palavra.rsplit(" " , true , 1)
+	for p in ps:
+		if p.length() > maiorLargura:
+			maiorLargura = p.length()
+
+	#print(maiorLargura)
+	$caixaTexto/hbox.columns = maiorLargura + 1
+	
 	for a in enigma.palavra.to_upper():
 		var label = $modelo.duplicate()
 		label.text = a
-		$hbox.add_child(label)
+		$caixaTexto/hbox.add_child(label)
 
 	yield(get_tree().create_timer(.15),"timeout")
 	enigma.usado = true
@@ -93,12 +113,12 @@ func _input(event):
 				return
 
 		var repetido = false
-		for c in $hbox.get_children():
+		for c in $caixaTexto/hbox.get_children():
 			if c.text ==  event.as_text().to_upper() and c.mostrando():
 				emit_signal("letraJaEscolhida")
 				c.blink()
 				repetido = true
-		
+
 		if repetido:
 			return
 
@@ -108,7 +128,7 @@ func _input(event):
 		var achou = false
 		for l in enigma.palavra.to_upper():
 			if l == event.as_text().to_upper():
-				$hbox.get_child(i).mostra()
+				$caixaTexto/hbox.get_child(i).mostra()
 				achou = true
 			i += 1
 		if !achou:
@@ -126,15 +146,16 @@ func _input(event):
 			#$success.play()
 		verificaCompletou()
 
+
 func verificaCompletou():
 	if vidas <= 0:
 		#$gameover.play()
-		for c in $hbox.get_children():
+		for c in $caixaTexto/hbox.get_children():
 			c.vermelha()
 		emit_signal("enforcado")
 		return
 	var completou = true
-	for c in $hbox.get_children():
+	for c in $caixaTexto/hbox.get_children():
 		if !c.mostrando():
 			completou = false
 	if !completou:
@@ -143,7 +164,7 @@ func verificaCompletou():
 		set_process_input(true)
 	else:
 		var completouTodas = true
-		for c in $hbox.get_children():
+		for c in $caixaTexto/hbox.get_children():
 				c.win()
 
 		for e in enigmas:

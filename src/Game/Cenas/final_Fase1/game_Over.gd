@@ -8,6 +8,9 @@ func _ready():
 
 #Botão de voltar para o menu
 func _process(_delta):
-	if $voltar/botao_voltar.is_pressed():
+	if Input.is_action_just_pressed("ui_accept"):
 		get_tree().change_scene("res://Cenas/cena_Menu/cena_Menu.tscn")
 		Global.reiniciar = 0 
+#	if $voltar/botao_voltar.is_pressed():
+#		get_tree().change_scene("res://Cenas/cena_Menu/cena_Menu.tscn")
+#		Global.reiniciar = 0 

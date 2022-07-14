@@ -2,6 +2,36 @@ extends Node
  
 var data =  {
 
+		"industria" : {
+			"tipo" : Mensagens.Tipos.PERGUNTA,
+			"informacao" : "Sergio tem uma empresa de fornecimento de algodão e, em conjunto com as demais empresas que cuidam do mesmo tema, pretende selar um acordo para controlar o mercado do algodão, de modo que os preços sejam ajustados entre essas empresas para eliminar a concorrência. Como você aconselharia Sergio a prosseguir?",
+			"alternativas" : [
+				"Sergio não poderia seguir com seu plano, pois a prática narrada configura crime contra a ordem econômica, denominado formação de cartel",
+				"Sergio poderia seguir com seu plano, pois a prática narrada é frequentemente utilizada para que os preços do mercado mercado sejam mais controlados, o que auxilia no desenvolvimento econômico do país"
+			],
+			"explicacoes" : {
+				"True" : "Você está certo, Presidente! A prática de cartel é proibida no Brasil, pois se trata de situação em que há o abuso do poder econômico de um determinado grupo de empresas que, em conjunto, objetivam dominar determinado nicho de mercado, com total controle sobre os preços e as quantidades vendidas daquele produto. Por isso, não seria indicado que Sergio siga com seu plano.",
+				"False" : "Poxa, Presidente, sua resposta está equivocada. A prática de cartel é proibida no Brasil, pois se trata de situação em que há o abuso do poder econômico de um determinado grupo de empresas que, em conjunto, objetivam dominar determinado nicho de mercado, com total controle sobre os preços e as quantidades vendidas daquele produto. Por isso, não seria indicado que Sergio siga com seu plano."
+			},
+			"mensagens_npc":{
+				"neutro" : [
+					"Rodrigo: Tenho várias dúvidas sobre nossa economia...!",
+				], 
+				"acertou": [
+					"Rodrigo: Muito obrigado por esclarecer essa duvida, presidente!",
+					"Rodrigo: Muito importante saber sobre o abuso do poder econômico",
+				],
+				"errou" : [
+					"Rodrigo: Presidente, infelizmente essa não era a explicação correta",
+				]
+			},
+			"correta" : 0,
+			"acertou" : false,
+			"valorAcerto" : 1,
+			"valorErro" : 0,
+			"respondido" : false,
+			"obrigatorio" :true
+		},
 		"mercado" : {
 			"tipo" : Mensagens.Tipos.PERGUNTA,
 			"informacao" : "Rodrigo comprou um pacote de pão de forma e, ao chegar em casa, percebeu que ele estava com mofo. No entanto, considerando que o Rodrigo já saiu da loja e não tinha visto esse defeito, ele questiona a você, Presidente, se ainda pode reclamar a respeito disso ao fornecedor do produto?",
@@ -67,37 +97,6 @@ var data =  {
 			"respondido" : false,
 			"obrigatorio" :true,
 		},
-		"industria" : {
-			"tipo" : Mensagens.Tipos.PERGUNTA,
-			"informacao" : "Sergio tem uma empresa de fornecimento de algodão e, em conjunto com as demais empresas que cuidam do mesmo tema, pretende selar um acordo para controlar o mercado do algodão, de modo que os preços sejam ajustados entre essas empresas para eliminar a concorrência. Ao te ver entrando na indústria, Sergio aproveita a sua presença para questionar se essa prática seria possível. Você, na condição de Presidente, responde que",
-			"alternativas" : [
-				"Sergio não poderia seguir com seu plano, pois a prática narrada configura crime contra a ordem econômica, denominado formação de cartel",
-				"Sergio poderia seguir com seu plano, pois a prática narrada é válida no mundo do direito para que o mercado seja mais controlado"
-			],
-			"explicacoes" : {
-				"True" : "Você está certo, Presidente! A prática de cartel é proibida no Brasil, pois se trata de situação em que há o abuso do poder econômico de um determinado grupo de empresas que, em conjunto, objetivam dominar determinado nicho de mercado, com total controle sobre os preços e as quantidades vendidas daquele produto. Por isso, não seria indicado que Sergio siga com seu plano.",
-				"False" : "Poxa, Presidente, sua resposta está equivocada. A prática de cartel é proibida no Brasil, pois se trata de situação em que há o abuso do poder econômico de um determinado grupo de empresas que, em conjunto, objetivam dominar determinado nicho de mercado, com total controle sobre os preços e as quantidades vendidas daquele produto. Por isso, não seria indicado que Sergio siga com seu plano."
-			},
-			"mensagens_npc":{
-				"neutro" : [
-					"Rodrigo: Tenho várias dúvidas sobre nossa economia...!",
-				], 
-				"acertou": [
-					"Rodrigo: Muito obrigado por esclarecer essa duvida, presidente!",
-					"Rodrigo: Muito importante saber sobre o abuso do poder econômico",
-				],
-				"errou" : [
-					"Rodrigo: Presidente, infelizmente essa não era a explicação correta",
-				]
-			},
-			"correta" : 0,
-			"acertou" : false,
-			"valorAcerto" : 1,
-			"valorErro" : 0,
-			"respondido" : false,
-			"obrigatorio" :true
-		},
-		
 		"prefeitura" : {
 			"tipo" : Mensagens.Tipos.PERGUNTA,
 			"informacao" : "Gertrudes, mulher do prefeito, estava dirigindo em uma estrada no período da manhã e, ao ouvir um pedido de socorro na estrada, não parou para pedir socorro de autoridade pública ou prestar assistência à pessoa que estava ferida. Essa situação seria narrada no jornal e, como Presidente, pediram para que você os ensinasse se existiria qualquer consequência legal nesse caso. Nessa posição, você:",

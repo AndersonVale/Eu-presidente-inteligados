@@ -90,9 +90,9 @@ anims/RESET = SubResource( 2 )
 anims/blink = SubResource( 3 )
 
 [node name="label" type="Label" parent="."]
-margin_top = 140.0
+margin_top = -18.0
 margin_right = 1271.0
-margin_bottom = 301.0
+margin_bottom = 143.0
 custom_fonts/font = SubResource( 1 )
 text = "Jogo da Forca"
 align = 1

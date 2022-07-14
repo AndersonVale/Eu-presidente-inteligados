@@ -4,14 +4,14 @@ var data =  {
 
 		"industria" : {
 			"tipo" : Mensagens.Tipos.PERGUNTA,
-			"informacao" : "Larissa estava lendo o jornal e se deparou com a seguinte frase: \"PIB do Brasil cresce 1% no primeiro trimestre de 2022\". Diante disso, Larissa, estudante do ensino médio, sem saber o significado de PIB, não conseguiu entender a notícia. Nesse contexto, aproveitando que você estava chegando, ficou de prontidão para te encontrar na porta da indústria. Diante disso, Presidente, como você explicaria para Larissa o que significa o PIB?",
+			"informacao" : "Larissa estava lendo o jornal e se deparou com a seguinte frase: \"PIB do Brasil cresce 1% no primeiro trimestre de 2022\". No entanto, Larissa, estudante do ensino médio, sem saber o significado de PIB, não conseguiu entender a notícia e pede sua ajuda. Como você explicaria para Larissa o que significa o PIB?",
 			"alternativas" : [
 				"Explica que o PIB é o Produto Internacional Brasileiro, isto é, o valor de todos os produtos que o Brasil produz e envia para o exterior no decorrer de um ano",
 				"Explica que o PIB é o Produto Interno Bruto, isto é, a soma de todos os bens e serviços finais produzidos por um país, estado ou cidade, geralmente em um ano"
 			],
 			"explicacoes" : {
 				"True" : "Mandou bem, Presidente! O PIB significa produto interno bruto e, por mais que possa ser calculado com base em referências distintas, representa a soma de todos os bens e serviços finais produzidos em uma determinada região e em um determinado tempo. Todos os países calculam o seu PIB nas suas respectivas moedas. O PIB do Brasil em 2021, por exemplo, foi de R$ 8,7 trilhões.",
-				"False" : "Acho que você se confundiu, Presidente! O PIB significa produto interno bruto e, por mais que possa ser calculado com base em referências distintas, representa a soma de todos os bens e serviços finais produzidos em uma determinada região e em um determinado tempo."
+				"False" : "Acho que você se confundiu, Presidente! O PIB significa produto interno bruto e, por mais que possa ser calculado com base em referências distintas, representa a soma de todos os bens e serviços finais produzidos em uma determinada região e em um determinado tempo. O PIB do Brasil em 2021, por exemplo, foi de R$ 8,7 trilhões."
 			},
 			"mensagens_npc":{
 				"neutro" : [
@@ -34,10 +34,10 @@ var data =  {
 		},
 		"mercado" : {
 			"tipo" : Mensagens.Tipos.PERGUNTA,
-			"informacao" : "Isabel comprou uma máquina de lavar. Mas, após 3 meses de sua compra, a máquina parou de funcionar por um problema técnico em sua função elétrica, que não era evidente no momento da compra. Além disso, Isabel não contratou garantia no momento de comprar o produto e agora teme ter perdido esse dinheiro para sempre, restando-lhe apenas comprar uma nova máquina. Você, como Presidente, precisará orientá-la sobre o que fazer nessa situação. Como você aconselharia Isabel?",
+			"informacao" : "Isabel comprou uma máquina de lavar sem garantia. Após 3 meses, a máquina parou de funcionar por um problema técnico em sua função elétrica, que não era evidente no momento da compra. Agora, ela teme ter perdido esse dinheiro para sempre, restando-lhe apenas comprar uma nova máquina. Sendo Presidente, como aconselharia Isabel?",
 			"alternativas" : [
-				"Aconselha a pedir um empréstimo e comprar uma nova máquina de lavar, porque quem não compra com garantia não tem qualquer proteção de acordo com as nossas leis. Na próxima, ela deverá torcer para que não haja qualquer problema oculto no produto e contar um pouco mais com a sorte.",
-				"Aconselha a entrar em contato com o fornecedor do produto, em até 90 dias depois que descobriu o defeito, para que a empresa arrume o produto, uma vez que nossas leis protegem as pessoas que compram produtos que não imaginavam ser defeituosos, com base no Código de Defesa do Consumidor."
+				"Aconselha a pedir um empréstimo e comprar uma nova máquina de lavar. Na próxima, ela deverá contratar a garantia ao comprar o produto para não ter que contar tanto com a sorte, conforme aconselha o Código de Defesa do Consumidor.",
+				"Aconselha a entrar em contato com o fornecedor do produto, em até 90 dias depois que descobriu o defeito, para que a empresa arrume o produto, porque o Código de Defesa do Consumidor protege as pessoas que compram produtos que não imaginavam ser defeituosos."
 			],
 			"explicacoes" : {
 				"True" : "Isso mesmo, Presidente! De acordo com o Código de Defesa do Consumidor, aquele que compra produto com defeito oculto, como Isabel, ainda que sem garantia, terá até 90 dias caso o produto seja durável, como as máquinas de lavar, para solicitar que o fornecedor corrija o defeito do produto em até 30 dias, ou, não sendo possível corrigir, possa (i) substituir o produto por um novo, igual, em perfeitas condições de funcionamento, (ii) restituir o valor pago pelo consumidor ou (iii) retirar do valor pago a quantia correspondente ao defeito do produto, sendo que o consumidor deve escolher uma dessas opções",
@@ -66,7 +66,7 @@ var data =  {
 		},
 		"escola" : {
 			"tipo" : Mensagens.Tipos.PERGUNTA,
-			"informacao" : "Matheus gostaria de matricular sua filha na escola perto de sua casa, na zona sul de São Paulo. Ao chegar na escola, Matheus é informado que não há vaga naquela unidade e que sua filha terá que estudar em uma creche na zona oeste de São Paulo, que fica a 2 horas da casa de Matheus. Diante dessa situação, Matheus questiona se tem algo que possa fazer para resolver essa situação. Como resposta, você, como Presidente, informa que:",
+			"informacao" : "Matheus gostaria de matricular sua filha na escola perto de casa, na zona sul de São Paulo. Ao chegar na escola, Matheus é informado que não há vaga naquela unidade e que sua filha terá que estudar em uma creche na zona oeste de São Paulo, que fica a 2 horas de sua casa. Diante disso, como você orientaria Matheus?",
 			"alternativas" : [
 				"Não é possível fazer nada, porque é necessário respeitar o limite das escolas e, por isso, Rodrigo não poderá matricular sua filha perto de casa",
 				"É direito do cidadão que tenha vaga na escola pública de educação infantil ou de ensino fundamental mais próxima de sua residência a toda criança a partir do dia em que completar 4 anos de idade. Por isso, Rodrigo poderá se valer de seu direito para matricular sua filha na escola mais próxima de casa, na zona sul de São Paulo"
@@ -100,7 +100,7 @@ var data =  {
 		},
 		"prefeitura" : {
 			"tipo" : Mensagens.Tipos.PERGUNTA,
-			"informacao" : "Uma empresa muito importante para o País está concorrendo em uma licitação para ser escolhida como a nova empresa responsável por realizar a coleta de lixo do município relevante, no entanto, entra em contato e fornece dinheiro ao servidor público responsável por coordenar o procedimento de licitação para que ele influencie internamente e faça com que a empresa ganhe a licitação, mesmo cobrando um preço maior para realizar o serviço que as demais empresas concorrentes. Nesse contexto, ao ser informado dessa situação, você é convidado a orientar sobre o que deve acontecer em seguida:",
+			"informacao" : "Uma empresa A está concorrendo em uma licitação para ser escolhida como a nova responsável por realizar a coleta de lixo do município. Essa empresa pagou o servidor público responsável por coordenar a licitação para que ela ganhasse a licitação, mesmo cobrando um preço maior para realizar o serviço do que as outras empresas concorrentes. Como Presidente, o que você orientaria?",
 			"alternativas" : [
 				"Orienta a manter as coisas como estão desde que não se torne um escândalo e pede para que, caso alguém pergunte se você sabe a respeito, seja falado que essa história não lhe foi reportada, tendo em vista que é uma empresa muito importante para o País",
 				"Orienta que o caso seja reportado ao Ministério Público para que, de acordo com o previsto na Lei de Licitações, o procedimento de licitação seja anulado e a empresa e o funcionário deverão ser responsabilizados pelas consequências que lhe cabem"

@@ -27,7 +27,9 @@ func _on_iniciar_Botao_pressed():
 	Global.acertouPrefeitura = 0#variável que determina se ele acertou a pergunta da prefeitura
 	Global.acertouEscola = 0#variável que determina se ele acertou a pergunta da escola
 	Global.acertouMercado = 0#variável que determina se ele acertou a pergunta do mercado
-
+	Global.quiz = null
+	Global.retornoMinigame 
+	Global.ultimo_sokoban = 0
 	get_tree().change_scene("res://Cenas/escolha_skin.tscn")
 
 func _on_carregar_Botao_pressed():
