@@ -25,18 +25,30 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.12374369"
-     inkscape:cx="-116.33665"
-     inkscape:cy="1997.9996"
+     inkscape:zoom="0.14696023"
+     inkscape:cx="-144.12745"
+     inkscape:cy="1068.8201"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:snap-global="false"
+     inkscape:snap-global="true"
      inkscape:window-width="1535"
      inkscape:window-height="876"
      inkscape:window-x="65"
      inkscape:window-y="24"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="611.66855,457.09744"
+       orientation="1,0"
+       id="guide4315" />
+    <sodipodi:guide
+       position="634.52343,389.73571"
+       orientation="0,1"
+       id="guide4317" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -56,7 +68,7 @@
      transform="translate(0,-308.26772)">
     <g
        id="g4236"
-       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta1.png"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta1A.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
@@ -65,7 +77,7 @@
          height="185.71428"
          width="125.71429"
          id="rect4234"
-         style="fill:#e3dbdb;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:#ff0000;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
       <text
          sodipodi:linespacing="125%"
          id="text4174"
@@ -80,16 +92,17 @@
            sodipodi:role="line">1</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:155.26231384px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-         x="66.908928"
-         y="489.7356"
+         style="font-style:normal;font-weight:normal;font-size:28.48278046px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-394.06519"
+         y="314.91269"
          id="text4184"
-         sodipodi:linespacing="125%"><tspan
+         sodipodi:linespacing="125%"
+         transform="matrix(0.49158416,-0.89621801,0.82171316,0.53615616,0,0)"><tspan
            sodipodi:role="line"
            id="tspan4186"
-           x="66.908928"
-           y="489.7356"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ff0000;">1</tspan></text>
+           x="-394.06519"
+           y="314.91269"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff">Presidente</tspan></text>
       <path
          transform="translate(0,308.26772)"
          id="rect4171"
@@ -98,29 +111,29 @@
     </g>
     <g
        id="g4244"
-       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta2.png"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta2A.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
-         style="fill:#e3dbdb;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         style="fill:#d45500;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
          id="rect4138"
          width="125.71429"
          height="185.71428"
          x="206.71428"
          y="347.36218" />
       <text
-         transform="scale(0.87997433,1.1363968)"
+         transform="matrix(0.45164037,-0.767165,0.94261275,0.61301095,0,0)"
          sodipodi:linespacing="125%"
          id="text4188"
-         y="430.95474"
-         x="251.13155"
-         style="font-style:normal;font-weight:normal;font-size:136.62684631px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#d45500;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+         y="417.64551"
+         x="-352.39145"
+         style="font-style:normal;font-weight:normal;font-size:30.99771309px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#d45500;"
-           y="430.95474"
-           x="251.13155"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           y="417.64551"
+           x="-352.39145"
            id="tspan4190"
-           sodipodi:role="line">2</tspan></text>
+           sodipodi:role="line">Governador</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="path4178"
@@ -129,11 +142,11 @@
     </g>
     <g
        id="g4257"
-       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta4.png"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta4A.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
-         style="fill:#e3dbdb;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         style="fill:#88aa00;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
          id="rect4142"
          width="125.71429"
          height="185.71428"
@@ -141,16 +154,19 @@
          y="347.36218" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:155.26231384px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#88aa00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-         x="563.90399"
-         y="489.7356"
+         style="font-style:normal;font-weight:normal;font-size:33.90987015px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-158.40022"
+         y="763.35608"
          id="text4196"
-         sodipodi:linespacing="125%"><tspan
+         sodipodi:linespacing="125%"
+         inkscape:transform-center-x="-52.943965"
+         inkscape:transform-center-y="-79.206369"
+         transform="matrix(0.50966611,-0.86037228,0.86037228,0.50966611,0,0)"><tspan
            sodipodi:role="line"
            id="tspan4198"
-           x="563.90399"
-           y="489.7356"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#88aa00;">4</tspan></text>
+           x="-158.40022"
+           y="763.35608"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff">Vereador</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="path4182"
@@ -159,7 +175,7 @@
     </g>
     <g
        id="g4263"
-       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta5.png"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta5A.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
@@ -168,19 +184,27 @@
          height="185.71428"
          width="125.71429"
          id="rect4144"
-         style="fill:#e3dbdb;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:#00aad4;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1" />
       <text
          sodipodi:linespacing="125%"
          id="text4200"
-         y="489.7356"
-         x="733.60962"
-         style="font-style:normal;font-weight:normal;font-size:155.26231384px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#00aad4;"
-           y="489.7356"
-           x="733.60962"
+         y="893.854"
+         x="-87.364937"
+         style="font-style:normal;font-weight:normal;font-size:27.35218239px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:transform-center-x="9.5557176"
+         inkscape:transform-center-y="2.1370045"
+         transform="matrix(0.47764341,-0.8785538,0.8785538,0.47764341,0,0)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           y="893.854"
+           x="-87.364937"
            id="tspan4202"
-           sodipodi:role="line">5</tspan></text>
+           sodipodi:role="line">Deputado</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           y="928.04425"
+           x="-87.364937"
+           sodipodi:role="line"
+           id="tspan4265">Estadual</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="path4184"
@@ -189,11 +213,11 @@
     </g>
     <g
        id="g4269"
-       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta6.png"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta6A.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
-         style="fill:#e3dbdb;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         style="fill:#0066ff;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
          id="rect4146"
          width="125.71429"
          height="185.71428"
@@ -201,16 +225,27 @@
          y="347.36218" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:155.26231384px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-         x="909.37616"
-         y="489.7356"
+         style="font-style:normal;font-weight:normal;font-size:24.46474075px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="107.93097"
+         y="1026.068"
          id="text4204"
-         sodipodi:linespacing="125%"><tspan
+         sodipodi:linespacing="100%"
+         transform="matrix(0.56601298,-0.82439633,0.82439633,0.56601298,0,0)"><tspan
            sodipodi:role="line"
            id="tspan4206"
-           x="909.37616"
-           y="489.7356"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#0066ff;">6</tspan></text>
+           x="107.93097"
+           y="1026.068"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff">Senador e</tspan><tspan
+           sodipodi:role="line"
+           x="107.93097"
+           y="1050.5327"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           id="tspan4272">Deputado</tspan><tspan
+           sodipodi:role="line"
+           x="107.93097"
+           y="1074.9974"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           id="tspan4274">Federal</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="path4186"
@@ -235,23 +270,27 @@
          style="fill:#005522;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
          d="m -212.14313,333.0762 0,185.71484 125.714844,0 0,-185.71484 -125.714844,0 z m 7.07226,7.07227 111.572274,0 0,171.57226 -111.572274,0 0,-171.57226 z"
          id="path4192" />
-      <text
-         transform="scale(1.1922785,0.83873023)"
-         sodipodi:linespacing="125%"
-         id="text4194"
-         y="569.95911"
-         x="-169.24907"
-         style="font-style:normal;font-weight:normal;font-size:149.81268311px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#e2e3db;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#e2e3db"
-           y="569.95911"
-           x="-169.24907"
-           id="tspan4196"
-           sodipodi:role="line">?</tspan></text>
+      <path
+         style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m -204.8672,426.23541 56.56909,-85.66172 54.998772,85.21064 -54.430682,86.90866 z"
+         id="rect4244"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <circle
+         style="fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path4247"
+         cx="-147.97916"
+         cy="426.08508"
+         r="37.890972" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="M 609.375 317.16211 A 37.890972 37.890972 0 0 0 600.07422 319.05078 C 612.04955 342.54291 617.82487 366.9897 616.26562 392.56641 A 37.890972 37.890972 0 0 0 625.40039 390.39258 C 625.68486 365.59 620.34991 341.17889 609.375 317.16211 z "
+         transform="translate(-760,71.12486)"
+         id="circle4312" />
     </g>
     <g
        id="g4250"
-       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta3.png"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta3A.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
@@ -260,34 +299,31 @@
          height="185.71428"
          width="125.71429"
          id="rect4140"
-         style="fill:#e3dbdb;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:#d4aa00;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1" />
       <text
          sodipodi:linespacing="125%"
          id="text4192"
-         y="489.7356"
-         x="388.13745"
-         style="font-style:normal;font-weight:normal;font-size:155.26231384px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#d4aa00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#d4aa00;"
-           y="489.7356"
-           x="388.13745"
+         y="613.19629"
+         x="-252.53117"
+         style="font-style:normal;font-weight:normal;font-size:35.65888214px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         transform="matrix(0.49272877,-0.87018295,0.87018295,0.49272877,0,0)"
+         inkscape:transform-center-x="-46.47001"
+         inkscape:transform-center-y="-86.995115"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           y="613.19629"
+           x="-252.53117"
            id="tspan4194"
-           sodipodi:role="line">3</tspan></text>
+           sodipodi:role="line">Prefeito</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="path4180"
          d="m 376.99969,347.3619 0,185.71484 125.71485,0 0,-185.71484 -125.71485,0 z m 7.07227,7.07227 111.57227,0 0,171.57226 -111.57227,0 0,-171.57226 z"
          style="fill:#501616;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none" />
-      <path
-         transform="translate(0,308.26772)"
-         inkscape:connector-curvature="0"
-         id="path4200"
-         d="m 384.93965,131.219 0,-84.852817 54.54824,0 54.54824,0 0,84.852817 0,84.85281 -54.54824,0 -54.54824,0 0,-84.85281 z m 66.09848,46.75862 c 14.7401,-7.51984 24.78504,-23.1879 24.79643,-38.6774 0.005,-6.94301 -6.78077,-17.46273 -14.15886,-21.94962 -5.41453,-3.29277 -5.76293,-4.0374 -2.97259,-6.35318 1.73845,-1.44278 5.91946,-6.10632 9.29115,-10.36343 6.32097,-7.980866 6.60577,-14.380138 0.74018,-16.630976 -3.25204,-1.247924 -55.90947,7.545638 -64.30988,10.739467 -6.08359,2.312979 -6.40266,3.590862 -2.26295,9.063109 2.7891,3.68687 3.96614,3.7662 21.41367,1.44322 10.15428,-1.35195 18.96293,-1.9575 19.57476,-1.34567 1.49465,1.49465 -11.34617,14.66701 -18.3868,18.86153 -6.23086,3.7121 -6.70052,9.67308 -1.04156,13.21977 2.55117,1.59892 5.2787,1.26449 10.67515,-1.3089 16.78208,-8.00282 26.80771,-2.69356 24.69252,13.07637 -1.30843,9.75507 -4.23812,13.39699 -14.5507,18.08808 -11.12571,5.06097 -19.1929,4.96462 -19.1929,-0.22923 0,-5.76386 -9.16082,-11.42357 -13.14209,-8.1194 -5.9053,4.90095 -2.29333,19.86679 5.79643,24.01694 6.13796,3.14885 23.60375,1.28233 33.03804,-3.53068 z"
-         style="fill:#e3dbdb;fill-opacity:1;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
     <g
        id="g4275"
-       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta7.png"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta7A.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
@@ -296,38 +332,35 @@
          height="185.71428"
          width="125.71429"
          id="rect4178"
-         style="fill:#e3dbdb;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:#aa00d4;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1" />
       <text
          sodipodi:linespacing="125%"
          id="text4208"
-         y="707.92853"
-         x="56.807411"
-         style="font-style:normal;font-weight:normal;font-size:155.26231384px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#aa00d4;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#aa00d4;"
-           y="707.92853"
-           x="56.807411"
+         y="473.06223"
+         x="-560.47321"
+         style="font-style:normal;font-weight:normal;font-size:27.53333282px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         transform="matrix(0.58323559,-0.81230305,0.81230305,0.58323559,0,0)"
+         inkscape:transform-center-x="5.176245"
+         inkscape:transform-center-y="0.061664764"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           y="473.06223"
+           x="-560.47321"
            id="tspan4210"
-           sodipodi:role="line">7</tspan></text>
+           sodipodi:role="line">Ministérios</tspan></text>
       <path
          inkscape:connector-curvature="0"
          style="fill:#501616;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
          d="m 34.12793,569.59548 0,185.71484 125.71485,0 0,-185.71484 -125.71485,0 z m 7.07227,7.07227 111.57227,0 0,171.57226 -111.57227,0 0,-171.57226 z"
          id="path4176" />
-      <path
-         transform="translate(0,308.26772)"
-         inkscape:connector-curvature="0"
-         id="path4204"
-         d="m 42.157149,354.06416 0,-85.71429 55,0 55.000001,0 0,85.71429 0,85.71428 -55.000001,0 -55,0 0,-85.71428 z m 64.850861,43.92857 c 3.2509,-5.0735 18.00628,-74.91292 18.00628,-85.22641 0,-2.07939 -1.00074,-5.20947 -2.22386,-6.95573 -2.8861,-4.12048 -7.52172,-4.12726 -31.812155,-0.0465 l -19.036017,3.19803 0.464588,18.32017 c 0.49116,19.36799 1.283965,21.52717 7.607446,20.71862 3.86833,-0.49462 6.247476,-7.99349 6.34794,-20.00818 l 0.08063,-9.64286 11.428572,0 c 8.693675,0 11.428575,0.46578 11.428575,1.9464 0,3.15824 -6.95902,36.49259 -9.882758,47.33932 -4.372577,16.22176 -6.140619,26.43116 -5.21557,30.11685 1.205799,4.80428 9.778838,4.96514 12.806328,0.24029 z"
-         style="fill:#e3dbdb;fill-opacity:1;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
     <g
        id="g4282"
-       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta8.png"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta8A.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
-         style="fill:#e3dbdb;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         style="fill:#ff5599;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
          id="rect4180"
          width="125.71429"
          height="185.71428"
@@ -335,31 +368,26 @@
          y="569.59576" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:155.26231384px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff5599;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-         x="226.51305"
-         y="707.92853"
+         style="font-style:normal;font-weight:normal;font-size:48.72480011px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-331.72876"
+         y="675.69525"
          id="text4212"
-         sodipodi:linespacing="125%"><tspan
+         sodipodi:linespacing="125%"
+         transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)"><tspan
            sodipodi:role="line"
            id="tspan4214"
-           x="226.51305"
-           y="707.92853"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ff5599;">8</tspan></text>
+           x="-331.72876"
+           y="675.69525"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff">STF</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="path4188"
          d="m 204.41364,569.59548 0,185.71484 125.71485,0 0,-185.71484 -125.71485,0 z m 7.07227,7.07227 111.57227,0 0,171.57226 -111.57227,0 0,-171.57226 z"
          style="fill:#501616;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none" />
-      <path
-         transform="translate(0,308.26772)"
-         inkscape:connector-curvature="0"
-         id="path4206"
-         d="m 212.15715,354.06416 0,-85.71429 55,0 55,0 0,85.71429 0,85.71428 -55,0 -55,0 0,-85.71428 z m 73.37591,45.32429 c 4.56811,-3.22978 8.05984,-10.33157 8.0387,-16.34984 -0.0164,-4.66463 -5.26078,-16.20404 -10.51898,-23.14522 -4.39306,-5.79912 -4.56236,-5.50665 10.14417,-17.52379 11.31698,-9.24744 15.39213,-15.18151 13.84638,-20.16256 -4.41233,-14.21842 -22.69997,-21.30636 -41.31475,-16.0128 -15.74465,4.47737 -25.10111,13.64805 -25.25436,24.75293 -0.0944,6.83777 1.84114,10.73515 9.05631,18.23595 l 5.61112,5.83324 -4.87756,7.24802 c -8.10513,12.04418 -8.57105,14.7943 -3.78495,22.34118 4.4603,7.03318 15.29412,15.81005 22.10658,17.90935 5.49241,1.69252 11.76931,0.53456 16.94734,-3.12646 z"
-         style="fill:#e3dbdb;fill-opacity:1;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
     <g
        id="g4289"
-       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta9.png"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta9A.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
@@ -368,30 +396,421 @@
          height="185.71428"
          width="125.71429"
          id="rect4182"
-         style="fill:#e3dbdb;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:#008080;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1" />
       <text
          sodipodi:linespacing="125%"
          id="text4216"
-         y="707.92853"
-         x="390.15775"
-         style="font-style:normal;font-weight:normal;font-size:155.26231384px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#008080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#008080;"
-           y="707.92853"
-           x="390.15775"
+         y="768.19543"
+         x="-321.82953"
+         style="font-style:normal;font-weight:normal;font-size:51.52821732px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         transform="matrix(0.60173878,-0.79869296,0.79869296,0.60173878,0,0)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           y="768.19543"
+           x="-321.82953"
            id="tspan4218"
-           sodipodi:role="line">9</tspan></text>
+           sodipodi:role="line">PGR</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="path4190"
          d="m 374.69933,569.59548 0,185.71485 125.71485,0 0,-185.71485 -125.71485,0 z m 7.07227,7.07227 111.57227,0 0,171.57227 -111.57227,0 0,-171.57227 z"
          style="fill:#501616;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none" />
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta1B.png"
+       id="g4197"
+       transform="translate(0,492.95443)">
+      <rect
+         style="fill:#ff0000;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
+         id="rect4199"
+         width="125.71429"
+         height="185.71428"
+         x="36.428013"
+         y="347.36176" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:26.45196152px;line-height:101.99999809%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-326.3537"
+         y="285.23624"
+         id="text4201"
+         sodipodi:linespacing="102%"
+         transform="matrix(0.50444361,-0.86344464,0.86344464,0.50444361,0,0)"><tspan
+           sodipodi:role="line"
+           id="tspan4203"
+           x="-326.3537"
+           y="285.23624"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:101.99999809%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff">Poder</tspan><tspan
+           sodipodi:role="line"
+           x="-326.3537"
+           y="312.21722"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:101.99999809%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff"
+           id="tspan4249">Executivo</tspan><tspan
+           sodipodi:role="line"
+           x="-317.80331"
+           y="339.19824"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:101.99999809%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff"
+           id="tspan4251">Federal </tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4205"
+         y="489.7356"
+         x="66.908928"
+         style="font-style:normal;font-weight:normal;font-size:155.26231384px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ff0000"
+           y="489.7356"
+           x="66.908928"
+           id="tspan4207"
+           sodipodi:role="line" /></text>
       <path
-         transform="translate(0,308.26772)"
+         style="fill:#501616;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 36.427734,39.09375 0,185.71484 125.714846,0 0,-185.71484 -125.714846,0 z M 43.5,46.166016 l 111.57227,0 0,171.572264 -111.57227,0 0,-171.572264 z"
+         id="path4209"
          inkscape:connector-curvature="0"
-         id="path4208"
-         d="m 382.15715,354.06416 0,-85.71429 55,0 55,0 0,85.71429 0,85.71428 -55,0 -55,0 0,-85.71428 z m 70.68504,48.05518 c 2.42831,-1.77563 2.67537,-4.41655 2.83984,-30.35714 0.13372,-21.08894 0.8539,-31.86369 2.79408,-41.80247 2.42894,-12.44251 2.45003,-13.73383 0.29798,-18.24674 -2.86117,-5.99993 -7.99188,-8.13384 -17.33123,-7.20822 -7.56669,0.74994 -20.87586,6.01685 -27.97125,11.06921 -5.60449,3.99075 -12.71273,16.54902 -12.72963,22.48969 -0.0163,5.73123 3.14607,12.19248 7.43916,15.19948 4.81644,3.37357 21.16172,2.99458 28.31863,-0.6566 l 5.65738,-2.88618 0,24.31475 c 0,22.40999 0.22382,24.53857 2.85714,27.17189 3.37932,3.37933 4.30633,3.48737 7.8279,0.91233 z"
-         style="fill:#e3dbdb;fill-opacity:1;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none" />
+         transform="translate(0,308.26772)" />
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta2B.png"
+       id="g4211"
+       transform="translate(0,492.95443)">
+      <rect
+         y="347.36218"
+         x="206.71428"
+         height="185.71428"
+         width="125.71429"
+         id="rect4213"
+         style="fill:#d45500;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:25.72519493px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-241.76018"
+         y="383.89105"
+         id="text4215"
+         sodipodi:linespacing="100%"
+         transform="matrix(0.44709078,-0.77458715,0.93415458,0.61825446,0,0)"><tspan
+           sodipodi:role="line"
+           id="tspan4217"
+           x="-241.76018"
+           y="383.89105"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff">Poder</tspan><tspan
+           sodipodi:role="line"
+           x="-241.76018"
+           y="409.61624"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff"
+           id="tspan4253">Executivo</tspan><tspan
+           sodipodi:role="line"
+           x="-241.76018"
+           y="435.34143"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff"
+           id="tspan4255">Estadual</tspan></text>
+      <path
+         style="fill:#501616;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 206.714,347.3619 0,185.71484 125.71484,0 0,-185.71484 -125.71484,0 z m 7.07227,7.07227 111.57226,0 0,171.57226 -111.57226,0 0,-171.57226 z"
+         id="path4219"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta4B.png"
+       id="g4221"
+       transform="translate(0,492.95443)">
+      <rect
+         y="347.36218"
+         x="547.28571"
+         height="185.71428"
+         width="125.71429"
+         id="rect4223"
+         style="fill:#88aa00;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1" />
+      <text
+         sodipodi:linespacing="100%"
+         id="text4225"
+         y="726.82727"
+         x="-45.18755"
+         style="font-style:normal;font-weight:normal;font-size:24.81839371px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         transform="matrix(0.53024797,-0.84784261,0.84784261,0.53024797,0,0)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff"
+           y="726.82727"
+           x="-45.187546"
+           id="tspan4227"
+           sodipodi:role="line">Poder</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff"
+           y="751.64569"
+           x="-45.18755"
+           sodipodi:role="line"
+           id="tspan4261">Legislativo</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff"
+           y="776.46405"
+           x="-37.165199"
+           sodipodi:role="line"
+           id="tspan4263">Municipal </tspan></text>
+      <path
+         style="fill:#501616;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 547.28542,347.3619 0,185.71484 125.71485,0 0,-185.71484 -125.71485,0 z m 7.07227,7.07227 111.57227,0 0,171.57226 -111.57227,0 0,-171.57226 z"
+         id="path4229"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta5B.png"
+       id="g4231"
+       transform="translate(0,492.95443)">
+      <rect
+         style="fill:#00aad4;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
+         id="rect4233"
+         width="125.71429"
+         height="185.71428"
+         x="717.57141"
+         y="347.36218" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:26.19229698px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-20.46817"
+         y="872.6554"
+         id="text4235"
+         sodipodi:linespacing="100%"
+         transform="matrix(0.466545,-0.88449746,0.88449746,0.466545,0,0)"><tspan
+           sodipodi:role="line"
+           id="tspan4237"
+           x="-20.468172"
+           y="872.6554"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff">Poder</tspan><tspan
+           sodipodi:role="line"
+           x="-20.468166"
+           y="898.84772"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff"
+           id="tspan4268">Legislativo</tspan><tspan
+           sodipodi:role="line"
+           x="-20.46817"
+           y="925.03998"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff"
+           id="tspan4270">Estadual</tspan></text>
+      <path
+         style="fill:#501616;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 717.57113,347.3619 0,185.71484 125.71484,0 0,-185.71484 -125.71484,0 z m 7.07226,7.07227 111.57227,0 0,171.57226 -111.57227,0 0,-171.57226 z"
+         id="path4239"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta6B.png"
+       id="g4241"
+       transform="translate(0,492.95443)">
+      <rect
+         y="347.36218"
+         x="887.85712"
+         height="185.71428"
+         width="125.71429"
+         id="rect4243"
+         style="fill:#0066ff;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1" />
+      <text
+         sodipodi:linespacing="100%"
+         id="text4245"
+         y="1026.9762"
+         x="92.184555"
+         style="font-style:normal;font-weight:normal;font-size:23.21103287px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         transform="matrix(0.54817224,-0.83636547,0.83636547,0.54817224,0,0)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           y="1026.9762"
+           x="92.184555"
+           id="tspan4247"
+           sodipodi:role="line">Poder</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           y="1050.1873"
+           x="92.184555"
+           sodipodi:role="line"
+           id="tspan4276">Legislativo</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           y="1073.3983"
+           x="92.184555"
+           sodipodi:role="line"
+           id="tspan4278">Federal</tspan></text>
+      <path
+         style="fill:#501616;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 887.85684,347.3619 0,185.71484 125.71486,0 0,-185.71484 -125.71486,0 z m 7.07226,7.07227 111.5723,0 0,171.57226 -111.5723,0 0,-171.57226 z"
+         id="path4249"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta3B.png"
+       id="g4261"
+       transform="translate(0,492.95443)">
+      <rect
+         style="fill:#d4aa00;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
+         id="rect4263"
+         width="125.71429"
+         height="185.71428"
+         x="376.99997"
+         y="347.36218" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:25.46078682px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-151.90239"
+         y="578.51953"
+         id="text4265"
+         sodipodi:linespacing="100%"
+         transform="matrix(0.5075755,-0.86160728,0.86160728,0.5075755,0,0)"><tspan
+           sodipodi:role="line"
+           id="tspan4267"
+           x="-151.90239"
+           y="578.51953"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff">Poder</tspan><tspan
+           sodipodi:role="line"
+           x="-151.90239"
+           y="603.98035"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff"
+           id="tspan4257">Executivo</tspan><tspan
+           sodipodi:role="line"
+           x="-151.90239"
+           y="629.4411"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';text-align:center;text-anchor:middle;fill:#ffffff"
+           id="tspan4259">Municipal</tspan></text>
+      <path
+         style="fill:#501616;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 376.99969,347.3619 0,185.71484 125.71485,0 0,-185.71484 -125.71485,0 z m 7.07227,7.07227 111.57227,0 0,171.57226 -111.57227,0 0,-171.57226 z"
+         id="path4269"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta7B.png"
+       id="g4273"
+       transform="translate(0,492.95443)">
+      <rect
+         style="fill:#aa00d4;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
+         id="rect4275"
+         width="125.71429"
+         height="185.71428"
+         x="34.128212"
+         y="569.59576" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:21.72605133px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-568.0957"
+         y="368.7543"
+         id="text4277"
+         sodipodi:linespacing="100%"
+         transform="matrix(0.45653656,-0.91287728,0.85032442,0.490121,0,0)"><tspan
+           sodipodi:role="line"
+           id="tspan4279"
+           x="-568.0957"
+           y="368.7543"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff">Órgãos</tspan><tspan
+           sodipodi:role="line"
+           x="-568.0957"
+           y="390.59421"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           id="tspan4280">do Poder</tspan><tspan
+           sodipodi:role="line"
+           x="-568.0957"
+           y="412.43414"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           id="tspan4282">Executivo</tspan><tspan
+           sodipodi:role="line"
+           x="-568.0957"
+           y="434.27405"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           id="tspan4284">Federal</tspan></text>
+      <path
+         id="path4281"
+         d="m 34.12793,569.59548 0,185.71484 125.71485,0 0,-185.71484 -125.71485,0 z m 7.07227,7.07227 111.57227,0 0,171.57226 -111.57227,0 0,-171.57226 z"
+         style="fill:#501616;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta8B.png"
+       id="g4285"
+       transform="translate(0,492.95443)">
+      <rect
+         y="569.59576"
+         x="204.41393"
+         height="185.71428"
+         width="125.71429"
+         id="rect4287"
+         style="fill:#ff5599;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1" />
+      <text
+         sodipodi:linespacing="100%"
+         id="text4289"
+         y="539.42529"
+         x="-424.04596"
+         style="font-style:normal;font-weight:normal;font-size:27.68520927px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         transform="matrix(0.44356363,-0.97621327,0.76827474,0.563617,0,0)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           y="539.42529"
+           x="-424.04596"
+           id="tspan4291"
+           sodipodi:role="line">Supremo</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           y="569.57068"
+           x="-424.04596"
+           sodipodi:role="line"
+           id="tspan4286">Tribunal</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           y="599.71613"
+           x="-424.04596"
+           sodipodi:role="line"
+           id="tspan4288">Federal</tspan></text>
+      <path
+         style="fill:#501616;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 204.41364,569.59548 0,185.71484 125.71485,0 0,-185.71484 -125.71485,0 z m 7.07227,7.07227 111.57227,0 0,171.57226 -111.57227,0 0,-171.57226 z"
+         id="path4293"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/andersonvale/Documentos/Godot/projetos_3_4_4/Eu-presidente-inteligados/src/Game/Imagens/memoria/carta9B.png"
+       id="g4297"
+       transform="translate(0,492.95443)">
+      <rect
+         style="fill:#008080;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
+         id="rect4299"
+         width="125.71429"
+         height="185.71428"
+         x="374.69962"
+         y="569.59576" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:23.14240265px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-465.57867"
+         y="678.78882"
+         id="text4301"
+         sodipodi:linespacing="100%"
+         transform="matrix(0.45001408,-0.89302146,0.89302146,0.45001408,0,0)"><tspan
+           sodipodi:role="line"
+           id="tspan4303"
+           x="-465.57867"
+           y="678.78882"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff">Procurador</tspan><tspan
+           sodipodi:role="line"
+           x="-465.57867"
+           y="701.93121"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           id="tspan4290">Geral da</tspan><tspan
+           sodipodi:role="line"
+           x="-465.57867"
+           y="725.07361"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:Purisa;-inkscape-font-specification:'Purisa Bold';fill:#ffffff"
+           id="tspan4292">República</tspan></text>
+      <path
+         style="fill:#501616;stroke:none;stroke-width:10.80000019;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 374.69933,569.59548 0,185.71485 125.71485,0 0,-185.71485 -125.71485,0 z m 7.07227,7.07227 111.57227,0 0,171.57227 -111.57227,0 0,-171.57227 z"
+         id="path4305"
+         inkscape:connector-curvature="0" />
     </g>
   </g>
 </svg>

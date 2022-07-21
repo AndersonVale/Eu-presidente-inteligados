@@ -1,7 +1,7 @@
 extends Area2D
 
 
-export(int , 1, 9) var valor = 1
+export(int , 1, 9) var valor = 1 setget setValor
 
 var flipped = false
 var colected = false
@@ -24,6 +24,9 @@ func largura():
 func altura():
 	return $back.texture.get_height()
 
-func setFront(f):
+func setValor(f):
 	valor = f
-	$front.texture = load("res://Imagens/memoria/carta" + str(f) + ".png")
+
+func setFront(f):
+	var ref = "res://Imagens/memoria/carta" + f + ".png"
+	$front.texture = load(ref)

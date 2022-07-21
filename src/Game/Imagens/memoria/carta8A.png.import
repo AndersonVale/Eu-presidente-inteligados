@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/carta2.png-ee998118a5ee537c949acb183e028cd8.stex"
+path="res://.import/carta8A.png-849c0c35818fd3e535b11e7f784d7f17.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagens/memoria/carta2.png"
-dest_files=[ "res://.import/carta2.png-ee998118a5ee537c949acb183e028cd8.stex" ]
+source_file="res://Imagens/memoria/carta8A.png"
+dest_files=[ "res://.import/carta8A.png-849c0c35818fd3e535b11e7f784d7f17.stex" ]
 
 [params]
 

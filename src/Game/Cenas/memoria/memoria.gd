@@ -1,7 +1,7 @@
 extends Node2D
 
 const PRECARTA = preload("res://Cenas/memoria/carta.tscn")
-
+const fronts = ["A","B"]
 export var autoStart = true
 export var linhas = 3
 export var colunas = 6
@@ -17,6 +17,7 @@ var cursorPos = Vector2.ZERO
 var pronto = false
 var cartaAtual 
 var flippedCartas = []
+
 
 signal selected(c)
 signal flipped(c)
@@ -40,8 +41,6 @@ func _input(event):
 	if Input.is_action_just_pressed("ui_accept"):
 		flippaCartaAtual()
 		emit_signal("flipped" , cartaAtual)
-	
-
 
 	if $cursor.visible and event is InputEventKey and event.pressed and not event.echo:
 		if Input.is_action_just_pressed("left"):
@@ -74,10 +73,12 @@ func criaCartas():
 			var carta = PRECARTA.instance()
 			$cartas.add_child(carta)
 			carta.position = Vector2(c * (largura + offset.x) , l * (altura + offset.y)) + deslocamento 
-			carta.setFront(a / 2)
+			carta.setFront(str(a / 2) + fronts[a % 2])
+			carta.setValor(a / 2)
 			a += 1
 			largura = carta.largura()
 			altura = carta.altura()
+
 
 
 func flipAll():
