@@ -13,6 +13,9 @@ func _ready():
 func _input(event):
 	if completou and Input.is_action_just_pressed("ui_accept"):
 		Global.voltaMundoAberto()
+		
+	if Input.is_action_just_pressed("ui_cancel"):
+		Global.voltaMundoAberto()
 
 func updateHud():
 	$hud/acertos.text = "  Acertos : " + str(acertos)

@@ -13,16 +13,16 @@ signal acertouTodas
 signal letraJaEscolhida
 
 var enigmas = [
-	{
-		"palavra" : "Quociente Eleitoral",
-		"dica" : "metodo de distribuicao das vagas do legislativo nas eleições pelo sistema proporcional de votos ",
-		"usado" : false
-	},
-	{
-		"palavra" : "Clausula Petrea",
-		"dica" : "Clausulas da Constituicao Federal que nao podem ser alteradas",
-		"usado" : false
-	},
+#	{
+#		"palavra" : "Quociente Eleitoral",
+#		"dica" : "metodo de distribuicao das vagas do legislativo nas eleições pelo sistema proporcional de votos ",
+#		"usado" : false
+#	},
+#	{
+#		"palavra" : "Clausula Petrea",
+#		"dica" : "Clausulas da Constituicao Federal que nao podem ser alteradas",
+#		"usado" : false
+#	},
 	{
 		"palavra" : "prefeito",
 		"dica" : "chefe do poder executivo municipal",
@@ -42,7 +42,36 @@ var enigmas = [
 		"palavra" : "Governador",
 		"dica" : "Chefe do poder executivo estadual",
 		"usado" : false
+	},
+	{
+		"palavra" : "municipio",
+		"dica" : "Divisão do Estado que tem autonomia administrativa",
+		"usado" : false
+	},
+	{
+		"palavra" : "estado",
+		"dica" : "Entidade com poder soberano para governar um povo dentro de uma área territorial delimitada",
+		"usado" : false
+	},
+	{
+		"palavra" : "Impeachment",
+		"dica" : "Processo político-criminal que visa destituir alguém de um cargo governativo",
+		"usado" : false
+	},{
+		"palavra" : "Imposto",
+		"dica" : "tributo obrigatório cobrado pelo governo",
+		"usado" : false
+	},
+	{
+		"palavra" : "tributo",
+		"dica" : "contribuição monetária imposta pelo Estado ao povo, sobre mercadorias etc",
+		"usado" : false
+	},{
+		"palavra" : "cidadao",
+		"dica" : "indivíduo que, como membro de um Estado, possui deveres e usufrui de direitos civis e políticos",
+		"usado" : false
 	}
+	
 	
 ]
 

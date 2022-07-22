@@ -5,6 +5,9 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
+func _input(event):
+	if Input.is_action_just_pressed("ui_cancel"):
+		Global.voltaMundoAberto()
 
 func _on_forca_acertouLetra():
 	$success.play()
