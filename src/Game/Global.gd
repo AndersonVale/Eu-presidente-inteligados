@@ -25,7 +25,7 @@ var mudo = 0 #variável que controla a reprodução ou não do som
 var subiuRua = 0 #variável que determina se o presidente chegou ao mundo aberto passando pelo mundo aberto ou pelo menu
 var skin = 3
 
-var fase = "sul"
+var fase = "sudeste"
 var quiz = null
 var retornoMinigame 
 var ultimo_sokoban = 0

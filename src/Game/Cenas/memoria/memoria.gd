@@ -23,6 +23,7 @@ signal selected(c)
 signal flipped(c)
 signal mactch(c1 , c2)
 signal miss(c1 , c2)
+signal completou
 
 func _ready():
 	randomize()
@@ -159,6 +160,9 @@ func verificaCompleto():
 		if !c.colected:
 			completo = false
 			break
+	
+	if completo:
+		emit_signal("completou")
 	print("completou: " + str(completo))
 
 

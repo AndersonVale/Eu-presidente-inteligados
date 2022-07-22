@@ -18,7 +18,7 @@
 [ext_resource path="res://Audio/TremLoadingloopl.mp3" type="AudioStream" id=16]
 
 [sub_resource type="DynamicFont" id=2]
-size = 20
+size = 25
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -110,8 +110,8 @@ margin_right = 2226.0
 margin_bottom = 392.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "teste
-"
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero felis, aliquam in eros in, rhoncus posuere felis. Fusce id lacinia orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam vitae tristique tortor."
+align = 3
 valign = 1
 autowrap = true
 
@@ -122,8 +122,8 @@ margin_right = 2226.0
 margin_bottom = 616.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "teste
-"
+text = "Praesent tincidunt magna ac ipsum pellentesque tincidunt. Fusce quis quam nec dui lobortis sodales. Curabitur tempor dapibus metus vitae euismod. Vestibulum ac commodo mi. Phasellus posuere sodales ipsum ac eleifend. Donec ac lacus eros. "
+align = 3
 valign = 1
 autowrap = true
 
@@ -151,21 +151,21 @@ __meta__ = {
 }
 
 [node name="texto_pergunta" type="Label" parent="informacao_pergunta"]
-margin_top = 85.0
 margin_right = 640.0
-margin_bottom = 185.0
+margin_bottom = 382.0
 rect_min_size = Vector2( 100, 100 )
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 1 )
-align = 1
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero felis, aliquam in eros in, rhoncus posuere felis. Fusce id lacinia orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam vitae tristique tortor. Praesent tincidunt magna ac ipsum pellentesque tincidunt. Fusce quis quam nec dui lobortis sodales. Curabitur tempor dapibus metus vitae euismod. Vestibulum ac commodo mi. Phasellus posuere sodales ipsum ac eleifend. Donec ac lacus eros."
+align = 3
 autowrap = true
 
 [node name="Panel" type="Panel" parent="informacao_pergunta"]
 modulate = Color( 1, 1, 1, 0 )
 self_modulate = Color( 1, 1, 1, 0 )
-margin_top = 274.0
+margin_top = 386.0
 margin_right = 640.0
-margin_bottom = 474.0
+margin_bottom = 586.0
 rect_min_size = Vector2( 0, 200 )
 
 [node name="imagem_pergunta" type="TextureRect" parent="informacao_pergunta/Panel"]
