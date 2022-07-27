@@ -47,13 +47,7 @@ var enigmas = [
 		"palavra" : "municipio",
 		"dica" : "Divisão do Estado que tem autonomia administrativa",
 		"usado" : false
-	},
-	{
-		"palavra" : "estado",
-		"dica" : "Entidade com poder soberano para governar um povo dentro de uma área territorial delimitada",
-		"usado" : false
-	},
-	{
+	},{
 		"palavra" : "Impeachment",
 		"dica" : "Processo político-criminal que visa destituir alguém de um cargo governativo",
 		"usado" : false
