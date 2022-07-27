@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Cenas/cena_Minigame/forca.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Audio/TremLoadingloopl.mp3" type="AudioStream" id=2]
@@ -44,6 +44,10 @@ tracks/0/keys = {
 "update": 1,
 "values": [ true, false ]
 }
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 9 )
 
 [node name="minigameForca" type="Node2D"]
 script = ExtResource( 8 )
@@ -96,6 +100,15 @@ margin_bottom = 143.0
 custom_fonts/font = SubResource( 1 )
 text = "Jogo da Forca"
 align = 1
+valign = 1
+
+[node name="aviso_sair" type="Label" parent="."]
+margin_left = 13.0
+margin_top = -10.0
+margin_right = 344.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 4 )
+text = "Pressione ESC para sair"
 valign = 1
 
 [connection signal="acertouLetra" from="forca" to="." method="_on_forca_acertouLetra"]

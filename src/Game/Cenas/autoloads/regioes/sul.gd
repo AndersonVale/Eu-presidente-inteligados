@@ -122,7 +122,7 @@ var data =  {
 					"Isabela: Voce deve dar o exemplo, Presidente!"
 				]
 			},
-			"correta" : 0,
+			"correta" : 1,
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : -1,

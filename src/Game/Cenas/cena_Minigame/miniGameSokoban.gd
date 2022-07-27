@@ -27,6 +27,6 @@ func _on_sokoban_levels_completed():
 func _on_sokoban_box_pushed():
 	$arrasta.play()
 
-
 func _on_sokoban_box_fited():
 	$blip.play()
+

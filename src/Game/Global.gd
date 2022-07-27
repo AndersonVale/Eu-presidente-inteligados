@@ -49,4 +49,5 @@ func respondeuPergunta():
 	emit_signal("perguntaRespondida")
 
 func voltaMundoAberto():
-	  get_tree().change_scene(retornoMinigame)
+	posicao_vertical += 10
+	get_tree().change_scene(retornoMinigame)
