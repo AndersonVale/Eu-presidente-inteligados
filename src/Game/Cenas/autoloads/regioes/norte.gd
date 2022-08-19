@@ -153,6 +153,13 @@ var data =  {
 		"configuracao" : {
 			"tipo" : Mensagens.Tipos.CONFIGURACAO,
 			"cena" : "res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn"
+		},
+		"mensagem_inicial" : {
+			"tipo" : Mensagens.Tipos.VCSABIA,
+			"mensagens_npc" : [
+				"Bem vindo ao Nordeste, nosso representante da vontade popular",
+				"Aqui vc receberá muito conhecimento que lhe permitirá ser um presidente muito melhor para nosso povo!"
+			]
 		}
 
 	}

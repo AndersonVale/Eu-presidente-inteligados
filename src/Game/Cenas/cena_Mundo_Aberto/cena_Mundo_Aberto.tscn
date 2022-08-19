@@ -1,4 +1,4 @@
-[gd_scene load_steps=199 format=2]
+[gd_scene load_steps=200 format=2]
 
 [ext_resource path="res://Imagens/hand.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/cena_Mundo_Aberto/NPC.gd" type="Script" id=2]
@@ -5539,6 +5539,14 @@ extents = Vector2( 9.5, 12 )
 [sub_resource type="RectangleShape2D" id=170]
 extents = Vector2( 5.5, 9.5 )
 
+[sub_resource type="GDScript" id=192]
+script/source = "extends Node
+
+func _ready():
+	get_parent().mensagens = Mensagens.mensagemIniciaisRegialAtual().mensagens_npc
+
+"
+
 [sub_resource type="RectangleShape2D" id=139]
 extents = Vector2( 7, 13.5 )
 
@@ -5721,7 +5729,6 @@ __meta__ = {
 "_edit_group_": true
 }
 npc_texto = NodePath("../NPC_texto")
-mensagens = PoolStringArray( "Ana: Quando terminarmos de conversar, você poderá usar as setas do seu teclado para se movimentar pelo mapa", "Ana: Estamos rodeados de problemas no país. Precisamos de sua ajuda!", "Ana: Ao encontrar uma porta que apresenta um ponto de exclamação vermelho, o problema que nos afeta será apresentado.", "Ana: Fique atento às noticias do jornal e faça as escolhas que considerar ser melhor para o país.", "Ana: Está vendo essa barra no canto superior esquerdo da tela\? Ela indica o quão bom o seu governo está", "Ana: Agora explore o mapa e ajude a tornar o Brasil um lugar melhor!" )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC"]
 position = Vector2( 0.5, 2 )
@@ -5740,6 +5747,9 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/RigidBody2D"]
 position = Vector2( 0.5, 0.5 )
 shape = SubResource( 170 )
+
+[node name="mensgens_iniciais" type="Node" parent="NPC"]
+script = SubResource( 192 )
 
 [node name="NPC8" type="Area2D" parent="."]
 position = Vector2( 486, 254 )

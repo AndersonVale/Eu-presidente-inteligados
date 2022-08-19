@@ -131,7 +131,7 @@ func _process(delta):
 #func _on_Area2D2_body_entered(_body):
 #	if !Mensagens.perguntaRegiaoAtual("escola").respondido: #entra na escola se ainda houver perguntas
 #		get_tree().change_scene("res://Cenas/Escola.tscn")
-##		Global.indexMundoAberto = Global.index #salva o index antes de passar pela porta
+##		Global.indexMundoAberto = Global	.index #salva o index antes de passar pela porta
 ##		Global.index = Global.indexEscola #modifica o index pelo armazenado na escola
 #
 #func _on_Area2D4_body_entered(_body):

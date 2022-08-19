@@ -153,6 +153,13 @@ var data =  {
 		"configuracao" : {
 			"tipo" : Mensagens.Tipos.CONFIGURACAO,
 			"cena" : "res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn"
+		},
+		"mensagem_inicial" : {
+			"tipo" : Mensagens.Tipos.VCSABIA,
+			"mensagens_npc" : [
+				"Temos o chefe do executivo em nossa região!",
+				"Que sua presença lhe renda muito conhecimento sobre nosso pedaço do Brasil"
+			]
 		}
 
 	}

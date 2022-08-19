@@ -154,6 +154,17 @@ var data =  {
 		"configuracao" : {
 			"tipo" : Mensagens.Tipos.CONFIGURACAO,
 			"cena" : "res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn"
+		},
+		"mensagem_inicial" : {
+			"tipo" : Mensagens.Tipos.VCSABIA,
+			"mensagens_npc" : [
+				"Ana: Quando terminarmos de conversar, você poderá usar as setas do seu teclado para se movimentar pelo mapa",
+				"Ana: Estamos rodeados de problemas no país. Precisamos de sua ajuda!",
+				"Ana: Ao encontrar uma porta que apresenta um ponto de exclamação vermelho, o problema que nos afeta será apresentado.",
+				"Ana: Fique atento às noticias do jornal e faça as escolhas que considerar ser melhor para o país.",
+				"Ana: Está vendo essa barra no canto superior esquerdo da tela? Ela indica o quão bom o seu governo está",
+				"Ana: Agora explore o mapa e ajude a tornar o Brasil um lugar melhor!"
+			]
 		}
 
 	}

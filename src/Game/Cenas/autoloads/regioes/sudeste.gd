@@ -153,6 +153,13 @@ var data =  {
 		"configuracao" : {
 			"tipo" : Mensagens.Tipos.CONFIGURACAO,
 			"cena" : "res://Cenas/cena_Mundo_Aberto/cena_Mundo_Aberto.tscn"
+		},
+		"mensagem_inicial" : {
+			"tipo" : Mensagens.Tipos.VCSABIA,
+			"mensagens_npc" : [
+				"Olá Presidente! Bem vindo à região Sudeste!",
+				"Espero que essa viagem lhe seja muito proveitosa!"
+			]
 		}
 
 	}
