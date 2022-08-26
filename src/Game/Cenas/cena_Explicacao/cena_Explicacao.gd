@@ -5,6 +5,7 @@ onready var pergunta = Mensagens.perguntaRegiaoAtual(Global.quiz)
 func _ready():
 	#set_process(false)
 	#print("Acertou pergunta:" + str(pergunta.acertou))
+	$botao_geral/Space.visible = !Global.isMobile()
 	$Label.text = pergunta.explicacoes[str(pergunta.acertou)]
 	
 	if  !pergunta.acertou:

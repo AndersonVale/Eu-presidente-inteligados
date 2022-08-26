@@ -25,7 +25,8 @@ func _ready() -> void:
 	load_quiz()
 
 func _process(delta):
-	$hud/Space.visible =  $Sprite.escolher_esquerda
+	if !Global.isMobile():
+		$hud/wasd/Space.visible =  $Sprite.escolher_esquerda
 	$Caneta.global_position = get_node("posCaneta"+str(opcao)).global_position
 	
 

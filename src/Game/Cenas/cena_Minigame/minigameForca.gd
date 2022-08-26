@@ -36,3 +36,7 @@ func _on_forca_errouLetra():
 
 func _on_forca_letraJaEscolhida():
 	$blip.play()
+
+
+func _on_escolhe_letras_letraSelecionada(l):
+	$forca.escolheLetra(l)

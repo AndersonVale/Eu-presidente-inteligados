@@ -90,8 +90,8 @@ func on_regiao_exited(regiao):
 #	$mapas_text.text = "Use as setas para viajar pelo Brasil!"
 
 func _process(_delta):
-	
-	$Space.visible = bool(podeAcessar)
+	if find_node("wasd"):
+		$wasd.visible = bool(podeAcessar)
 
 	if Input.is_action_pressed("ui_accept") and Global.fase and podeAcessar:
 		$aviao.connect("area_entered" , self , "on_regiao_entered")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=200 format=2]
+[gd_scene load_steps=201 format=2]
 
 [ext_resource path="res://Imagens/hand.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/cena_Mundo_Aberto/NPC.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Imagens/NPC/matheus.png" type="Texture" id=7]
 [ext_resource path="res://Imagens/NPC/Download28517.png" type="Texture" id=8]
 [ext_resource path="res://Imagens/NPC/Pedro Munhoz.png" type="Texture" id=9]
+[ext_resource path="res://Cenas/controller.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Imagens/Alertas/Interrogação.png" type="Texture" id=11]
 [ext_resource path="res://Imagens/NPC/Cachorro.png" type="Texture" id=12]
 [ext_resource path="res://Imagens/Alertas/ExclamaçãoVermelha.png" type="Texture" id=13]
@@ -6205,6 +6206,8 @@ texture = ExtResource( 1 )
 autoplay = "aponta"
 anims/RESET = SubResource( 190 )
 anims/aponta = SubResource( 191 )
+
+[node name="controller" parent="CanvasLayer" instance=ExtResource( 10 )]
 
 [connection signal="body_entered" from="porta-minigame" to="." method="_on_portaminigame_body_entered"]
 [connection signal="body_entered" from="mapa" to="." method="_on_mapa_body_entered"]

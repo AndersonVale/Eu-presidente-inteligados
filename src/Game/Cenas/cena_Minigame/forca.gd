@@ -4,6 +4,7 @@ const vidasBase = 7
 var enigma = ""
 var vidas = vidasBase
 var completo = false
+var aguardando = false
 
 signal errouLetra
 signal acertouLetra
@@ -76,6 +77,7 @@ func escolhePalavra():
 
 	if !temEnigma():
 		set_process_input(false)
+		aguardando = true
 		return
 
 	completo = false
@@ -83,6 +85,7 @@ func escolhePalavra():
 	$dica.text = ""
 	$chances.visible = false
 	set_process_input(false)
+	aguardando = true
 	$digite.visible = false
 	randomize()
 	var loops=randi() % 20 + 10
@@ -113,6 +116,7 @@ func escolhePalavra():
 	yield(get_tree().create_timer(.15),"timeout")
 	enigma.usado = true
 	set_process_input(true)
+	aguardando = false
 	$digite.visible = true
 	$chances.visible = true
 
@@ -128,47 +132,55 @@ func _input(event):
 		if event.as_text().length() > 1:
 			return
 
-		for c in $hbox2.get_children():
-			if c.text ==  event.as_text().to_upper():
+		escolheLetra(event.as_text())
+
+		
+func escolheLetra(letraPar):
+	
+	if aguardando:
+		return
+	
+	for c in $hbox2.get_children():
+			if c.text ==  letraPar.to_upper():
 				emit_signal("letraJaEscolhida")
 				#$blip.play()
 				c.blink()
 				return
 
-		var repetido = false
-		for c in $caixaTexto/hbox.get_children():
-			if c.text ==  event.as_text().to_upper() and c.mostrando():
-				emit_signal("letraJaEscolhida")
-				c.blink()
-				repetido = true
+	var repetido = false
+	for c in $caixaTexto/hbox.get_children():
+		if c.text ==  letraPar.to_upper() and c.mostrando():
+			emit_signal("letraJaEscolhida")
+			c.blink()
+			repetido = true
 
-		if repetido:
-			return
+	if repetido:
+		return
 
-		$digite.visible = false
-		set_process_input(false)
-		var i = 0
-		var achou = false
-		for l in enigma.palavra.to_upper():
-			if l == event.as_text().to_upper():
-				$caixaTexto/hbox.get_child(i).mostra()
-				achou = true
-			i += 1
-		if !achou:
-			var letra = $modelo2.duplicate()
-			letra.text =event.as_text().to_upper()
-			$hbox2.add_child(letra)
-			#$error.play()
-			vidas -= 1
-			$chances.text = "CHANCES : " + str(vidas)
-			if vidas < 4:
-				$dica.text = "Dica: " + enigma.dica
-			emit_signal("errouLetra")
-		else:
-			emit_signal("acertouLetra")
-			#$success.play()
-		verificaCompletou()
-
+	$digite.visible = false
+	set_process_input(false)
+	aguardando = true
+	var i = 0
+	var achou = false
+	for l in enigma.palavra.to_upper():
+		if l == letraPar.to_upper():
+			$caixaTexto/hbox.get_child(i).mostra()
+			achou = true
+		i += 1
+	if !achou:
+		var letra = $modelo2.duplicate()
+		letra.text = letraPar.to_upper()
+		$hbox2.add_child(letra)
+		#$error.play()
+		vidas -= 1
+		$chances.text = "CHANCES : " + str(vidas)
+		if vidas < 4:
+			$dica.text = "Dica: " + enigma.dica
+		emit_signal("errouLetra")
+	else:
+		emit_signal("acertouLetra")
+		#$success.play()
+	verificaCompletou()
 
 func verificaCompletou():
 	if vidas <= 0:
@@ -185,6 +197,7 @@ func verificaCompletou():
 		yield(get_tree().create_timer(1.5),"timeout")
 		$digite.visible = true
 		set_process_input(true)
+		aguardando = false
 	else:
 		var completouTodas = true
 		for c in $caixaTexto/hbox.get_children():
@@ -200,6 +213,7 @@ func verificaCompletou():
 			$reiniciar.visible = true
 			completo = true
 			set_process_input(true)
+			aguardando = false
 			emit_signal("acertouPalavra")
 
 func temEnigma():

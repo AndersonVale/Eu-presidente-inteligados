@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Cenas/memoria/memoria.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/cena_Minigame/miniGameMemoria.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Audio/8-bit-game-over-sound-tune.ogg" type="AudioStream" id=9]
 [ext_resource path="res://Audio/TremLoadingloopl.mp3" type="AudioStream" id=10]
 [ext_resource path="res://Cenas/pressSpace.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Cenas/controller.tscn" type="PackedScene" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -90,8 +91,30 @@ margin_right = 1248.0
 margin_bottom = 93.0
 text = "PRESSIONE ESPAÇO PARA CONTINUAR"
 
+[node name="controller" parent="." instance=ExtResource( 12 )]
+
+[node name="w" parent="controller/buttons" index="0"]
+position = Vector2( 66, 442 )
+
+[node name="S" parent="controller/buttons" index="1"]
+position = Vector2( 65, 584 )
+
+[node name="A" parent="controller/buttons" index="2"]
+position = Vector2( 9, 516 )
+
+[node name="D" parent="controller/buttons" index="3"]
+position = Vector2( 129, 517 )
+
+[node name="esc" parent="controller" index="2"]
+position = Vector2( 1136, 105 )
+
+[node name="space" parent="controller" index="3"]
+position = Vector2( 500, 483 )
+
 [connection signal="completou" from="memoria" to="." method="_on_memoria_completou"]
 [connection signal="flipped" from="memoria" to="." method="_on_memoria_flipped"]
 [connection signal="mactch" from="memoria" to="." method="_on_memoria_mactch"]
 [connection signal="miss" from="memoria" to="." method="_on_memoria_miss"]
 [connection signal="selected" from="memoria" to="." method="_on_memoria_selected"]
+
+[editable path="controller"]

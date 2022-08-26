@@ -1,6 +1,10 @@
 extends Node2D
 
 
+func _ready():
+	if Global.isMobile():
+		queue_free()
+
 func _process(_delta):
 	$CenterContainer/S.visible = bool(Input.is_action_pressed("ui_down"))
 	$CenterContainer/W.visible = bool(Input.is_action_pressed("ui_up"))

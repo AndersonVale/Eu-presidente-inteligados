@@ -43,7 +43,9 @@ func _input(event):
 		flippaCartaAtual()
 		emit_signal("flipped" , cartaAtual)
 
-	if $cursor.visible and event is InputEventKey and event.pressed and not event.echo:
+	#print(event)
+
+	if $cursor.visible and (event is InputEventKey and event.pressed and not event.echo)  or event is InputEventAction:
 		if Input.is_action_just_pressed("left"):
 			cursorPos += Vector2(-1,0)
 		elif Input.is_action_just_pressed("right"):

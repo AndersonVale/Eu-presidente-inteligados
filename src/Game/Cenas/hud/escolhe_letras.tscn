@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Font/MEGAMAN10.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Imagens/Teclado/right.png" type="Texture" id=2]
+[ext_resource path="res://Imagens/Teclado/left.png" type="Texture" id=3]
+[ext_resource path="res://Cenas/hud/escolhe_letras.gd" type="Script" id=4]
+[ext_resource path="res://Imagens/Teclado/space_ajustado.png" type="Texture" id=5]
+[ext_resource path="res://Imagens/Teclado/esc.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+font_data = ExtResource( 1 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 304.0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 800, 200 )
+
+[node name="escolhe_letras" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 2.0
+margin_right = 371.0
+margin_bottom = 257.0
+color = Color( 0, 0, 0, 0.403922 )
+
+[node name="letra" type="Label" parent="."]
+margin_top = -32.0
+margin_right = 368.0
+margin_bottom = 143.0
+custom_colors/font_color = Color( 0.960784, 0.847059, 0.227451, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "A
+"
+align = 1
+valign = 1
+
+[node name="A" type="TouchScreenButton" parent="."]
+position = Vector2( 24, 46 )
+scale = Vector2( 0.217317, 0.217317 )
+normal = ExtResource( 3 )
+shape = SubResource( 2 )
+action = "ui_left"
+
+[node name="ESC" type="TouchScreenButton" parent="."]
+position = Vector2( 9, 150 )
+scale = Vector2( 0.217317, 0.217317 )
+normal = ExtResource( 6 )
+shape = SubResource( 2 )
+action = "ui_cancel"
+
+[node name="D" type="TouchScreenButton" parent="."]
+position = Vector2( 267, 45 )
+scale = Vector2( 0.217317, 0.217317 )
+normal = ExtResource( 2 )
+shape = SubResource( 2 )
+action = "ui_right"
+
+[node name="D2" type="TouchScreenButton" parent="."]
+position = Vector2( 195, 191 )
+scale = Vector2( 0.152905, 0.152905 )
+normal = ExtResource( 5 )
+shape = SubResource( 3 )
+action = "ui_accept"
+
+[connection signal="visibility_changed" from="." to="." method="_on_escolhe_letras_visibility_changed"]

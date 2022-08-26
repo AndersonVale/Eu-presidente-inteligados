@@ -3,7 +3,8 @@ extends Node2D
 
 #Esconder o mouse
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	#Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	pass
 	
 #Fazer com que o sprite siga o mouse
 func _process(_delta):

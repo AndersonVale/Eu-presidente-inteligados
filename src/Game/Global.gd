@@ -30,6 +30,10 @@ var quiz = null
 var retornoMinigame 
 var ultimo_sokoban = 0
 
+var textando = false setget setTextando
+
+signal textando_changed(v)
+
 var skins = [
 	"res://Imagens/NPC/avatar1_Oficial.png",
 	"res://Imagens/NPC/npc_garoto_negro.png",
@@ -51,3 +55,15 @@ func respondeuPergunta():
 func voltaMundoAberto():
 	posicao_vertical += 10
 	get_tree().change_scene(retornoMinigame)
+
+func setTextando(val):
+	textando = val
+	emit_signal("textando_changed", textando)
+
+func isMobile():
+	if OS.has_feature('JavaScript'):
+		JavaScript.eval("console.log(new URLSearchParams(window.location.search).get('mobile') )")
+		return JavaScript.eval("new URLSearchParams(window.location.search).get('mobile') ") != null
+		#return JavaScript.eval(" ( window.innerWidth <= 800 ) || ( window.innerHeight <= 600 ) ")
+	else:
+		return OS.has_feature("mobile")

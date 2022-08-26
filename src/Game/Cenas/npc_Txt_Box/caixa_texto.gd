@@ -220,6 +220,7 @@ func _process(_delta):
 					hide_textbox()
 					if texto_fila.empty():
 						hide_textbox()
+						Global.textando = false
 						emit_signal("texto_completo")
 				else:
 					texto.percent_visible = 1.0
@@ -232,6 +233,7 @@ func _process(_delta):
 				mudar_estado(State.PRONTO)
 				if texto_fila.empty():
 					hide_textbox()
+					Global.textando = false
 					emit_signal("texto_completo")
 
 
@@ -269,6 +271,7 @@ func mostrar_texto():
 func mudar_estado(proximo_estado):
 	set_process(true)
 	estado_atual = proximo_estado
+	Global.textando = true
 #	match estado_atual:
 #		State.PRONTO:
 #			print("Estado atual: PRONTO")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Imagens/NPC/avatar1_Oficial.png" type="Texture" id=1]
 [ext_resource path="res://Imagens/NPC/npc_garoto_negro.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Cenas/ad.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Imagens/Teclado/space.png" type="Texture" id=12]
 [ext_resource path="res://Audio/success.wav" type="AudioStream" id=13]
+[ext_resource path="res://Cenas/controller.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -128,3 +129,22 @@ scale = Vector2( 0.2, 0.2 )
 [node name="Space" type="Sprite" parent="ad"]
 position = Vector2( -10.0005, 185 )
 texture = ExtResource( 12 )
+
+[node name="controller" parent="." instance=ExtResource( 14 )]
+show_up = false
+show_down = false
+show_esc = false
+
+[node name="w" parent="controller/buttons" index="0"]
+position = Vector2( 74, 516 )
+
+[node name="S" parent="controller/buttons" index="1"]
+position = Vector2( 72, 656 )
+
+[node name="A" parent="controller/buttons" index="2"]
+position = Vector2( 20, 617 )
+
+[node name="D" parent="controller/buttons" index="3"]
+position = Vector2( 152, 615 )
+
+[editable path="controller"]

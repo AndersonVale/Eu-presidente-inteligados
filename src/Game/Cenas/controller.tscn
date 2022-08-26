@@ -1,0 +1,125 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Imagens/Teclado/space.png" type="Texture" id=1]
+[ext_resource path="res://Imagens/Teclado/up.png" type="Texture" id=2]
+[ext_resource path="res://Imagens/Teclado/right.png" type="Texture" id=3]
+[ext_resource path="res://Imagens/Teclado/down.png" type="Texture" id=4]
+[ext_resource path="res://Imagens/Teclado/left.png" type="Texture" id=5]
+[ext_resource path="res://Cenas/controller.gd" type="Script" id=6]
+[ext_resource path="res://Imagens/Teclado/esc.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 220, 199.461 )
+
+[sub_resource type="AtlasTexture" id=4]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 700, 500 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 300, 300 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 600, 300 )
+
+[node name="controller" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="buttons" type="Node2D" parent="."]
+
+[node name="w" type="TouchScreenButton" parent="buttons"]
+position = Vector2( 92, 502 )
+scale = Vector2( 0.2, 0.2 )
+normal = ExtResource( 2 )
+shape = SubResource( 1 )
+passby_press = true
+action = "up"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="w2" type="TouchScreenButton" parent="buttons/w"]
+normal = ExtResource( 2 )
+shape = SubResource( 1 )
+passby_press = true
+action = "ui_up"
+visibility_mode = 1
+
+[node name="S" type="TouchScreenButton" parent="buttons"]
+position = Vector2( 89, 631 )
+scale = Vector2( 0.2, 0.2 )
+normal = ExtResource( 4 )
+shape = SubResource( 1 )
+passby_press = true
+action = "down"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="S2" type="TouchScreenButton" parent="buttons/S"]
+normal = ExtResource( 4 )
+shape = SubResource( 1 )
+passby_press = true
+action = "ui_down"
+visibility_mode = 1
+
+[node name="A" type="TouchScreenButton" parent="buttons"]
+position = Vector2( 20, 559 )
+scale = Vector2( 0.2, 0.2 )
+normal = ExtResource( 5 )
+shape = SubResource( 1 )
+passby_press = true
+action = "left"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="A2" type="TouchScreenButton" parent="buttons/A"]
+normal = ExtResource( 5 )
+shape = SubResource( 1 )
+passby_press = true
+action = "ui_left"
+visibility_mode = 1
+
+[node name="D" type="TouchScreenButton" parent="buttons"]
+position = Vector2( 162, 561 )
+scale = Vector2( 0.2, 0.2 )
+normal = ExtResource( 3 )
+shape = SubResource( 1 )
+passby_press = true
+action = "right"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="D2" type="TouchScreenButton" parent="buttons/D"]
+normal = ExtResource( 3 )
+shape = SubResource( 1 )
+passby_press = true
+action = "ui_right"
+visibility_mode = 1
+
+[node name="super_space" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 669, 360 )
+normal = SubResource( 4 )
+shape = SubResource( 3 )
+passby_press = true
+action = "ui_accept"
+visibility_mode = 1
+
+[node name="esc" type="TouchScreenButton" parent="."]
+position = Vector2( 27.0001, 19 )
+scale = Vector2( 0.195246, 0.195246 )
+normal = ExtResource( 7 )
+shape = SubResource( 5 )
+passby_press = true
+action = "ui_cancel"
+
+[node name="space" type="TouchScreenButton" parent="."]
+position = Vector2( 980, 480 )
+scale = Vector2( 0.2, 0.2 )
+normal = ExtResource( 1 )
+shape = SubResource( 2 )
+passby_press = true
+action = "ui_accept"
