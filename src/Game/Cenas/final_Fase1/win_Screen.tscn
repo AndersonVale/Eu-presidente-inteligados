@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Font/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Cenas/final_Fase1/win_Screen.gd" type="Script" id=2]
 [ext_resource path="res://Imagens/NPC/ana.png" type="Texture" id=3]
 [ext_resource path="res://Cenas/pressSpace.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Cenas/controller.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Cenas/cena_Menu/cursor_Mouse.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
@@ -80,3 +81,19 @@ anims/ana_fase1 = SubResource( 3 )
 [node name="pressSpace" parent="." instance=ExtResource( 4 )]
 margin_left = 4.0
 text = "PRESSIONE ESPAÇO PARA CONTINUAR"
+
+[node name="controller" parent="." instance=ExtResource( 5 )]
+show_direcionais = false
+show_left = false
+show_up = false
+show_down = false
+show_right = false
+show_esc = false
+
+[node name="buttons" parent="controller" index="0"]
+position = Vector2( 0, -168 )
+
+[node name="space" parent="controller" index="3"]
+position = Vector2( 482, 485 )
+
+[editable path="controller"]
