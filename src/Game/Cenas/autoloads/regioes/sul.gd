@@ -68,8 +68,8 @@ var data =  {
 			"tipo" : Mensagens.Tipos.PERGUNTA,
 			"informacao" : "Matheus gostaria de matricular sua filha na escola perto de casa, na zona sul de São Paulo. Ao chegar na escola, Matheus é informado que não há vaga naquela unidade e que sua filha terá que estudar em uma creche na zona oeste de São Paulo, que fica a 2 horas de sua casa. Diante disso, como você orientaria Matheus?",
 			"alternativas" : [
-				"Não é possível fazer nada, porque é necessário respeitar o limite das escolas e, por isso, Rodrigo não poderá matricular sua filha perto de casa",
-				"É direito do cidadão que tenha vaga na escola pública de educação infantil ou de ensino fundamental mais próxima de sua residência a toda criança a partir do dia em que completar 4 anos de idade. Por isso, Rodrigo poderá se valer de seu direito para matricular sua filha na escola mais próxima de casa, na zona sul de São Paulo"
+				"Não é possível fazer nada, porque é necessário respeitar o limite das escolas e, por isso, Matheus não poderá matricular sua filha perto de casa",
+				"É direito do cidadão que tenha vaga na escola pública de educação infantil ou de ensino fundamental mais próxima de sua residência a toda criança a partir do dia em que completar 4 anos de idade. Por isso, Matheus poderá se valer de seu direito para matricular sua filha na escola mais próxima de casa, na zona sul de São Paulo"
 			],
 			"explicacoes" : {
 				"True" : "A resposta está correta, Presidente! A Lei de Diretrizes e Bases da Educação determina que é dever do Estado garantir vaga na escola pública de educação infantil ou de ensino fundamental mais próxima da residência a toda criança a partir do dia em que completar 4 (quatro) anos de idade. Matheus, portanto, poderá matricular sua filha na escola mais próxima de casa, na zona sul de São Paulo, conforme garantido por lei. Lembrando que isso é de responsabilidade do Poder Executivo Municipal, ou seja, do Prefeito!",

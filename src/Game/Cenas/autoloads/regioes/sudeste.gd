@@ -7,7 +7,7 @@ var data =  {
 			"informacao" : "Telma tem uma empresa de perfumes desde 2010. No entanto, devido à pandemia, os lucros caíram e a empresa estava passando por muitas dificuldades financeiras. Buscando a recuperação da empresa, Telma gostaria de ingressar negociando com apenas alguns dos seus fornecedores, sem se socorrer do Poder Judiciário. Como Presidente, o que você sugeriria para Telma?",
 			"alternativas" : [
 				"Avisaria que não há jeito de resolver a crise da empresa fora do campo judicial, porque apenas o juízo saberia dizer qual pessoa (credor) deverá ser pago primeiro, seguindo o determinado na Lei de Recuperação Judicial e Falências.",
-				"Avisaria que não há jeito de resolver a crise da empresa fora do campo judicial, porque apenas o juízo saberia dizer se o credor deverá ser pago primeiro"
+				"Avisaria que há jeito de negociar as dívidas específicas com as empresas credoras que ela desejar, caso elas assinem o plano de recuperação extrajudicial que será elaborado pela empresa da Telma, apenas em relação aos credores que ela tiver vontade, para que as dívidas tidas em relação a essas empresas sejam pagas e encerradas."
 			],
 			"explicacoes" : {
 				"True" : "Acertou, Presidente! A lei que regula a recuperação judicial, a extrajudicial e a falência do empresário e da sociedade empresária. Nesse contexto, o legislador fez a previsão de que as dívidas poderiam ser negociadas extrajudicialmente, ou seja, independentemente de processo judicial, por intermédio da proposta de plano de recuperação da empresa devedora, na qual prevê novas formas de pagamento aos credores selecionados, para que possa ter condições melhores para pagar suas dívidas sem falir, desde que os credores envolvidos aceitem a proposta.",
@@ -25,7 +25,7 @@ var data =  {
 					"Rodrigo: Presidente, infelizmente essa não era a explicação correta",
 				]
 			},
-			"correta" : 0,
+			"correta" : 1,
 			"acertou" : false,
 			"valorAcerto" : 1,
 			"valorErro" : 0,
